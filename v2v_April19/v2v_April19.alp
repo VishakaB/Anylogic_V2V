@@ -7,7 +7,7 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.0.202404161236" AlpVersion="8.9.0">
 <Model>
 	<Id>1713352799334</Id>
-	<Name><![CDATA[v2v_April17th1]]></Name>
+	<Name><![CDATA[v2v_April19]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[v2v]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Second]]></ModelTimeUnit>
@@ -25,7 +25,7 @@
 				</GenericParameterValue>
 				<GenericParameterLabel><![CDATA[Generic parameter:]]></GenericParameterLabel>
 			</GenericParameter>
-			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<FlowChartsUsage>CAR</FlowChartsUsage>
 			<SamplesToKeep>100</SamplesToKeep>
 			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
 			<ElementsLimitValue>100</ElementsLimitValue>
@@ -41,7 +41,6 @@
 					<Code><![CDATA[10]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
-				<AfterStepCode><![CDATA[//System.out.println("X coordinates: "+this.getX());]]></AfterStepCode>
 				<PhysicalLength Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
@@ -56,7 +55,7 @@
 				</PhysicalHeight>
 			</AgentProperties>
 			<EnvironmentProperties>
-					<EnableSteps>false</EnableSteps>
+					<EnableSteps>true</EnableSteps>
 					<StepDurationCode Class="CodeUnitValue">
 						<Code><![CDATA[1.0]]></Code>
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -73,7 +72,7 @@
 					<NetworkType>DISTANCE_BASED</NetworkType>
 					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
 					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
-					<ConnectionsRangeCode><![CDATA[1000]]></ConnectionsRangeCode>
+					<ConnectionsRangeCode><![CDATA[CommunicationRange]]></ConnectionsRangeCode>
 					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
 					<MCode><![CDATA[10]]></MCode>
 			</EnvironmentProperties>
@@ -111,7 +110,7 @@
 			<TrafficLight>
 				<Id>1713356146870</Id>
 				<Name><![CDATA[trafficLight]]></Name>
-				<X>290</X><Y>235</Y>
+				<X>330</X><Y>220</Y>
 				<Label><X>0</X><Y>-20</Y></Label>
 				<PublicFlag>true</PublicFlag>
 				<PresentationFlag>true</PresentationFlag>
@@ -189,14 +188,14 @@
 				<Variable Class="CollectionVariable">
 					<Id>1713507346579</Id>
 					<Name><![CDATA[vehicleids]]></Name>
-					<X>607</X><Y>-87</Y>
+					<X>370</X><Y>-120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
 						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
-						<ElementClass><![CDATA[Integer]]></ElementClass>
+						<ElementClass><![CDATA[Object]]></ElementClass>
 						<ValueElementClass><![CDATA[String]]></ValueElementClass>
 					</Properties>
 
@@ -2154,7 +2153,7 @@ applyNetwork();]]></Code>
 				<EmbeddedObject>
 					<Id>1713356511641</Id>
 					<Name><![CDATA[cars]]></Name>
-					<X>175</X><Y>-52</Y>
+					<X>210</X><Y>-50</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2216,7 +2215,7 @@ applyNetwork();]]></Code>
 				<EmbeddedObject>
 					<Id>1713512473187</Id>
 					<Name><![CDATA[roadNetworkDescriptor]]></Name>
-					<X>861</X><Y>-52</Y>
+					<X>650</X><Y>-110</Y>
 					<Label><X>-90</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2266,18 +2265,12 @@ applyNetwork();]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnterNetwork]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[//System.out.println("enter X coordinates: "+this.getX());]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExitNetwork]]></Name>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onEnterRoad]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[//System.out.println("enter X coordinates: "+this.getX());]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onExitRoad]]></Name>
@@ -2296,15 +2289,9 @@ applyNetwork();]]></Code>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onResumeMoving]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[//System.out.println("enter X coordinates: "+this.getX());]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[onClickCar]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[//System.out.println("enter X coordinates: "+this.getX());]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[automaticallyResolveDeadlocks]]></Name>
@@ -2346,7 +2333,7 @@ applyNetwork();]]></Code>
 					<LocationNameCode Class="CodeValue">
 						<Code><![CDATA[""]]></Code>
 					</LocationNameCode>
-					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationType>EMPTY</InitializationType>
 					<InitializationDatabaseTableQuery>
 						<TableReference>
 						</TableReference>
@@ -2356,23 +2343,23 @@ applyNetwork();]]></Code>
 					</QuantityColumn>
 				</EmbeddedObject>
 				<EmbeddedObject>
-					<Id>1713777632949</Id>
-					<Name><![CDATA[networkaccess]]></Name>
-					<X>176</X><Y>-85</Y>
+					<Id>1713609504568</Id>
+					<Name><![CDATA[network_edge]]></Name>
+					<X>210</X><Y>-80</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<PresentationId>1713777632951</PresentationId>
+					<PresentationId>1713609504570</PresentationId>
 					<ActiveObjectClass>
 						<PackageName><![CDATA[v2v]]></PackageName>
-						<ClassName><![CDATA[networkaccess]]></ClassName>
+						<ClassName><![CDATA[network_edge]]></ClassName>
 					</ActiveObjectClass>
 					<GenericParameterSubstitute>
 						<GenericParameterSubstituteReference>
 							<PackageName><![CDATA[v2v]]></PackageName>
-							<ClassName><![CDATA[networkaccess]]></ClassName>
-							<ItemName><![CDATA[1713777632932]]></ItemName>
+							<ClassName><![CDATA[network_edge]]></ClassName>
+							<ItemName><![CDATA[1713609504541]]></ItemName>
 						</GenericParameterSubstituteReference>
 					</GenericParameterSubstitute>
 					<Parameters>
@@ -2383,10 +2370,6 @@ applyNetwork();]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
 					<InEnvironment>true</InEnvironment>	
-					<InitialSpeedCode Class="CodeUnitValue">
-						<Code><![CDATA[0]]></Code>
-						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
-					</InitialSpeedCode>
 					<InitialLocationType>XYZ</InitialLocationType>
 					<XCode Class="CodeValue">
 						<Code><![CDATA[344]]></Code>
@@ -3585,9 +3568,9 @@ applyNetwork();]]></Code>
 					<Longitude>0.0</Longitude>
 				</EmbeddedObjectPresentation>
 				<EmbeddedObjectPresentation>
-					<Id>1713777632951</Id>
-					<Name><![CDATA[networkaccess_presentation]]></Name>
-					<X>316</X><Y>-82</Y>
+					<Id>1713609504570</Id>
+					<Name><![CDATA[network_edge_presentation]]></Name>
+					<X>310</X><Y>-80</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3635,7 +3618,8 @@ applyNetwork();]]></Code>
 					<Code><![CDATA[10]]></Code>
 					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 				</VelocityCode>
-				<AfterStepCode><![CDATA[System.out.println("Vehicle Coords (x,y): "+ this.vehicleid+" "+this.getX()+" "+this.getY());]]></AfterStepCode>
+				<AfterStepCode><![CDATA[//Get the position of vehicle at each second
+System.out.println("car agent: "+ this.id+" xcoord "+this.getX()+" ycoord "+this.getY());]]></AfterStepCode>
 				<PhysicalLength Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
@@ -3705,8 +3689,8 @@ applyNetwork();]]></Code>
 			<Variables>
 				<Variable Class="PlainVariable">
 					<Id>1713507248314</Id>
-					<Name><![CDATA[vehicleid]]></Name>
-					<X>200</X><Y>-50</Y>
+					<Name><![CDATA[id]]></Name>
+					<X>230</X><Y>-50</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3742,88 +3726,24 @@ applyNetwork();]]></Code>
 						<Type><![CDATA[double]]></Type>        
 					</Properties>
 				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1713783435034</Id>
-					<Name><![CDATA[userid]]></Name>
-					<X>200</X><Y>-20</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>false</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[int]]></Type>        
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[(int) uniform(10,main.nbvehicles+10)]]></Code>
-						</InitialValue>
-					</Properties>
-				</Variable>
 			</Variables>
 			<StatechartElements>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1713511053796</Id>
-					<Name><![CDATA[Idle]]></Name>
-					<X>170</X><Y>90</Y>
+					<Name><![CDATA[state]]></Name>
+					<X>180</X><Y>70</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="20">
-						<EntryAction><![CDATA[//initialization of paramters
-main.vehicleids.add(this.vehicleid);
-List<Car> v2x_connections = getConnections();
-//int v2x_count = getConnnectionsNumber();
-System.out.println("v2x count: "+ this.vehicleid+" "+v2x_connections);]]></EntryAction>
-						<FillColor/>
-					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1713783259067</Id>
-					<Name><![CDATA[Initialization]]></Name>
-					<X>90</X><Y>160</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="20">
-						<EntryAction><![CDATA[//initialization of paramters
-xcoord = getX();
-ycoord = getY();
-]]></EntryAction>
-						<FillColor/>
-					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1713783279051</Id>
-					<Name><![CDATA[Transmit]]></Name>
-					<X>90</X><Y>230</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="20">
-						<EntryAction><![CDATA[//initialization of paramters
-]]></EntryAction>
-						<FillColor/>
-					</Properties>
-				</StatechartElement>
-				<StatechartElement Class="State" ParentState="ROOT_NODE">
-					<Id>1713783700793</Id>
-					<Name><![CDATA[ReceiveACK]]></Name>
-					<X>90</X><Y>310</Y>
-					<Label><X>10</X><Y>10</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="124" Height="20">
-						<EntryAction><![CDATA[//initialization of paramters
-]]></EntryAction>
+					<Properties Width="100" Height="30">
 						<FillColor/>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
 					<Id>1713507242691</Id>
 					<Name><![CDATA[statechart]]></Name>
-					<X>220</X><Y>50</Y>
+					<X>220</X><Y>30</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3833,158 +3753,7 @@ ycoord = getY();
 						<Point><X>0</X><Y>40</Y></Point>
 					</Points>
 					<Properties Target="1713511053796">
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1713783270441</Id>
-					<Name><![CDATA[transition]]></Name>
-					<X>190</X><Y>110</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-40</X><Y>50</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1713511053796" Target="1713783259067" Trigger="timeout">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1713783285754</Id>
-					<Name><![CDATA[transition1]]></Name>
-					<X>120</X><Y>180</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>50</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1713783259067" Target="1713783279051" Trigger="timeout">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1713783375361</Id>
-					<Name><![CDATA[transition2]]></Name>
-					<X>90</X><Y>320</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-30</X><Y>-10</Y></Point>
-						<Point><X>-30</X><Y>-210</Y></Point>
-						<Point><X>80</X><Y>-220</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1713783700793" Target="1713511053796" Trigger="timeout">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1713783772864</Id>
-					<Name><![CDATA[transition3]]></Name>
-					<X>120</X><Y>250</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>60</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1713783279051" Target="1713783700793" Trigger="timeout">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1713783786080</Id>
-					<Name><![CDATA[transition4]]></Name>
-					<X>170</X><Y>310</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-60</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1713783700793" Target="1713783279051" Trigger="timeout">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+						<Action><![CDATA[//System.out.println("enter X coordinates: "+this.getX());]]></Action>
 					</Properties>	
 				</StatechartElement>
 			</StatechartElements>
@@ -3999,8 +3768,9 @@ ycoord = getY();
 					<ShowLabel>true</ShowLabel>
 					<HandleReceiveInConnections>false</HandleReceiveInConnections>
 					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentReferenceId>1713356434629</AgentReferenceId>
 					<AgentLinkBidirectional>true</AgentLinkBidirectional>
-					<MessageType><![CDATA[networkaccess]]></MessageType>
+					<MessageType><![CDATA[Object]]></MessageType>
 					<StatechartReference>
 						<PackageName><![CDATA[v2v]]></PackageName>
 						<ClassName><![CDATA[Car]]></ClassName>
@@ -4095,12 +3865,12 @@ ycoord = getY();
 		</ActiveObjectClass>
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
-			<Id>1713777632926</Id>
-			<Name><![CDATA[networkaccess]]></Name>
+			<Id>1713609504535</Id>
+			<Name><![CDATA[network_edge]]></Name>
 			<Generic>false</Generic>
 			<GenericParameter>
-				<Id>1713777632932</Id>
-				<Name><![CDATA[1713777632932]]></Name>
+				<Id>1713609504541</Id>
+				<Name><![CDATA[1713609504541]]></Name>
 				<GenericParameterValue Class="CodeValue">
 					<Code><![CDATA[T extends Agent]]></Code>
 				</GenericParameterValue>
@@ -4160,7 +3930,7 @@ ycoord = getY();
 			<DatasetsCreationProperties>
 				<AutoCreate>true</AutoCreate>
 					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1713859200000</OccurrenceDate>
+					<OccurrenceDate>1713686400000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -4171,7 +3941,7 @@ ycoord = getY();
 					</RecurrenceCode>
 			</DatasetsCreationProperties>
 			<ScaleRuler>
-				<Id>1713777632929</Id>
+				<Id>1713609504538</Id>
 				<Name><![CDATA[scale]]></Name>
 				<X>0</X><Y>-150</Y>
 				<PublicFlag>false</PublicFlag>
@@ -4186,11 +3956,11 @@ ycoord = getY();
 				<Scale>10</Scale>
 				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
 			</ScaleRuler>
-			<CurrentLevel>1713777632933</CurrentLevel>
-			<ConnectionsId>1713777632927</ConnectionsId>
+			<CurrentLevel>1713609504542</CurrentLevel>
+			<ConnectionsId>1713609504536</ConnectionsId>
 			<AgentLinks>
 				<AgentLink>
-					<Id>1713777632927</Id>
+					<Id>1713609504536</Id>
 					<Name><![CDATA[connections]]></Name>
 					<X>50</X><Y>-50</Y>
 					<Label><X>15</X><Y>0</Y></Label>
@@ -4199,13 +3969,14 @@ ycoord = getY();
 					<ShowLabel>true</ShowLabel>
 					<HandleReceiveInConnections>false</HandleReceiveInConnections>
 					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentReferenceId>1713356434629</AgentReferenceId>
 					<AgentLinkBidirectional>true</AgentLinkBidirectional>
 					<MessageType><![CDATA[Object]]></MessageType>
 					<DrawLine>true</DrawLine>
 					<LineStyle>SOLID</LineStyle>
 					<LineWidth>1</LineWidth>
-					<LineColor>-16777216</LineColor>
-					<LineZOrder>ABOVE_AGENTS</LineZOrder>
+					<LineColor>-4565549</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
 					<LineArrow>NONE</LineArrow>
 					<LineArrowPosition>END</LineArrowPosition>
 				</AgentLink>
@@ -4213,7 +3984,7 @@ ycoord = getY();
 
 			<ContainerLinks>
 				<ContainerLink>
-					<Id>1713781502075</Id>
+					<Id>1713609504621</Id>
 					<Name><![CDATA[main]]></Name>
 					<X>50</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4229,7 +4000,7 @@ ycoord = getY();
 
 			<Presentation>
 				<Level>
-					<Id>1713777632933</Id>
+					<Id>1713609504542</Id>
 					<Name><![CDATA[level]]></Name>
 					<X>0</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4242,8 +4013,8 @@ ycoord = getY();
 
 			<Presentation>
 				<Figure3D>
-					<Id>1713777632937</Id>
-					<Name><![CDATA[transmission_tower]]></Name>
+					<Id>1713609504546</Id>
+					<Name><![CDATA[computer_on]]></Name>
 					<X>0</X><Y>0</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -4254,20 +4025,28 @@ ycoord = getY();
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[v2v]]></PackageName>
-						<ClassName><![CDATA[3d/transmission_tower.dae]]></ClassName>
+						<ClassName><![CDATA[3d/computer_on.dae]]></ClassName>
 					</ResourceReference>
 					<ColorTable>
 						<ColorMapping>
-							<Name><![CDATA[MA_material_11]]></Name>
-							<OriginalColor>-3618616</OriginalColor>
+							<Name><![CDATA[MA_material_4]]></Name>
+							<OriginalColor>-16396032</OriginalColor>
 						</ColorMapping>
 						<ColorMapping>
-							<Name><![CDATA[MA_material]]></Name>
-							<OriginalColor>-11447983</OriginalColor>
+							<Name><![CDATA[MA_black]]></Name>
+							<OriginalColor>-16777216</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA__96_96_96]]></Name>
+							<OriginalColor>-10526881</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[MA___LightGray_]]></Name>
+							<OriginalColor>-5658199</OriginalColor>
 						</ColorMapping>
 					</ColorTable>
 					<AutoScale>true</AutoScale>
-					<Scale>1.0</Scale>
+					<Scale>3.0</Scale>
 					<Rotation>0.0</Rotation>
 					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
 					<ApplyShading>true</ApplyShading>
@@ -4391,7 +4170,7 @@ ycoord = getY();
 			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
-			<Path><![CDATA[3d/transmission_tower.dae]]></Path>
+			<Path><![CDATA[3d/computer_on.dae]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 			<Location>FILE_SYSTEM</Location>
 		</Resource>
