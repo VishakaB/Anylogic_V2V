@@ -7,7 +7,7 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.0.202404161236" AlpVersion="8.9.0">
 <Model>
 	<Id>1713352799334</Id>
-	<Name><![CDATA[v2v_April30v2]]></Name>
+	<Name><![CDATA[v2v_April30v5]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[v2v]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Second]]></ModelTimeUnit>
@@ -1213,7 +1213,7 @@ applyNetwork();]]></BeforeStepCode>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
 					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
+						<Code><![CDATA[nbvehicles]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
 					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
@@ -1372,6 +1372,10 @@ applyNetwork();]]></BeforeStepCode>
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[//the id removed from the main.vehicleids
+//assign a index to each id in a linkedhashmap]]></Code>
+							</Value>
 						</Parameter>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
@@ -1895,7 +1899,7 @@ applyNetwork();]]></BeforeStepCode>
 					</Parameters>
 					<ReplicationFlag>false</ReplicationFlag>
 					<Replication Class="CodeValue">
-						<Code><![CDATA[100]]></Code>
+						<Code><![CDATA[nbvehicles]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
 					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
@@ -5119,18 +5123,6 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1714464717716</Id>
-					<Name><![CDATA[vehicleindex]]></Name>
-					<X>400</X><Y>230</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[int]]></Type>        
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
 					<Id>1714477923561</Id>
 					<Name><![CDATA[transmitmsgcar]]></Name>
 					<X>610</X><Y>-140</Y>
@@ -5153,7 +5145,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="40">
-						<EntryAction><![CDATA[int vehicleindex = main.vehicleids.indexOf(this.vehicleid);
+						<EntryAction><![CDATA[
 transmitfinished = false
 //System.out.println("vehicleindex & id: "+vehicleindex+";"+vehicleid);]]></EntryAction>
 						<FillColor>-7876885</FillColor>
@@ -5172,10 +5164,11 @@ transmitfinished = false
 if (connected2network==true) {
     // Set color to yellow
     color = yellow;
+    int vehicleindex = main.vehicleids.indexOf(this.vehicleid);
     // Assuming msg is supposed to represent the message to be sent
     // sending
-    transmitmsgcar = "emergency" + ";" + String.valueOf(vehicleid) + ";" +String.valueOf(vehicleindex)+";"+ //
-    String.valueOf(connected2network) + ";" + String.valueOf(carX) + ";" + String.valueOf(carY);
+    transmitmsgcar = "emergency"+";"+String.valueOf(vehicleindex)+";"+ //
+    String.valueOf(vehicleid) + ";" + String.valueOf(carX) + ";" + String.valueOf(carY);
     send(transmitmsgcar,main.networkaccess);
     transmitfinished = true;
     //Caculate the time to connect to the network
@@ -5232,6 +5225,7 @@ else {
 					</Points>
 					<Properties Target="1713511053796">
 						<Action><![CDATA[main.vehicleids.add(this.vehicleid);
+int vehicleindex = main.vehicleids.indexOf(this.vehicleid);
 startTime = time(SECOND);
 nbcalls=0;
 color=red;
@@ -5260,12 +5254,12 @@ color=red;
 	
 	if(message[0].equals("car")) 	
 		{    
-		  System.out.println("message from car: "+ vehicleid +" received message");
+		  //System.out.println("message from car: "+ vehicleid +" received message");
 		  receptionfinished = true;
 		}
 	if(message[0].equals("recommended route")) 	
 		{    
-		  System.out.println("message from network, cloud: "+ vehicleid +" received "+";"+message[1]+";"+message[2]);
+		  System.out.println("vehicle id: "+ vehicleid +" received: (index,id) "+message[1]+";"+message[2]);
 		  receptionfinishedcloud = true;
 		}
 }]]></Action>
@@ -5669,30 +5663,6 @@ color=red;
 						</InitialValue>
 					</Properties>
 				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1714139347350</Id>
-					<Name><![CDATA[variable1]]></Name>
-					<X>420</X><Y>-220</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1714469499555</Id>
-					<Name><![CDATA[vehicleindex]]></Name>
-					<X>420</X><Y>-250</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[String]]></Type>        
-					</Properties>
-				</Variable>
 			</Variables>
 			<StatechartElements>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -5704,7 +5674,9 @@ color=red;
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[transmitfinished=false;]]></EntryAction>
+						<EntryAction><![CDATA[transmitfinished=false;
+//initialize variable
+receptioncloud=false;]]></EntryAction>
 						<FillColor/>
 					</Properties>
 				</StatechartElement>
@@ -5722,25 +5694,53 @@ color=red;
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1714029614857</Id>
-					<Name><![CDATA[Transmit]]></Name>
+					<Name><![CDATA[TransmitToCloud]]></Name>
 					<X>160</X><Y>170</Y>
 					<Label><X>10</X><Y>12</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="30">
+						<EntryAction><![CDATA[String[] message = receivedmsg.split(";");
+if(message[0].equals("emergency")) 	
+	{    
+	  //System.out.println("network received message");
+	  receptionfinished=true;
+	  String vehicleindex = message[1];//vehicleid
+	  String vehicleid = message[2];//vehicleid
+	  //System.out.println("vehicle index: "+message[1]);
+	  transmitmsg ="requestroute"+";"+vehicleindex+";"+vehicleid+";"+"end";
+	  send(transmitmsg,main.cloudserver);
+	  transmitfinished=true;
+	}
+]]></EntryAction>
 						<FillColor/>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1714138516185</Id>
-					<Name><![CDATA[state1]]></Name>
+					<Name><![CDATA[TransmitToCar]]></Name>
 					<X>330</X><Y>250</Y>
 					<Label><X>20</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="30">
+						<EntryAction><![CDATA[String[] message = receivedmsg.split(";");
+if (message[0].equals("recommendation")) {
+    //transmit msg: vehicleindex,roadsegments.get(0),roadsegments.get(1);
+    transmitmsg = "recommended route" + ";" + message[1] + ";" + message[2] + ";" + message[3];
+    //System.out.println("test message[1]:" + (message[0]));
+    // Assuming 'cars' is a collection of vehicles, and each vehicle has a 'vehicleid' field
+    for (Car car : main.cars) {
+        if (car.vehicleid == Integer.valueOf(message[2])) {
+            send(transmitmsg, car);
+            transmissionv2 = true;
+            break; // Exit loop after transmitting to the correct car
+        }
+    }
+}
+]]></EntryAction>
 						<FillColor/>
 					</Properties>
 				</StatechartElement>
@@ -5773,20 +5773,19 @@ color=red;
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1713788393420" Target="1713948211784" Trigger="message">
-						<Action><![CDATA[receptionfinished=false;
-receptioncloud=false;
-receivedmsg=msg;
+						<Action><![CDATA[receivedmsg=msg;
 String[] message = receivedmsg.split(";");
 //Receive message from Car
 if(message[0].equals("emergency")) 	
 	{    
 	  //System.out.println("network received message");
 	  receptionfinished=true;
-	  vehicleindex = message[2];
+	  String vehicleindex = message[1];//vehicleid
+	  //System.out.println("vehicle index received at network: "+message[1]);
 	}
 else if (message[0].equals("recommendation")) 	
 	{    
-	  System.out.println("received message from cloud");
+	  //System.out.println("received message from cloud");
 	  receptioncloud=true;
 	}]]></Action>
 						<Timeout Class="CodeUnitValue">
@@ -5823,7 +5822,7 @@ else if (message[0].equals("recommendation"))
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[receptionfinished=true]]></Condition>
+						<Condition><![CDATA[receptionfinished==true]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -5849,45 +5848,12 @@ else if (message[0].equals("recommendation"))
 						<Point><X>60</X><Y>-70</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1714029614857" Target="1713788393420" Trigger="timeout">
+					<Properties Source="1714029614857" Target="1713788393420" Trigger="condition">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[transmitfinished==true;]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="Transmit" ParentStateId="1714029614857">
-					<Id>1714124070157</Id>
-					<Name><![CDATA[transition1]]></Name>
-					<X>250</X><Y>200</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-20</X><Y>-30</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1714029614857" Target="1714029614857" Trigger="timeout">
-						<Action><![CDATA[transmitmsg = "request route"+";"+vehicleindex+";"+"end";
-send(transmitmsg,main.cloudserver);
-transmitfinished=true]]></Action>
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[0.1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -5917,41 +5883,7 @@ transmitfinished=true]]></Action>
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[receptioncloud=true;]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="state1" ParentStateId="1714138516185">
-					<Id>1714138528386</Id>
-					<Name><![CDATA[transition4]]></Name>
-					<X>380</X><Y>250</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>30</X><Y>30</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1714138516185" Target="1714138516185" Trigger="timeout">
-						<Action><![CDATA[String[] message = receivedmsg.split(";");
-transmitmsg = "recommended route"+";"+ message[1]+";"+message[2];
-send(transmitmsg,main.cars.get(Integer.valueOf(message[2])));
-transmissionv2=true;]]></Action>
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[0.1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
+						<Condition><![CDATA[receptioncloud==true;]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -5979,8 +5911,6 @@ transmissionv2=true;]]></Action>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1714138516185" Target="1713788393420" Trigger="condition">
-						<Action><![CDATA[//initialize variable
-receptioncloud=false;]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -6307,8 +6237,10 @@ receptioncloud=false;]]></Action>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[transmitmsg = "recommendation"+";"+String.valueOf(vehicleindex)+";"+roadsegments.get(0)+";"+roadsegments.get(1)+";";
-System.out.println("vehicle index transmmitted"+vehicleindex);
+						<EntryAction><![CDATA[String[] message = receivedmsg.split(";");
+vehicleindex = Integer.valueOf(message[2]);
+transmitmsg = "recommendation"+";"+message[1]+";"+message[2]+";"+roadsegments.get(0)+";"+roadsegments.get(1)+";";
+//System.out.println("vehicle index transmmitted"+vehicleindex);
 send(transmitmsg,main.networkaccess);
 processfinished=true;]]></EntryAction>
 						<FillColor/>
@@ -6343,10 +6275,11 @@ processfinished=true;]]></EntryAction>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1714123761098" Target="1714123761100" Trigger="message">
-						<Action><![CDATA[System.out.println("cloud reception okay");
+						<Action><![CDATA[//System.out.println("cloud reception okay");
 receivedmsg=msg;
 String[] message = receivedmsg.split(";");
 vehicleindex = Integer.valueOf(message[1]);
+//System.out.println("vehileindex cloud: "+message[1]);
 if(message[0].equals("request route")) 	
 	{    
 	  System.out.println("cloud received message"+receivedmsg);
