@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 17
+Bundle-Description: Access to the Neo4j graph database through Java
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Neo4j Java Driver
+Bundle-SymbolicName: org.neo4j.driver.neo4j-java-driver
+Bundle-Version: 5.20.0.v20240507-1835
+Created-By: Apache Maven Bundle Plugin 5.1.8
+Export-Package: neo4j;version="5.20.0"
+Implementation-Version: 5.20.0-${build.revision}
+Package: org/neo4j/driver
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+Tool: Bnd-6.3.1.202206071316
