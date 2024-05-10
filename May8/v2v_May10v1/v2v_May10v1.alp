@@ -7,7 +7,7 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.0.202404161236" AlpVersion="8.9.0">
 <Model>
 	<Id>1713352799334</Id>
-	<Name><![CDATA[v2v_May8v2]]></Name>
+	<Name><![CDATA[v2v_May10v1]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[v2v]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Second]]></ModelTimeUnit>
@@ -37,26 +37,27 @@ String password = "dff8fkGG2";
   //  var result = driver.executableQuery("CREATE (n)").execute();
    // System.out.println(result.summary().counters().nodesCreated());
 //}
-String connectionUrl =
-    "jdbc:sqlserver://localhost:1433;" +
-     "databaseName=AdventureWorks;integratedSecurity=true;" +
-     "encrypt=true;trustServerCertificate=true";
-//access a SQL server
-String dbURL = "jdbc:sqlserver://demo-mssql\\SQLEXPRESS02;encrypt=true;trustServerCertificate=true;databaseName=DemoDatabase";
-String user = "sa";
-String pass = "123";
-//"jdbc:sqlserver://" +serverName + ":1433;DatabaseName=" + dbName + ";encrypt=true;trustServerCertificate=true;
 
+String dbURL = "jdbc:mysql://localhost:3306/jdbcvideo";
+String user = "root";
+String pass = "926521071vV#";
 
-        int totalRowsAffected = 0; // Declaration and initialization of totalRowsAffected variable
+try {
+    // Register MySQL JDBC driver
+    //Class.forName("com.mysql.cj.jdbc.Driver");
 
-        try {
-            Connection connection = DriverManager.getConnection(dbURL, user, pass);
-            
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-]]></StartupCode>
+    // Establish connection
+    Connection connection = DriverManager.getConnection(dbURL, user, pass);
+    java.sql.Statement statement = connection.createStatement();
+    java.sql.ResultSet resultSet = statement.executeQuery("SELECT * FROM people");
+
+    while (resultSet.next()) {
+        System.out.println(resultSet.getString("firstname") + " " + resultSet.getString("id"));
+    }
+}  catch (SQLException e) {
+    // Handle SQL exception
+    e.printStackTrace();
+}]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1713352799347</Id>
@@ -6825,6 +6826,11 @@ if(message[0].equals("request route"))
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 			<Location>FILE_SYSTEM</Location>
 		</Resource>
+		<Resource>
+			<Path><![CDATA[mysql-connector-j-8.4.0.jar]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
+		</Resource>
 	</ModelResources>
     <RequiredLibraryReference>
 		<LibraryName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></LibraryName>
@@ -6888,6 +6894,14 @@ if(message[0].equals("request route"))
 		<ResourceReference>
 			<PackageName><![CDATA[v2v]]></PackageName>
 			<ClassName><![CDATA[mssql-jdbc-8.2.2.jre8.jar]]></ClassName>
+		</ResourceReference>
+		<Imported>true</Imported>
+		<Folder>false</Folder>
+	</ClassPathEntry>
+	<ClassPathEntry>
+		<ResourceReference>
+			<PackageName><![CDATA[v2v]]></PackageName>
+			<ClassName><![CDATA[mysql-connector-j-8.4.0.jar]]></ClassName>
 		</ResourceReference>
 		<Imported>true</Imported>
 		<Folder>false</Folder>
