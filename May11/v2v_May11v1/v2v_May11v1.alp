@@ -7,7 +7,7 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.0.202404161236" AlpVersion="8.9.0">
 <Model>
 	<Id>1713352799334</Id>
-	<Name><![CDATA[v2v_May10v1]]></Name>
+	<Name><![CDATA[v2v_May11v1]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[v2v]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Second]]></ModelTimeUnit>
@@ -23,11 +23,12 @@ import org.neo4j.driver.GraphDatabase;
 import org.neo4j.driver.Session;
 import org.neo4j.driver.Result;
 import org.neo4j.driver.Record;
+import org.neo4j.jdbc.http.HttpDriver;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.*;
-]]></Import>
+import java.sql.SQLException;]]></Import>
 			<StartupCode><![CDATA[String dbURL = "jdbc:mysql://localhost:3306/jdbcvideo";
 String user = "root";
 String pass = "926521071vV#";
@@ -48,17 +49,23 @@ try {
     // Handle SQL exception
     e.printStackTrace();
 }
-
-String uri = "jdbc:neo4j://localhost:7474";
+//reference:https://neo4j.com/blog/neo4j-jdbc-driver-3-0-3-and-3-1-0-released/
+String uri = "jdbc:neo4j:http://localhost:7687";
 String username = "neo4j";
 String password = "dff8fkGG2";
         
-var authToken = AuthTokens.basic(username, password);
-try (var driver = GraphDatabase.driver(uri, authToken)) 
-{
-  var result = driver.executableQuery("CREATE (n)").execute();
-  System.out.println(result.summary().counters().nodesCreated());
-}  ]]></StartupCode>
+
+try (Connection con = DriverManager.getConnection(uri, username, password)) {
+    // Your code for interacting with the database goes here
+    con.setReadOnly(true);
+    String sql = "MATCH (n) RETURN n LIMIT 25";
+    //var result = DriverManager.executableQuery("CREATE (n)").execute();
+    //System.out.println(result.summary().counters().nodesCreated());
+    
+} catch (SQLException e) {
+    // Handle the SQLException
+    e.printStackTrace();
+} ]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1713352799347</Id>
@@ -5772,11 +5779,107 @@ color=red;
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1715587313956</Id>
+					<Name><![CDATA[bandwidth]]></Name>
+					<X>620</X><Y>-190</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1715587323586</Id>
+					<Name><![CDATA[channelid]]></Name>
+					<X>620</X><Y>-160</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1715587334291</Id>
+					<Name><![CDATA[transnmissionpower]]></Name>
+					<X>620</X><Y>-130</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1715587355891</Id>
+					<Name><![CDATA[receivedpower]]></Name>
+					<X>620</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1715587379171</Id>
+					<Name><![CDATA[resourceRB]]></Name>
+					<X>620</X><Y>-70</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1715587410115</Id>
+					<Name><![CDATA[datarate]]></Name>
+					<X>620</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1715587420321</Id>
+					<Name><![CDATA[latency]]></Name>
+					<X>620</X><Y>70</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1715587438762</Id>
+					<Name><![CDATA[packetlossrate]]></Name>
+					<X>620</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
 			</Variables>
 			<StatechartElements>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1713788393420</Id>
-					<Name><![CDATA[state]]></Name>
+					<Name><![CDATA[idle]]></Name>
 					<X>260</X><Y>90</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -5792,7 +5895,7 @@ receptioncloud=false;]]></EntryAction>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1713948211784</Id>
 					<Name><![CDATA[Receive]]></Name>
-					<X>340</X><Y>170</Y>
+					<X>350</X><Y>170</Y>
 					<Label><X>12</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5805,11 +5908,11 @@ receptioncloud=false;]]></EntryAction>
 					<Id>1714029614857</Id>
 					<Name><![CDATA[TransmitToCloud]]></Name>
 					<X>160</X><Y>170</Y>
-					<Label><X>10</X><Y>12</Y></Label>
+					<Label><X>10</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30">
+					<Properties Width="150" Height="30">
 						<EntryAction><![CDATA[String[] message = receivedmsg.split(";");
 if(message[0].equals("emergency")) 	
 	{    
@@ -5829,12 +5932,12 @@ if(message[0].equals("emergency"))
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1714138516185</Id>
 					<Name><![CDATA[TransmitToCar]]></Name>
-					<X>330</X><Y>250</Y>
+					<X>340</X><Y>250</Y>
 					<Label><X>20</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="30">
+					<Properties Width="160" Height="30">
 						<EntryAction><![CDATA[String[] message = receivedmsg.split(";");
 if (message[0].equals("recommendation")) {
     //transmit msg: vehicleindex,roadsegments.get(0),roadsegments.get(1);
@@ -5855,7 +5958,7 @@ if (message[0].equals("recommendation")) {
 				</StatechartElement>
 				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
 					<Id>1713788395128</Id>
-					<Name><![CDATA[statechart]]></Name>
+					<Name><![CDATA[switchon]]></Name>
 					<X>310</X><Y>50</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -5878,7 +5981,7 @@ if (message[0].equals("recommendation")) {
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>70</X><Y>50</Y></Point>
+						<Point><X>80</X><Y>50</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1713788393420" Target="1713948211784" Trigger="message">
@@ -5916,14 +6019,14 @@ else if (message[0].equals("recommendation"))
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1713948315344</Id>
 					<Name><![CDATA[transition]]></Name>
-					<X>340</X><Y>180</Y>
+					<X>350</X><Y>180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-80</X><Y>0</Y></Point>
+						<Point><X>-40</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1713948211784" Target="1714029614857" Trigger="condition">
@@ -5977,7 +6080,7 @@ else if (message[0].equals("recommendation"))
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1714138504018</Id>
 					<Name><![CDATA[transition3]]></Name>
-					<X>370</X><Y>200</Y>
+					<X>380</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6007,16 +6110,16 @@ else if (message[0].equals("recommendation"))
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1714139257734</Id>
 					<Name><![CDATA[transition5]]></Name>
-					<X>430</X><Y>260</Y>
+					<X>500</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>100</X><Y>0</Y></Point>
-						<Point><X>100</X><Y>-150</Y></Point>
-						<Point><X>-70</X><Y>-160</Y></Point>
+						<Point><X>30</X><Y>0</Y></Point>
+						<Point><X>30</X><Y>-150</Y></Point>
+						<Point><X>-140</X><Y>-160</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1714138516185" Target="1713788393420" Trigger="condition">
@@ -6054,7 +6157,7 @@ else if (message[0].equals("recommendation"))
 					<StatechartReference>
 						<PackageName><![CDATA[v2v]]></PackageName>
 						<ClassName><![CDATA[networkaccess]]></ClassName>
-						<ItemName><![CDATA[statechart]]></ItemName>
+						<ItemName><![CDATA[switchon]]></ItemName>
 					</StatechartReference>
 					<DrawLine>true</DrawLine>
 					<LineStyle>SOLID</LineStyle>
@@ -6827,6 +6930,16 @@ if(message[0].equals("request route"))
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 			<Location>FILE_SYSTEM</Location>
 		</Resource>
+		<Resource>
+			<Path><![CDATA[neo4j-jdbc-driver-3.0.3.jar]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
+		</Resource>
+		<Resource>
+			<Path><![CDATA[neo4j-jdbc-http-3.0.3.jar]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
+		</Resource>
 	</ModelResources>
     <RequiredLibraryReference>
 		<LibraryName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></LibraryName>
@@ -6890,6 +7003,22 @@ if(message[0].equals("request route"))
 		<ResourceReference>
 			<PackageName><![CDATA[v2v]]></PackageName>
 			<ClassName><![CDATA[mysql-connector-j-8.4.0.jar]]></ClassName>
+		</ResourceReference>
+		<Imported>true</Imported>
+		<Folder>false</Folder>
+	</ClassPathEntry>
+	<ClassPathEntry>
+		<ResourceReference>
+			<PackageName><![CDATA[v2v]]></PackageName>
+			<ClassName><![CDATA[neo4j-jdbc-driver-3.0.3.jar]]></ClassName>
+		</ResourceReference>
+		<Imported>true</Imported>
+		<Folder>false</Folder>
+	</ClassPathEntry>
+	<ClassPathEntry>
+		<ResourceReference>
+			<PackageName><![CDATA[v2v]]></PackageName>
+			<ClassName><![CDATA[neo4j-jdbc-http-3.0.3.jar]]></ClassName>
 		</ResourceReference>
 		<Imported>true</Imported>
 		<Folder>false</Folder>

@@ -28,7 +28,17 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.*;
 ]]></Import>
-			<StartupCode><![CDATA[String dbURL = "jdbc:mysql://localhost:3306/jdbcvideo";
+			<StartupCode><![CDATA[String uri = "http://localhost:7474";
+String username = "neo4j";
+String password = "dff8fkGG2";
+        
+//var authToken = AuthTokens.basic(username, password);
+//try (var driver = GraphDatabase.driver(uri, authToken)) {
+  //  var result = driver.executableQuery("CREATE (n)").execute();
+   // System.out.println(result.summary().counters().nodesCreated());
+//}
+
+String dbURL = "jdbc:mysql://localhost:3306/jdbcvideo";
 String user = "root";
 String pass = "926521071vV#";
 
@@ -47,18 +57,7 @@ try {
 }  catch (SQLException e) {
     // Handle SQL exception
     e.printStackTrace();
-}
-
-String uri = "jdbc:neo4j://localhost:7474";
-String username = "neo4j";
-String password = "dff8fkGG2";
-        
-var authToken = AuthTokens.basic(username, password);
-try (var driver = GraphDatabase.driver(uri, authToken)) 
-{
-  var result = driver.executableQuery("CREATE (n)").execute();
-  System.out.println(result.summary().counters().nodesCreated());
-}  ]]></StartupCode>
+}]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1713352799347</Id>
@@ -6823,6 +6822,11 @@ if(message[0].equals("request route"))
 			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
+			<Path><![CDATA[mssql-jdbc-8.2.2.jre8.jar]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
+		</Resource>
+		<Resource>
 			<Path><![CDATA[mysql-connector-j-8.4.0.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 			<Location>FILE_SYSTEM</Location>
@@ -6882,6 +6886,14 @@ if(message[0].equals("request route"))
 		<ResourceReference>
 			<PackageName><![CDATA[v2v]]></PackageName>
 			<ClassName><![CDATA[slf4j-api-1.7.36.jar]]></ClassName>
+		</ResourceReference>
+		<Imported>true</Imported>
+		<Folder>false</Folder>
+	</ClassPathEntry>
+	<ClassPathEntry>
+		<ResourceReference>
+			<PackageName><![CDATA[v2v]]></PackageName>
+			<ClassName><![CDATA[mssql-jdbc-8.2.2.jre8.jar]]></ClassName>
 		</ResourceReference>
 		<Imported>true</Imported>
 		<Folder>false</Folder>
