@@ -204,31 +204,14 @@ applyNetwork();]]></BeforeStepCode>
 				<DefaultState>YELLOW</DefaultState>
 			</TrafficLight>
 			<TrafficLight>
-				<Id>1716533272389</Id>
+				<Id>1716797042345</Id>
 				<Name><![CDATA[trafficLight1]]></Name>
-				<X>290</X><Y>705</Y>
+				<X>300</X><Y>800</Y>
 				<Label><X>0</X><Y>-20</Y></Label>
 				<PublicFlag>true</PublicFlag>
 				<PresentationFlag>true</PresentationFlag>
 				<ShowLabel>true</ShowLabel>
-				<Type>JUNCTION_DIRECTION_LINES</Type>
-				<Junction>1714137299729</Junction>
-				<Line>1714137299939</Line>
-				<Line>1714137299941</Line>
-				<Line>1714137316303</Line>
-				<Line>1714137316305</Line>
-				<Line>1714137316307</Line>
-				<Line>1714137316309</Line>
-				<Line>1714137316317</Line>
-				<Line>1714137316319</Line>
-				<Line>1716533697831</Line>
-				<Line>1716533697833</Line>
-				<Line>1716533697835</Line>
-				<Line>1716533697837</Line>
-				<Line>1716533697839</Line>
-				<Line>1716533697841</Line>
-				<Line>1716533697843</Line>
-				<Line>1716533697845</Line>
+				<Type>JUNCTION_STOP_LINES</Type>
 				<Duration Class="CodeValue">
 					<Code><![CDATA[10]]></Code>
 				</Duration>
@@ -238,57 +221,21 @@ applyNetwork();]]></BeforeStepCode>
 				<Duration Class="CodeValue">
 					<Code><![CDATA[10]]></Code>
 				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[3]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[10]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[3]]></Code>
+				</Duration>
 				<DefaultState>RED</DefaultState>
 				<DefaultState>YELLOW</DefaultState>
 				<DefaultState>RED</DefaultState>
-				<State>GREEN</State>
-				<State>YELLOW</State>
-				<State>RED</State>
-				<State>GREEN</State>
-				<State>YELLOW</State>
-				<State>RED</State>
-				<State>RED</State>
-				<State>YELLOW</State>
-				<State>RED</State>
-				<State>RED</State>
-				<State>YELLOW</State>
-				<State>RED</State>
-				<State>GREEN</State>
-				<State>YELLOW</State>
-				<State>RED</State>
-				<State>GREEN</State>
-				<State>YELLOW</State>
-				<State>RED</State>
-				<State>RED</State>
-				<State>YELLOW</State>
-				<State>RED</State>
-				<State>RED</State>
-				<State>YELLOW</State>
-				<State>RED</State>
-				<State>GREEN</State>
-				<State>YELLOW</State>
-				<State>GREEN</State>
-				<State>GREEN</State>
-				<State>YELLOW</State>
-				<State>GREEN</State>
-				<State>GREEN</State>
-				<State>YELLOW</State>
-				<State>RED</State>
-				<State>RED</State>
-				<State>YELLOW</State>
-				<State>GREEN</State>
-				<State>RED</State>
-				<State>YELLOW</State>
-				<State>GREEN</State>
-				<State>GREEN</State>
-				<State>YELLOW</State>
-				<State>RED</State>
-				<State>GREEN</State>
-				<State>YELLOW</State>
-				<State>RED</State>
-				<State>RED</State>
-				<State>YELLOW</State>
-				<State>RED</State>
+				<DefaultState>YELLOW</DefaultState>
+				<DefaultState>RED</DefaultState>
+				<DefaultState>YELLOW</DefaultState>
 			</TrafficLight>
 			<Variables>
 				<Variable Class="PlainVariable">
@@ -317,7 +264,7 @@ applyNetwork();]]></BeforeStepCode>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[int]]></Type>        
 						<InitialValue Class="CodeValue">
-							<Code><![CDATA[10000000]]></Code>
+							<Code><![CDATA[100000000]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
@@ -386,7 +333,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1713354703320</Id>
 					<Name><![CDATA[connector1]]></Name>
-					<X>865</X><Y>155</Y>
+					<X>1055</X><Y>155</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -422,7 +369,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1713354774435</Id>
 					<Name><![CDATA[connector]]></Name>
-					<X>865</X><Y>55</Y>
+					<X>1055</X><Y>55</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -455,7 +402,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1713354774437</Id>
 					<Name><![CDATA[connector2]]></Name>
-					<X>750</X><Y>55</Y>
+					<X>940</X><Y>55</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -473,7 +420,7 @@ applyNetwork();]]></BeforeStepCode>
 					<TargetEmbeddedObjectReference>
 						<PackageName><![CDATA[v2v]]></PackageName>
 						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carSource]]></ItemName>
+						<ItemName><![CDATA[carSource_Road]]></ItemName>
 					</TargetEmbeddedObjectReference>
 					<TargetConnectableItemReference>
 						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
@@ -488,7 +435,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1713354845130</Id>
 					<Name><![CDATA[connector3]]></Name>
-					<X>770</X><Y>75</Y>
+					<X>960</X><Y>75</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -523,7 +470,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1713354855467</Id>
 					<Name><![CDATA[connector4]]></Name>
-					<X>905</X><Y>155</Y>
+					<X>1095</X><Y>155</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -558,7 +505,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1713354884507</Id>
 					<Name><![CDATA[connector5]]></Name>
-					<X>770</X><Y>95</Y>
+					<X>960</X><Y>95</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -593,7 +540,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1713354909963</Id>
 					<Name><![CDATA[connector6]]></Name>
-					<X>905</X><Y>210</Y>
+					<X>1095</X><Y>210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -629,7 +576,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1713355277640</Id>
 					<Name><![CDATA[connector7]]></Name>
-					<X>1110</X><Y>55</Y>
+					<X>1300</X><Y>55</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -662,7 +609,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1713355431756</Id>
 					<Name><![CDATA[connector9]]></Name>
-					<X>870</X><Y>400</Y>
+					<X>1060</X><Y>400</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -695,7 +642,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1713355452774</Id>
 					<Name><![CDATA[connector11]]></Name>
-					<X>865</X><Y>495</Y>
+					<X>1055</X><Y>495</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -730,7 +677,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1713355478073</Id>
 					<Name><![CDATA[connector12]]></Name>
-					<X>865</X><Y>580</Y>
+					<X>1055</X><Y>580</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -766,7 +713,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1713355612088</Id>
 					<Name><![CDATA[connector13]]></Name>
-					<X>905</X><Y>580</Y>
+					<X>1095</X><Y>580</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -803,7 +750,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1713355646055</Id>
 					<Name><![CDATA[connector14]]></Name>
-					<X>905</X><Y>495</Y>
+					<X>1095</X><Y>495</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -840,7 +787,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1713355665016</Id>
 					<Name><![CDATA[connector15]]></Name>
-					<X>910</X><Y>400</Y>
+					<X>1100</X><Y>400</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -876,7 +823,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1713355835782</Id>
 					<Name><![CDATA[connector10]]></Name>
-					<X>865</X><Y>155</Y>
+					<X>1055</X><Y>155</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -912,7 +859,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1716388163371</Id>
 					<Name><![CDATA[connector16]]></Name>
-					<X>865</X><Y>495</Y>
+					<X>1055</X><Y>495</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -949,7 +896,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1716388314945</Id>
 					<Name><![CDATA[connector17]]></Name>
-					<X>865</X><Y>580</Y>
+					<X>1055</X><Y>580</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -986,7 +933,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1716447909080</Id>
 					<Name><![CDATA[connector8]]></Name>
-					<X>740</X><Y>400</Y>
+					<X>930</X><Y>400</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1019,7 +966,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1716448075275</Id>
 					<Name><![CDATA[connector18]]></Name>
-					<X>870</X><Y>660</Y>
+					<X>1060</X><Y>660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1052,7 +999,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1716448075277</Id>
 					<Name><![CDATA[connector19]]></Name>
-					<X>865</X><Y>755</Y>
+					<X>1055</X><Y>755</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1087,7 +1034,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1716448075279</Id>
 					<Name><![CDATA[connector20]]></Name>
-					<X>865</X><Y>840</Y>
+					<X>1055</X><Y>840</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1123,7 +1070,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1716448075281</Id>
 					<Name><![CDATA[connector21]]></Name>
-					<X>865</X><Y>755</Y>
+					<X>1055</X><Y>755</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1160,7 +1107,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1716448075283</Id>
 					<Name><![CDATA[connector22]]></Name>
-					<X>865</X><Y>840</Y>
+					<X>1055</X><Y>840</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1197,7 +1144,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1716448075285</Id>
 					<Name><![CDATA[connector23]]></Name>
-					<X>740</X><Y>660</Y>
+					<X>930</X><Y>660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1230,7 +1177,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1716448348497</Id>
 					<Name><![CDATA[connector24]]></Name>
-					<X>910</X><Y>660</Y>
+					<X>1100</X><Y>660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1265,7 +1212,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1716448430466</Id>
 					<Name><![CDATA[connector25]]></Name>
-					<X>905</X><Y>755</Y>
+					<X>1095</X><Y>755</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1301,7 +1248,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1716448490546</Id>
 					<Name><![CDATA[connector26]]></Name>
-					<X>905</X><Y>840</Y>
+					<X>1095</X><Y>840</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1336,7 +1283,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1716452073804</Id>
 					<Name><![CDATA[connector27]]></Name>
-					<X>865</X><Y>495</Y>
+					<X>1055</X><Y>495</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1372,7 +1319,7 @@ applyNetwork();]]></BeforeStepCode>
 				<Connector>
 					<Id>1716533800999</Id>
 					<Name><![CDATA[connector28]]></Name>
-					<X>870</X><Y>660</Y>
+					<X>1060</X><Y>660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1403,6 +1350,677 @@ applyNetwork();]]></BeforeStepCode>
 						<Point><X>-50</X><Y>220</Y></Point>
 						<Point><X>25</X><Y>220</Y></Point>
 						<Point><X>25</X><Y>190</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716796562196</Id>
+					<Name><![CDATA[connector29]]></Name>
+					<X>1140</X><Y>960</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo9]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[selectOutput8]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[SelectOutput5]]></ClassName>
+						<ItemName><![CDATA[out1]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-110</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716796562198</Id>
+					<Name><![CDATA[connector30]]></Name>
+					<X>1135</X><Y>1055</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo10]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[selectOutput8]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[SelectOutput5]]></ClassName>
+						<ItemName><![CDATA[out2]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-65</X><Y>0</Y></Point>
+						<Point><X>-65</X><Y>-75</Y></Point>
+						<Point><X>-105</X><Y>-75</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716796562200</Id>
+					<Name><![CDATA[connector31]]></Name>
+					<X>1135</X><Y>1140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo11]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[selectOutput8]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[SelectOutput5]]></ClassName>
+						<ItemName><![CDATA[out3]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-85</X><Y>0</Y></Point>
+						<Point><X>-85</X><Y>-65</Y></Point>
+						<Point><X>-85</X><Y>-140</Y></Point>
+						<Point><X>-105</X><Y>-140</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716796562204</Id>
+					<Name><![CDATA[connector33]]></Name>
+					<X>1135</X><Y>1140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo11]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo10]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[outWayNotFound]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-30</X><Y>0</Y></Point>
+						<Point><X>-30</X><Y>-20</Y></Point>
+						<Point><X>-30</X><Y>-50</Y></Point>
+						<Point><X>30</X><Y>-50</Y></Point>
+						<Point><X>30</X><Y>-75</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716796562206</Id>
+					<Name><![CDATA[connector34]]></Name>
+					<X>1010</X><Y>960</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[selectOutput8]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[SelectOutput5]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carSource4]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarSource]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-100</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716796562208</Id>
+					<Name><![CDATA[connector35]]></Name>
+					<X>1140</X><Y>960</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo9]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo11]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[outWayNotFound]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-50</X><Y>0</Y></Point>
+						<Point><X>-50</X><Y>220</Y></Point>
+						<Point><X>25</X><Y>220</Y></Point>
+						<Point><X>25</X><Y>190</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716796562202</Id>
+					<Name><![CDATA[connector32]]></Name>
+					<X>1135</X><Y>1055</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo10]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo9]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[outWayNotFound]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-30</X><Y>0</Y></Point>
+						<Point><X>-30</X><Y>-25</Y></Point>
+						<Point><X>-30</X><Y>-55</Y></Point>
+						<Point><X>35</X><Y>-55</Y></Point>
+						<Point><X>35</X><Y>-85</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716796770060</Id>
+					<Name><![CDATA[connector36]]></Name>
+					<X>1180</X><Y>960</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo9]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carDispose]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarDispose]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>70</X><Y>0</Y></Point>
+						<Point><X>70</X><Y>-905</Y></Point>
+						<Point><X>120</X><Y>-905</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716796805438</Id>
+					<Name><![CDATA[connector37]]></Name>
+					<X>1175</X><Y>1055</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo10]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carDispose]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarDispose]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>75</X><Y>0</Y></Point>
+						<Point><X>75</X><Y>-1000</Y></Point>
+						<Point><X>125</X><Y>-1000</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716796823582</Id>
+					<Name><![CDATA[connector38]]></Name>
+					<X>1175</X><Y>1140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo11]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carDispose]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarDispose]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>75</X><Y>0</Y></Point>
+						<Point><X>75</X><Y>-1085</Y></Point>
+						<Point><X>125</X><Y>-1085</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716798529340</Id>
+					<Name><![CDATA[connector39]]></Name>
+					<X>1075</X><Y>-155</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo13]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo12]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[outWayNotFound]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-15</X><Y>0</Y></Point>
+						<Point><X>-15</X><Y>-60</Y></Point>
+						<Point><X>30</X><Y>-60</Y></Point>
+						<Point><X>30</X><Y>-90</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716798529342</Id>
+					<Name><![CDATA[connector40]]></Name>
+					<X>1075</X><Y>-255</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo12]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[selectOutput9]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[SelectOutput5]]></ClassName>
+						<ItemName><![CDATA[out1]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-95</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716798529344</Id>
+					<Name><![CDATA[connector41]]></Name>
+					<X>960</X><Y>-255</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[selectOutput9]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[SelectOutput5]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carSource_Road1]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarSource]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-100</X><Y>0</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716798529346</Id>
+					<Name><![CDATA[connector42]]></Name>
+					<X>980</X><Y>-235</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[selectOutput9]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[SelectOutput5]]></ClassName>
+						<ItemName><![CDATA[out2]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo13]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>60</X><Y>0</Y></Point>
+						<Point><X>60</X><Y>80</Y></Point>
+						<Point><X>95</X><Y>80</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716798529348</Id>
+					<Name><![CDATA[connector43]]></Name>
+					<X>980</X><Y>-215</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[selectOutput9]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[SelectOutput5]]></ClassName>
+						<ItemName><![CDATA[out3]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo14]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>40</X><Y>0</Y></Point>
+						<Point><X>40</X><Y>115</Y></Point>
+						<Point><X>95</X><Y>115</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716798529350</Id>
+					<Name><![CDATA[connector44]]></Name>
+					<X>1075</X><Y>-155</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo13]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo14]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[outWayNotFound]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-25</X><Y>0</Y></Point>
+						<Point><X>-25</X><Y>110</Y></Point>
+						<Point><X>30</X><Y>110</Y></Point>
+						<Point><X>30</X><Y>65</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716798609305</Id>
+					<Name><![CDATA[connector45]]></Name>
+					<X>1115</X><Y>-255</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo12]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carDispose]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarDispose]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>80</X><Y>0</Y></Point>
+						<Point><X>95</X><Y>0</Y></Point>
+						<Point><X>110</X><Y>0</Y></Point>
+						<Point><X>110</X><Y>310</Y></Point>
+						<Point><X>185</X><Y>310</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716798709446</Id>
+					<Name><![CDATA[connector46]]></Name>
+					<X>1115</X><Y>-155</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo13]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carDispose]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarDispose]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>90</X><Y>0</Y></Point>
+						<Point><X>100</X><Y>0</Y></Point>
+						<Point><X>110</X><Y>0</Y></Point>
+						<Point><X>110</X><Y>210</Y></Point>
+						<Point><X>185</X><Y>210</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1716798852104</Id>
+					<Name><![CDATA[connector47]]></Name>
+					<X>1115</X><Y>-100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo14]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[v2v]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carDispose]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarDispose]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>90</X><Y>0</Y></Point>
+						<Point><X>100</X><Y>0</Y></Point>
+						<Point><X>110</X><Y>0</Y></Point>
+						<Point><X>110</X><Y>155</Y></Point>
+						<Point><X>185</X><Y>155</Y></Point>
 					</Points>
 				</Connector>
 			</Connectors>
@@ -1495,9 +2113,9 @@ applyNetwork();]]></BeforeStepCode>
 			<EmbeddedObjects>
 				<EmbeddedObject>
 					<Id>1713354628089</Id>
-					<Name><![CDATA[carSource]]></Name>
-					<X>620</X><Y>55</Y>
-					<Label><X>-25</X><Y>-35</Y></Label>
+					<Name><![CDATA[carSource_Road]]></Name>
+					<X>810</X><Y>55</Y>
+					<Label><X>-66</X><Y>-37</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -1515,14 +2133,11 @@ applyNetwork();]]></BeforeStepCode>
 					<Parameters>
 						<Parameter>
 							<Name><![CDATA[arrivalType]]></Name>
-							<Value Class="CodeValue">
-								<Code><![CDATA[self.INTERARRIVAL_TIME]]></Code>
-							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[nbvehicles]]></Code>
+								<Code><![CDATA[100000000]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_MILLISECOND]]></Unit>
 							</Value>
 						</Parameter>
@@ -1727,7 +2342,7 @@ applyNetwork();]]></BeforeStepCode>
 				<EmbeddedObject>
 					<Id>1713354653209</Id>
 					<Name><![CDATA[carMoveTo]]></Name>
-					<X>865</X><Y>45</Y>
+					<X>1055</X><Y>45</Y>
 					<Label><X>-30</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1827,7 +2442,7 @@ applyNetwork();]]></BeforeStepCode>
 				<EmbeddedObject>
 					<Id>1713354699585</Id>
 					<Name><![CDATA[carDispose]]></Name>
-					<X>1110</X><Y>55</Y>
+					<X>1300</X><Y>55</Y>
 					<Label><X>-45</X><Y>-35</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1895,7 +2510,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<EmbeddedObject>
 					<Id>1713354772930</Id>
 					<Name><![CDATA[selectOutput5]]></Name>
-					<X>740</X><Y>45</Y>
+					<X>930</X><Y>45</Y>
 					<Label><X>-45</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2012,7 +2627,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<EmbeddedObject>
 					<Id>1713354805126</Id>
 					<Name><![CDATA[carMoveTo1]]></Name>
-					<X>865</X><Y>145</Y>
+					<X>1055</X><Y>145</Y>
 					<Label><X>-30</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2105,7 +2720,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<EmbeddedObject>
 					<Id>1713354899180</Id>
 					<Name><![CDATA[carMoveTo2]]></Name>
-					<X>865</X><Y>200</Y>
+					<X>1055</X><Y>200</Y>
 					<Label><X>-30</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2198,7 +2813,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<EmbeddedObject>
 					<Id>1713355410378</Id>
 					<Name><![CDATA[selectOutput6]]></Name>
-					<X>730</X><Y>390</Y>
+					<X>920</X><Y>390</Y>
 					<Label><X>-45</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2315,7 +2930,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<EmbeddedObject>
 					<Id>1713355418075</Id>
 					<Name><![CDATA[carMoveTo3]]></Name>
-					<X>870</X><Y>390</Y>
+					<X>1060</X><Y>390</Y>
 					<Label><X>-30</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2411,7 +3026,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<EmbeddedObject>
 					<Id>1713355424395</Id>
 					<Name><![CDATA[carMoveTo4]]></Name>
-					<X>865</X><Y>485</Y>
+					<X>1055</X><Y>485</Y>
 					<Label><X>-30</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2507,7 +3122,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<EmbeddedObject>
 					<Id>1713355470651</Id>
 					<Name><![CDATA[carMoveTo5]]></Name>
-					<X>865</X><Y>570</Y>
+					<X>1055</X><Y>570</Y>
 					<Label><X>-30</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2666,7 +3281,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<EmbeddedObject>
 					<Id>1713512473187</Id>
 					<Name><![CDATA[roadNetworkDescriptor]]></Name>
-					<X>935</X><Y>-90</Y>
+					<X>685</X><Y>-205</Y>
 					<Label><X>-90</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2932,7 +3547,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<EmbeddedObject>
 					<Id>1716388671308</Id>
 					<Name><![CDATA[carSource2]]></Name>
-					<X>610</X><Y>400</Y>
+					<X>800</X><Y>400</Y>
 					<Label><X>-25</X><Y>-35</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3163,7 +3778,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<EmbeddedObject>
 					<Id>1716448075164</Id>
 					<Name><![CDATA[selectOutput7]]></Name>
-					<X>730</X><Y>650</Y>
+					<X>920</X><Y>650</Y>
 					<Label><X>-45</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3280,7 +3895,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<EmbeddedObject>
 					<Id>1716448075185</Id>
 					<Name><![CDATA[carMoveTo6]]></Name>
-					<X>870</X><Y>650</Y>
+					<X>1060</X><Y>650</Y>
 					<Label><X>-30</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3376,7 +3991,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<EmbeddedObject>
 					<Id>1716448075200</Id>
 					<Name><![CDATA[carMoveTo7]]></Name>
-					<X>865</X><Y>745</Y>
+					<X>1055</X><Y>745</Y>
 					<Label><X>-30</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3469,7 +4084,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<EmbeddedObject>
 					<Id>1716448075219</Id>
 					<Name><![CDATA[carMoveTo8]]></Name>
-					<X>865</X><Y>830</Y>
+					<X>1055</X><Y>830</Y>
 					<Label><X>-30</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3562,7 +4177,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<EmbeddedObject>
 					<Id>1716448075238</Id>
 					<Name><![CDATA[carSource3]]></Name>
-					<X>610</X><Y>660</Y>
+					<X>800</X><Y>660</Y>
 					<Label><X>-25</X><Y>-35</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3790,6 +4405,1267 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<QuantityColumn>
 					</QuantityColumn>
 				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1716796562096</Id>
+					<Name><![CDATA[selectOutput8]]></Name>
+					<X>1000</X><Y>950</Y>
+					<Label><X>-45</X><Y>-25</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[SelectOutput5]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+							<ClassName><![CDATA[SelectOutput5]]></ClassName>
+							<ItemName><![CDATA[1412336243132]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[type]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[condition1]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[condition2]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[condition3]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[condition4]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[probability1]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[probability2]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[probability3]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[probability4]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[0]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[probability5]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[0]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[exitNumber]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit1]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit2]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit3]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit4]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit5]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1716796562117</Id>
+					<Name><![CDATA[carMoveTo9]]></Name>
+					<X>1140</X><Y>950</Y>
+					<Label><X>-30</X><Y>-25</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+							<ClassName><![CDATA[CarMoveTo]]></ClassName>
+							<ItemName><![CDATA[1431084833294]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[movesTo]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[road]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[road]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[destination]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.END_OF_BACKWARD_LANE]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[parkingLot]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[stopLine]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[busStop]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[stopLineBehavior]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onWayNotFound]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1716796562131</Id>
+					<Name><![CDATA[carMoveTo10]]></Name>
+					<X>1135</X><Y>1045</Y>
+					<Label><X>-30</X><Y>-25</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+							<ClassName><![CDATA[CarMoveTo]]></ClassName>
+							<ItemName><![CDATA[1431084833294]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[movesTo]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[road]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[road2]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[destination]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[parkingLot]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[stopLine]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[busStop]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[stopLineBehavior]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onWayNotFound]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1716796562145</Id>
+					<Name><![CDATA[carMoveTo11]]></Name>
+					<X>1135</X><Y>1130</Y>
+					<Label><X>-30</X><Y>-25</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+							<ClassName><![CDATA[CarMoveTo]]></ClassName>
+							<ItemName><![CDATA[1431084833294]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[movesTo]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[road]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[road2]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[destination]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[parkingLot]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[stopLine]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[busStop]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[stopLineBehavior]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onWayNotFound]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1716796562159</Id>
+					<Name><![CDATA[carSource4]]></Name>
+					<X>880</X><Y>960</Y>
+					<Label><X>-25</X><Y>-35</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarSource]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+							<ClassName><![CDATA[CarSource]]></ClassName>
+							<ItemName><![CDATA[1424253364560]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[arrivalType]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.INTERARRIVAL_TIME]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[rate]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[nbvehicles]]></Code>
+								<Unit Class="RateUnits"><![CDATA[PER_MILLISECOND]]></Unit>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[interarrivalTime]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[0.00000001]]></Code>
+								<Unit Class="TimeUnits"><![CDATA[MILLISECOND]]></Unit>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[rateSchedule]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[modifyRate]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[rateExpression]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[arrivalSchedule]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[setAgentParametersFromDB]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[databaseTable]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[arrivalDate]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[limitArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maxArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[1000000]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[appears]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[road]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[road1]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[laneDirection]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[isRandomLane]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[laneIndex]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[parkingLot]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[newCar]]></Name>
+							<Value Class="EntityCodeValue">
+								<IsAgentEntity>true</IsAgentEntity>
+								<EntityEmbeddedObject>
+									<ActiveObjectClass>
+										<PackageName><![CDATA[v2v]]></PackageName>
+										<ClassName><![CDATA[Car]]></ClassName>
+									</ActiveObjectClass>
+									<GenericParameterSubstitute>
+										<GenericParameterSubstituteReference>
+											<PackageName><![CDATA[v2v]]></PackageName>
+											<ClassName><![CDATA[Car]]></ClassName>
+											<ItemName><![CDATA[1713356434635]]></ItemName>
+										</GenericParameterSubstituteReference>
+									</GenericParameterSubstitute>
+									<Parameters>
+									</Parameters>
+									<ReplicationFlag>true</ReplicationFlag>
+									<Replication Class="CodeValue">
+										<Code><![CDATA[100]]></Code>
+									</Replication>
+									<CollectionType>ARRAY_LIST_BASED</CollectionType>
+									<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+									<XCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</XCode>
+									<YCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</YCode>
+									<ZCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</ZCode>
+									<ColumnCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</ColumnCode>
+									<RowCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</RowCode>
+									<LatitudeCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</LatitudeCode>
+									<LongitudeCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</LongitudeCode>
+									<LocationNameCode Class="CodeValue">
+										<Code><![CDATA[""]]></Code>
+									</LocationNameCode>
+									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
+									<InitializationDatabaseTableQuery>
+										<TableReference>
+										</TableReference>
+									</InitializationDatabaseTableQuery>
+									<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+									<QuantityColumn>
+									</QuantityColumn>
+								</EntityEmbeddedObject>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[length]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[initialSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[100]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[preferredSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[100]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maxAcceleration]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maxDeceleration]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[addCarToCustomPopulation]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[carPopulation]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[cars]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[nbvehicles]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1716798529240</Id>
+					<Name><![CDATA[carSource_Road1]]></Name>
+					<X>830</X><Y>-255</Y>
+					<Label><X>-66</X><Y>-37</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarSource]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+							<ClassName><![CDATA[CarSource]]></ClassName>
+							<ItemName><![CDATA[1424253364560]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[arrivalType]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[rate]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[100000000]]></Code>
+								<Unit Class="RateUnits"><![CDATA[PER_MILLISECOND]]></Unit>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[interarrivalTime]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[0.00000001]]></Code>
+								<Unit Class="TimeUnits"><![CDATA[MILLISECOND]]></Unit>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[rateSchedule]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[modifyRate]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[rateExpression]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[arrivalSchedule]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[setAgentParametersFromDB]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[databaseTable]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[arrivalDate]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[limitArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maxArrivals]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[1000000000]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[appears]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[road]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[road]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[laneDirection]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[isRandomLane]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[laneIndex]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[parkingLot]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[newCar]]></Name>
+							<Value Class="EntityCodeValue">
+								<IsAgentEntity>true</IsAgentEntity>
+								<EntityEmbeddedObject>
+									<ActiveObjectClass>
+										<PackageName><![CDATA[v2v]]></PackageName>
+										<ClassName><![CDATA[Car]]></ClassName>
+									</ActiveObjectClass>
+									<GenericParameterSubstitute>
+										<GenericParameterSubstituteReference>
+											<PackageName><![CDATA[v2v]]></PackageName>
+											<ClassName><![CDATA[Car]]></ClassName>
+											<ItemName><![CDATA[1713356434635]]></ItemName>
+										</GenericParameterSubstituteReference>
+									</GenericParameterSubstitute>
+									<Parameters>
+									</Parameters>
+									<ReplicationFlag>true</ReplicationFlag>
+									<Replication Class="CodeValue">
+										<Code><![CDATA[100]]></Code>
+									</Replication>
+									<CollectionType>ARRAY_LIST_BASED</CollectionType>
+									<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+									<XCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</XCode>
+									<YCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</YCode>
+									<ZCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</ZCode>
+									<ColumnCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</ColumnCode>
+									<RowCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</RowCode>
+									<LatitudeCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</LatitudeCode>
+									<LongitudeCode Class="CodeValue">
+										<Code><![CDATA[0]]></Code>
+									</LongitudeCode>
+									<LocationNameCode Class="CodeValue">
+										<Code><![CDATA[""]]></Code>
+									</LocationNameCode>
+									<InitializationType>LOAD_FROM_DATABASE</InitializationType>
+									<InitializationDatabaseTableQuery>
+										<TableReference>
+										</TableReference>
+									</InitializationDatabaseTableQuery>
+									<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+									<QuantityColumn>
+									</QuantityColumn>
+								</EntityEmbeddedObject>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[length]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[initialSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[100]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[preferredSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[100]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maxAcceleration]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[maxDeceleration]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[addCarToCustomPopulation]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[true]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[carPopulation]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[cars]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[nbvehicles]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1716798529279</Id>
+					<Name><![CDATA[carMoveTo12]]></Name>
+					<X>1075</X><Y>-265</Y>
+					<Label><X>-30</X><Y>-25</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+							<ClassName><![CDATA[CarMoveTo]]></ClassName>
+							<ItemName><![CDATA[1431084833294]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[movesTo]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[road]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[road1]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[destination]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.END_OF_BACKWARD_LANE]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[parkingLot]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[stopLine]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[busStop]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[stopLineBehavior]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[//System.out.println("enter X coordinates: "+this.getX());
+]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onWayNotFound]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1716798529293</Id>
+					<Name><![CDATA[selectOutput9]]></Name>
+					<X>950</X><Y>-265</Y>
+					<Label><X>-45</X><Y>-25</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[SelectOutput5]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+							<ClassName><![CDATA[SelectOutput5]]></ClassName>
+							<ItemName><![CDATA[1412336243132]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[type]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[condition1]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[condition2]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[condition3]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[condition4]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[probability1]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[probability2]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[probability3]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[probability4]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[0]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[probability5]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[0]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[exitNumber]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit1]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit2]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit3]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit4]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit5]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1716798529314</Id>
+					<Name><![CDATA[carMoveTo13]]></Name>
+					<X>1075</X><Y>-165</Y>
+					<Label><X>-30</X><Y>-25</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+							<ClassName><![CDATA[CarMoveTo]]></ClassName>
+							<ItemName><![CDATA[1431084833294]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[movesTo]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[road]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[road2]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[destination]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[parkingLot]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[stopLine]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[busStop]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[stopLineBehavior]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onWayNotFound]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
+				<EmbeddedObject>
+					<Id>1716798529328</Id>
+					<Name><![CDATA[carMoveTo14]]></Name>
+					<X>1075</X><Y>-110</Y>
+					<Label><X>-30</X><Y>-25</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParameterSubstitute>
+						<GenericParameterSubstituteReference>
+							<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+							<ClassName><![CDATA[CarMoveTo]]></ClassName>
+							<ItemName><![CDATA[1431084833294]]></ItemName>
+						</GenericParameterSubstituteReference>
+					</GenericParameterSubstitute>
+					<Parameters>
+						<Parameter>
+							<Name><![CDATA[movesTo]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[road]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[road3]]></Code>
+							</Value>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[destination]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[parkingLot]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[stopLine]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[busStop]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[stopLineBehavior]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onEnter]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onExit]]></Name>
+						</Parameter>
+						<Parameter>
+							<Name><![CDATA[onWayNotFound]]></Name>
+						</Parameter>
+					</Parameters>
+					<ReplicationFlag>false</ReplicationFlag>
+					<Replication Class="CodeValue">
+						<Code><![CDATA[100]]></Code>
+					</Replication>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<XCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</XCode>
+					<YCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</YCode>
+					<ZCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ZCode>
+					<ColumnCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</ColumnCode>
+					<RowCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</RowCode>
+					<LatitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LatitudeCode>
+					<LongitudeCode Class="CodeValue">
+						<Code><![CDATA[0]]></Code>
+					</LongitudeCode>
+					<LocationNameCode Class="CodeValue">
+						<Code><![CDATA[""]]></Code>
+					</LocationNameCode>
+					<InitializationType>SPECIFIED_NUMBER</InitializationType>
+					<InitializationDatabaseTableQuery>
+						<TableReference>
+						</TableReference>
+					</InitializationDatabaseTableQuery>
+					<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+					<QuantityColumn>
+					</QuantityColumn>
+				</EmbeddedObject>
 			</EmbeddedObjects>
 
 			<Presentation>
@@ -3830,606 +5706,10 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<SignalStateAnimationVisible>true</SignalStateAnimationVisible>
 
 			<Presentation>
-				<RoadJunction>
-					<Id>1714137299729</Id>
-					<Name><![CDATA[intersection1]]></Name>
-					<X>250</X><Y>775</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<FakeNode>false</FakeNode>
-
-			<Presentation>
-				<LaneConnector SourceId="1714137297919" TargetId="1714137297919">
-					<Id>1714137299939</Id>
-					<Name><![CDATA[laneConnector36]]></Name>
-					<X>212.66666666666666</X><Y>782</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.33333333333334</X><Y>-7</Y></Point>
-						<Point><X>10</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-28</Y></Point>
-						<Point><X>10</X><Y>-28</Y></Point>
-						<Point><X>37.33333333333334</X><Y>-7</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1714137297919" TargetId="1714137297919">
-					<Id>1714137299941</Id>
-					<Name><![CDATA[laneConnector37]]></Name>
-					<X>212.66666666666666</X><Y>782</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.33333333333334</X><Y>-7</Y></Point>
-						<Point><X>10</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-14</Y></Point>
-						<Point><X>10</X><Y>-14</Y></Point>
-						<Point><X>37.33333333333334</X><Y>-7</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1714137310345" TargetId="1714137297919">
-					<Id>1714137316303</Id>
-					<Name><![CDATA[laneConnector48]]></Name>
-					<X>280</X><Y>754</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-30</X><Y>21</Y></Point>
-						<Point><X>-10</X><Y>0</Y></Point>
-						<Point><X>-67.33333333333334</X><Y>0</Y></Point>
-						<Point><X>-57.33333333333334</X><Y>0</Y></Point>
-						<Point><X>-30</X><Y>21</Y></Point>
-					</Points>
-					<SourceLane>0</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1714137310345" TargetId="1714137297919">
-					<Id>1714137316305</Id>
-					<Name><![CDATA[laneConnector49]]></Name>
-					<X>280</X><Y>768</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-30</X><Y>7</Y></Point>
-						<Point><X>-10</X><Y>0</Y></Point>
-						<Point><X>-67.33333333333334</X><Y>0</Y></Point>
-						<Point><X>-57.33333333333334</X><Y>0</Y></Point>
-						<Point><X>-30</X><Y>7</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1714137297919" TargetId="1714137310345">
-					<Id>1714137316307</Id>
-					<Name><![CDATA[laneConnector50]]></Name>
-					<X>212.66666666666666</X><Y>796</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.33333333333334</X><Y>-21</Y></Point>
-						<Point><X>10</X><Y>0</Y></Point>
-						<Point><X>67.33333333333334</X><Y>0</Y></Point>
-						<Point><X>57.33333333333334</X><Y>0</Y></Point>
-						<Point><X>37.33333333333334</X><Y>-21</Y></Point>
-					</Points>
-					<SourceLane>0</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1714137297919" TargetId="1714137310345">
-					<Id>1714137316309</Id>
-					<Name><![CDATA[laneConnector51]]></Name>
-					<X>212.66666666666666</X><Y>782</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.33333333333334</X><Y>-7</Y></Point>
-						<Point><X>10</X><Y>0</Y></Point>
-						<Point><X>67.33333333333334</X><Y>0</Y></Point>
-						<Point><X>57.33333333333334</X><Y>0</Y></Point>
-						<Point><X>37.33333333333334</X><Y>-7</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1714137310345" TargetId="1714137310345">
-					<Id>1714137316317</Id>
-					<Name><![CDATA[laneConnector55]]></Name>
-					<X>280</X><Y>768</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-30</X><Y>7</Y></Point>
-						<Point><X>-10</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>28</Y></Point>
-						<Point><X>-10</X><Y>28</Y></Point>
-						<Point><X>-30</X><Y>7</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1714137310345" TargetId="1714137310345">
-					<Id>1714137316319</Id>
-					<Name><![CDATA[laneConnector56]]></Name>
-					<X>280</X><Y>768</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-30</X><Y>7</Y></Point>
-						<Point><X>-10</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>14</Y></Point>
-						<Point><X>-10</X><Y>14</Y></Point>
-						<Point><X>-30</X><Y>7</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1716533628537" TargetId="1716533628537">
-					<Id>1716533697831</Id>
-					<Name><![CDATA[laneConnector29]]></Name>
-					<X>243</X><Y>750.0003333333332</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>7</X><Y>24.999666666666826</Y></Point>
-						<Point><X>0</X><Y>10</Y></Point>
-						<Point><X>28</X><Y>0</Y></Point>
-						<Point><X>28</X><Y>10</Y></Point>
-						<Point><X>7</X><Y>24.999666666666826</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1716533628537" TargetId="1716533628537">
-					<Id>1716533697833</Id>
-					<Name><![CDATA[laneConnector30]]></Name>
-					<X>243</X><Y>750.0003333333332</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>7</X><Y>24.999666666666826</Y></Point>
-						<Point><X>0</X><Y>10</Y></Point>
-						<Point><X>14</X><Y>0</Y></Point>
-						<Point><X>14</X><Y>10</Y></Point>
-						<Point><X>7</X><Y>24.999666666666826</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1716533628537" TargetId="1714137297919">
-					<Id>1716533697835</Id>
-					<Name><![CDATA[laneConnector31]]></Name>
-					<X>229</X><Y>750.0003333333332</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>21</X><Y>24.999666666666826</Y></Point>
-						<Point><X>0</X><Y>10</Y></Point>
-						<Point><X>-3.9996666666667693</X><Y>3.999666666666826</Y></Point>
-						<Point><X>6.000333333333231</X><Y>3.999666666666826</Y></Point>
-						<Point><X>-3.9996666666667693</X><Y>3.999666666666826</Y></Point>
-						<Point><X>-16.333333333333343</X><Y>3.999666666666826</Y></Point>
-						<Point><X>-16.333333333333343</X><Y>3.999666666666826</Y></Point>
-						<Point><X>21</X><Y>24.999666666666826</Y></Point>
-					</Points>
-					<SourceLane>0</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1714137297919" TargetId="1716533628537">
-					<Id>1716533697837</Id>
-					<Name><![CDATA[laneConnector32]]></Name>
-					<X>212.66666666666666</X><Y>782</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.33333333333334</X><Y>-7</Y></Point>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>26.333666666666574</X><Y>0</Y></Point>
-						<Point><X>26.333666666666574</X><Y>0</Y></Point>
-						<Point><X>36.33366666666657</X><Y>0</Y></Point>
-						<Point><X>58.33333333333334</X><Y>-31.999666666666826</Y></Point>
-						<Point><X>58.33333333333334</X><Y>-21.999666666666826</Y></Point>
-						<Point><X>37.33333333333334</X><Y>-7</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1714137297919" TargetId="1716533628537">
-					<Id>1716533697839</Id>
-					<Name><![CDATA[laneConnector33]]></Name>
-					<X>212.66666666666666</X><Y>782</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.33333333333334</X><Y>-7</Y></Point>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>12.333666666666574</X><Y>0</Y></Point>
-						<Point><X>12.333666666666574</X><Y>0</Y></Point>
-						<Point><X>22.333666666666574</X><Y>0</Y></Point>
-						<Point><X>44.33333333333334</X><Y>-31.999666666666826</Y></Point>
-						<Point><X>44.33333333333334</X><Y>-21.999666666666826</Y></Point>
-						<Point><X>37.33333333333334</X><Y>-7</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1716533628537" TargetId="1714137310345">
-					<Id>1716533697841</Id>
-					<Name><![CDATA[laneConnector34]]></Name>
-					<X>243</X><Y>750.0003333333332</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>7</X><Y>24.999666666666826</Y></Point>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>8.999666666666826</Y></Point>
-						<Point><X>0</X><Y>8.999666666666826</Y></Point>
-						<Point><X>0</X><Y>18.999666666666826</Y></Point>
-						<Point><X>37</X><Y>45.999666666666826</Y></Point>
-						<Point><X>27</X><Y>45.999666666666826</Y></Point>
-						<Point><X>7</X><Y>24.999666666666826</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1716533628537" TargetId="1714137310345">
-					<Id>1716533697843</Id>
-					<Name><![CDATA[laneConnector35]]></Name>
-					<X>243</X><Y>750.0003333333332</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>7</X><Y>24.999666666666826</Y></Point>
-						<Point><X>0</X><Y>10</Y></Point>
-						<Point><X>31.99966666666677</X><Y>31.999666666666826</Y></Point>
-						<Point><X>21.99966666666677</X><Y>31.999666666666826</Y></Point>
-						<Point><X>31.99966666666677</X><Y>31.999666666666826</Y></Point>
-						<Point><X>37</X><Y>31.999666666666826</Y></Point>
-						<Point><X>37</X><Y>31.999666666666826</Y></Point>
-						<Point><X>7</X><Y>24.999666666666826</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1714137310345" TargetId="1716533628537">
-					<Id>1716533697845</Id>
-					<Name><![CDATA[laneConnector38]]></Name>
-					<X>280</X><Y>754</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-30</X><Y>21</Y></Point>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-5.000333333333231</X><Y>0</Y></Point>
-						<Point><X>-5.000333333333231</X><Y>0</Y></Point>
-						<Point><X>-15.00033333333323</X><Y>0</Y></Point>
-						<Point><X>-9</X><Y>-3.999666666666826</Y></Point>
-						<Point><X>-9</X><Y>6.000333333333174</Y></Point>
-						<Point><X>-30</X><Y>21</Y></Point>
-					</Points>
-					<SourceLane>0</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-			</Presentation>
-
-				</RoadJunction>
-				<Road TargetId="1714137299729">
-					<Id>1714137297919</Id>
-					<Name><![CDATA[road4]]></Name>
-					<X>0</X><Y>775</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<DelimiterWidth Class="UnitValue">
-						<Value Class="Double">0</Value>
-						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
-					</DelimiterWidth>
-					<RoadDelimiterColor>-16744448</RoadDelimiterColor>
-					<RoadDelimiterMaterial>null</RoadDelimiterMaterial>
-					<ForwardLanesCount>2</ForwardLanesCount>
-					<Bidirectional>true</Bidirectional>
-					<BackwardLanesCount>2</BackwardLanesCount>
-					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>212.66666666666666</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>187.66666666666666</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>237.66666666666666</X><Y>0</Y><Z>0</Z></Point>
-					</Points>
-
-			<Presentation>
-				<RoadStopline>
-					<Id>1714137299959</Id>
-					<Name><![CDATA[stopLine5]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>204.66666666666666</Offset>
-					<OnForwardSide>true</OnForwardSide>
-					<LeftLane>2</LeftLane>
-					<RightLane>0</RightLane>
-					<Junction>1714137299729</Junction>
-					<StartSpeedLimitSign>false</StartSpeedLimitSign>
-					<SpeedLimitValue Class="UnitValue">
-						<Value Class="Double">40</Value>
-						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
-					</SpeedLimitValue>
-					<YieldSign>false</YieldSign>
-					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
-					<EmbeddedObject>
-						<ActiveObjectClass>
-							<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
-							<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
-						</ActiveObjectClass>
-						<GenericParameterSubstitute>
-							<GenericParameterSubstituteReference>
-								<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
-								<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
-								<ItemName><![CDATA[1587667461380]]></ItemName>
-							</GenericParameterSubstituteReference>
-						</GenericParameterSubstitute>
-						<Parameters>
-							<Parameter>
-								<Name><![CDATA[onCarPassed]]></Name>
-							</Parameter>
-						</Parameters>
-						<ReplicationFlag>false</ReplicationFlag>
-						<Replication Class="CodeValue">
-							<Code><![CDATA[100]]></Code>
-						</Replication>
-						<CollectionType>ARRAY_LIST_BASED</CollectionType>
-						<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-						<XCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</XCode>
-						<YCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</YCode>
-						<ZCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</ZCode>
-						<ColumnCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</ColumnCode>
-						<RowCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</RowCode>
-						<LatitudeCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</LatitudeCode>
-						<LongitudeCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</LongitudeCode>
-						<LocationNameCode Class="CodeValue">
-							<Code><![CDATA[""]]></Code>
-						</LocationNameCode>
-						<InitializationType>SPECIFIED_NUMBER</InitializationType>
-						<InitializationDatabaseTableQuery>
-							<TableReference>
-							</TableReference>
-						</InitializationDatabaseTableQuery>
-						<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-						<QuantityColumn>
-						</QuantityColumn>
-					</EmbeddedObject>
-				</RoadStopline>
-			</Presentation>
-
-				</Road>
-				<Road SourceId="1714137299729">
-					<Id>1714137310345</Id>
-					<Name><![CDATA[road6]]></Name>
-					<X>280</X><Y>775</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<DelimiterWidth Class="UnitValue">
-						<Value Class="Double">0</Value>
-						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
-					</DelimiterWidth>
-					<RoadDelimiterColor>-16744448</RoadDelimiterColor>
-					<RoadDelimiterMaterial>null</RoadDelimiterMaterial>
-					<ForwardLanesCount>2</ForwardLanesCount>
-					<Bidirectional>true</Bidirectional>
-					<BackwardLanesCount>2</BackwardLanesCount>
-					<Points>
-						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>230</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>205</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>255</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>235</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>210</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>260</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>245</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>220</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>220</X><Y>0</Y><Z>0</Z></Point>
-					</Points>
-
-			<Presentation>
-				<RoadStopline>
-					<Id>1714137316321</Id>
-					<Name><![CDATA[stopLine7]]></Name>
-					<X>0</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>8.0</Offset>
-					<OnForwardSide>false</OnForwardSide>
-					<LeftLane>2</LeftLane>
-					<RightLane>0</RightLane>
-					<Junction>1714137299729</Junction>
-					<StartSpeedLimitSign>false</StartSpeedLimitSign>
-					<SpeedLimitValue Class="UnitValue">
-						<Value Class="Double">40</Value>
-						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
-					</SpeedLimitValue>
-					<YieldSign>false</YieldSign>
-					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
-					<EmbeddedObject>
-						<ActiveObjectClass>
-							<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
-							<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
-						</ActiveObjectClass>
-						<GenericParameterSubstitute>
-							<GenericParameterSubstituteReference>
-								<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
-								<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
-								<ItemName><![CDATA[1587667461380]]></ItemName>
-							</GenericParameterSubstituteReference>
-						</GenericParameterSubstitute>
-						<Parameters>
-							<Parameter>
-								<Name><![CDATA[onCarPassed]]></Name>
-							</Parameter>
-						</Parameters>
-						<ReplicationFlag>false</ReplicationFlag>
-						<Replication Class="CodeValue">
-							<Code><![CDATA[100]]></Code>
-						</Replication>
-						<CollectionType>ARRAY_LIST_BASED</CollectionType>
-						<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-						<XCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</XCode>
-						<YCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</YCode>
-						<ZCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</ZCode>
-						<ColumnCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</ColumnCode>
-						<RowCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</RowCode>
-						<LatitudeCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</LatitudeCode>
-						<LongitudeCode Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</LongitudeCode>
-						<LocationNameCode Class="CodeValue">
-							<Code><![CDATA[""]]></Code>
-						</LocationNameCode>
-						<InitializationType>SPECIFIED_NUMBER</InitializationType>
-						<InitializationDatabaseTableQuery>
-							<TableReference>
-							</TableReference>
-						</InitializationDatabaseTableQuery>
-						<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
-						<QuantityColumn>
-						</QuantityColumn>
-					</EmbeddedObject>
-				</RoadStopline>
-			</Presentation>
-
-				</Road>
-				<Road SourceId="1716533628534" TargetId="1714137299729">
+				<Road SourceId="1716533628534" TargetId="1716795124416">
 					<Id>1716533628537</Id>
 					<Name><![CDATA[road2]]></Name>
-					<X>250</X><Y>257.3333333333333</Y>
+					<X>250</X><Y>270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4449,9 +5729,9 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>492.667</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>467.667</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>467.667</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>572.6666666666666</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>547.6666666666666</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>597.6666666666666</Y><Z>0</Z></Point>
 					</Points>
 
 			<Presentation>
@@ -4534,7 +5814,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					</EmbeddedObject>
 				</RoadStopline>
 				<RoadStopline>
-					<Id>1716533697847</Id>
+					<Id>1716795124447</Id>
 					<Name><![CDATA[stopLine4]]></Name>
 					<X>0</X><Y>0</Y>
 					<Label><X>10</X><Y>0</Y></Label>
@@ -4542,11 +5822,11 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>484.667</Offset>
+					<Offset>564.6666666666666</Offset>
 					<OnForwardSide>true</OnForwardSide>
 					<LeftLane>2</LeftLane>
 					<RightLane>0</RightLane>
-					<Junction>1714137299729</Junction>
+					<Junction>1716795124416</Junction>
 					<StartSpeedLimitSign>false</StartSpeedLimitSign>
 					<SpeedLimitValue Class="UnitValue">
 						<Value Class="Double">40</Value>
@@ -4630,7 +5910,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1713354045780" TargetId="1713354045780">
 					<Id>1716533628538</Id>
 					<Name><![CDATA[laneConnector1]]></Name>
-					<X>243</X><Y>182.66666666666669</Y>
+					<X>243</X><Y>182.66699999999992</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4639,11 +5919,11 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>7</X><Y>37.333333333333314</Y></Point>
+						<Point><X>7</X><Y>37.333000000000084</Y></Point>
 						<Point><X>0</X><Y>10</Y></Point>
 						<Point><X>28</X><Y>0</Y></Point>
 						<Point><X>28</X><Y>10</Y></Point>
-						<Point><X>7</X><Y>37.333333333333314</Y></Point>
+						<Point><X>7</X><Y>37.333000000000084</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -4651,7 +5931,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1713354045780" TargetId="1713354045780">
 					<Id>1716533628540</Id>
 					<Name><![CDATA[laneConnector2]]></Name>
-					<X>243</X><Y>182.66666666666669</Y>
+					<X>243</X><Y>182.66699999999992</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4660,11 +5940,11 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>7</X><Y>37.333333333333314</Y></Point>
+						<Point><X>7</X><Y>37.333000000000084</Y></Point>
 						<Point><X>0</X><Y>10</Y></Point>
 						<Point><X>14</X><Y>0</Y></Point>
 						<Point><X>14</X><Y>10</Y></Point>
-						<Point><X>7</X><Y>37.333333333333314</Y></Point>
+						<Point><X>7</X><Y>37.333000000000084</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>1</TargetLane>
@@ -4672,7 +5952,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1713354045780" TargetId="1716533626215">
 					<Id>1716533628542</Id>
 					<Name><![CDATA[laneConnector3]]></Name>
-					<X>229</X><Y>182.66666666666669</Y>
+					<X>229</X><Y>182.66699999999992</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4681,14 +5961,11 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>21</X><Y>37.333333333333314</Y></Point>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>3.3333333331597714E-4</Y></Point>
-						<Point><X>0</X><Y>3.3333333331597714E-4</Y></Point>
-						<Point><X>0</X><Y>10.000333333333316</Y></Point>
-						<Point><X>-16.333</X><Y>16.333333333333314</Y></Point>
-						<Point><X>-6.332999999999998</X><Y>16.333333333333314</Y></Point>
-						<Point><X>21</X><Y>37.333333333333314</Y></Point>
+						<Point><X>21</X><Y>37.333000000000084</Y></Point>
+						<Point><X>0</X><Y>10</Y></Point>
+						<Point><X>-16.333000000000084</X><Y>16.333000000000084</Y></Point>
+						<Point><X>-6.333000000000084</X><Y>16.333000000000084</Y></Point>
+						<Point><X>21</X><Y>37.333000000000084</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -4696,7 +5973,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1713354045780" TargetId="1716533628537">
 					<Id>1716533628544</Id>
 					<Name><![CDATA[laneConnector4]]></Name>
-					<X>229</X><Y>182.66666666666669</Y>
+					<X>229</X><Y>182.66699999999992</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4705,11 +5982,11 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>21</X><Y>37.333333333333314</Y></Point>
+						<Point><X>21</X><Y>37.333000000000084</Y></Point>
 						<Point><X>0</X><Y>10</Y></Point>
-						<Point><X>0</X><Y>74.66666666666663</Y></Point>
-						<Point><X>0</X><Y>64.66666666666663</Y></Point>
-						<Point><X>21</X><Y>37.333333333333314</Y></Point>
+						<Point><X>0</X><Y>87.33300000000008</Y></Point>
+						<Point><X>0</X><Y>77.33300000000008</Y></Point>
+						<Point><X>21</X><Y>37.333000000000084</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -4717,7 +5994,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1713354045780" TargetId="1716533628537">
 					<Id>1716533628546</Id>
 					<Name><![CDATA[laneConnector5]]></Name>
-					<X>243</X><Y>182.66666666666669</Y>
+					<X>243</X><Y>182.66699999999992</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4726,11 +6003,11 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>7</X><Y>37.333333333333314</Y></Point>
+						<Point><X>7</X><Y>37.333000000000084</Y></Point>
 						<Point><X>0</X><Y>10</Y></Point>
-						<Point><X>0</X><Y>74.66666666666663</Y></Point>
-						<Point><X>0</X><Y>64.66666666666663</Y></Point>
-						<Point><X>7</X><Y>37.333333333333314</Y></Point>
+						<Point><X>0</X><Y>87.33300000000008</Y></Point>
+						<Point><X>0</X><Y>77.33300000000008</Y></Point>
+						<Point><X>7</X><Y>37.333000000000084</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>1</TargetLane>
@@ -4738,7 +6015,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1716533626215" TargetId="1713354045780">
 					<Id>1716533628548</Id>
 					<Name><![CDATA[laneConnector6]]></Name>
-					<X>212.667</X><Y>227</Y>
+					<X>212.66699999999992</X><Y>227</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4747,14 +6024,14 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.333</X><Y>-7</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-7</Y></Point>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>13.999666666666684</X><Y>0</Y></Point>
-						<Point><X>13.999666666666684</X><Y>0</Y></Point>
-						<Point><X>23.999666666666684</X><Y>0</Y></Point>
-						<Point><X>58.333</X><Y>-44.333333333333314</Y></Point>
-						<Point><X>58.333</X><Y>-34.333333333333314</Y></Point>
-						<Point><X>37.333</X><Y>-7</Y></Point>
+						<Point><X>14</X><Y>0</Y></Point>
+						<Point><X>14</X><Y>0</Y></Point>
+						<Point><X>24</X><Y>0</Y></Point>
+						<Point><X>58.333000000000084</X><Y>-44.333000000000084</Y></Point>
+						<Point><X>58.333000000000084</X><Y>-34.333000000000084</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-7</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -4762,7 +6039,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1716533626215" TargetId="1713354045780">
 					<Id>1716533628550</Id>
 					<Name><![CDATA[laneConnector7]]></Name>
-					<X>212.667</X><Y>227</Y>
+					<X>212.66699999999992</X><Y>227</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4771,14 +6048,11 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.333</X><Y>-7</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-7</Y></Point>
 						<Point><X>10</X><Y>0</Y></Point>
-						<Point><X>44.333</X><Y>-44.333</Y></Point>
-						<Point><X>44.333</X><Y>-34.333</Y></Point>
-						<Point><X>44.333</X><Y>-44.333</Y></Point>
-						<Point><X>44.333</X><Y>-44.333333333333314</Y></Point>
-						<Point><X>44.333</X><Y>-44.333333333333314</Y></Point>
-						<Point><X>37.333</X><Y>-7</Y></Point>
+						<Point><X>44.333000000000084</X><Y>-44.333000000000084</Y></Point>
+						<Point><X>44.333000000000084</X><Y>-34.333000000000084</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-7</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>1</TargetLane>
@@ -4786,7 +6060,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1716533626215" TargetId="1716533626215">
 					<Id>1716533628552</Id>
 					<Name><![CDATA[laneConnector8]]></Name>
-					<X>212.667</X><Y>227</Y>
+					<X>212.66699999999992</X><Y>227</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4795,11 +6069,11 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.333</X><Y>-7</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-7</Y></Point>
 						<Point><X>10</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>-28</Y></Point>
 						<Point><X>10</X><Y>-28</Y></Point>
-						<Point><X>37.333</X><Y>-7</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-7</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -4807,7 +6081,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1716533626215" TargetId="1716533626215">
 					<Id>1716533628554</Id>
 					<Name><![CDATA[laneConnector9]]></Name>
-					<X>212.667</X><Y>227</Y>
+					<X>212.66699999999992</X><Y>227</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4816,11 +6090,11 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.333</X><Y>-7</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-7</Y></Point>
 						<Point><X>10</X><Y>0</Y></Point>
 						<Point><X>0</X><Y>-14</Y></Point>
 						<Point><X>10</X><Y>-14</Y></Point>
-						<Point><X>37.333</X><Y>-7</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-7</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>1</TargetLane>
@@ -4828,7 +6102,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1716533626215" TargetId="1716533628537">
 					<Id>1716533628556</Id>
 					<Name><![CDATA[laneConnector10]]></Name>
-					<X>212.667</X><Y>241</Y>
+					<X>212.66699999999992</X><Y>241</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4837,14 +6111,14 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.333</X><Y>-21</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-21</Y></Point>
 						<Point><X>10</X><Y>0</Y></Point>
-						<Point><X>16.333</X><Y>16.33299999999997</Y></Point>
-						<Point><X>16.333</X><Y>6.332999999999998</Y></Point>
-						<Point><X>16.333</X><Y>16.33299999999997</Y></Point>
-						<Point><X>16.333</X><Y>16.333333333333314</Y></Point>
-						<Point><X>16.333</X><Y>16.333333333333314</Y></Point>
-						<Point><X>37.333</X><Y>-21</Y></Point>
+						<Point><X>16.333000000000084</X><Y>16.333000000000084</Y></Point>
+						<Point><X>16.333000000000084</X><Y>6.333000000000084</Y></Point>
+						<Point><X>16.333000000000084</X><Y>16.333000000000084</Y></Point>
+						<Point><X>16.333000000000084</X><Y>29</Y></Point>
+						<Point><X>16.333000000000084</X><Y>29</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-21</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -4852,7 +6126,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1716533628537" TargetId="1713354045780">
 					<Id>1716533628558</Id>
 					<Name><![CDATA[laneConnector11]]></Name>
-					<X>271</X><Y>257.3333333333333</Y>
+					<X>271</X><Y>270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4861,11 +6135,11 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-21</X><Y>-37.333333333333314</Y></Point>
+						<Point><X>-21</X><Y>-50</Y></Point>
 						<Point><X>0</X><Y>-10</Y></Point>
-						<Point><X>0</X><Y>-74.66666666666663</Y></Point>
-						<Point><X>0</X><Y>-64.66666666666663</Y></Point>
-						<Point><X>-21</X><Y>-37.333333333333314</Y></Point>
+						<Point><X>0</X><Y>-87.33300000000008</Y></Point>
+						<Point><X>0</X><Y>-77.33300000000008</Y></Point>
+						<Point><X>-21</X><Y>-50</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -4873,7 +6147,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1716533628537" TargetId="1713354045780">
 					<Id>1716533628560</Id>
 					<Name><![CDATA[laneConnector12]]></Name>
-					<X>257</X><Y>257.3333333333333</Y>
+					<X>257</X><Y>270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4882,11 +6156,11 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-7</X><Y>-37.333333333333314</Y></Point>
+						<Point><X>-7</X><Y>-50</Y></Point>
 						<Point><X>0</X><Y>-10</Y></Point>
-						<Point><X>0</X><Y>-74.66666666666663</Y></Point>
-						<Point><X>0</X><Y>-64.66666666666663</Y></Point>
-						<Point><X>-7</X><Y>-37.333333333333314</Y></Point>
+						<Point><X>0</X><Y>-87.33300000000008</Y></Point>
+						<Point><X>0</X><Y>-77.33300000000008</Y></Point>
+						<Point><X>-7</X><Y>-50</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>1</TargetLane>
@@ -4894,7 +6168,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1716533628537" TargetId="1716533626215">
 					<Id>1716533628562</Id>
 					<Name><![CDATA[laneConnector13]]></Name>
-					<X>257</X><Y>257.3333333333333</Y>
+					<X>257</X><Y>270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4903,14 +6177,14 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-7</X><Y>-37.333333333333314</Y></Point>
+						<Point><X>-7</X><Y>-50</Y></Point>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-14.000333333333316</Y></Point>
-						<Point><X>0</X><Y>-14.000333333333316</Y></Point>
-						<Point><X>0</X><Y>-24.000333333333316</Y></Point>
-						<Point><X>-44.333</X><Y>-58.333333333333314</Y></Point>
-						<Point><X>-34.333</X><Y>-58.333333333333314</Y></Point>
-						<Point><X>-7</X><Y>-37.333333333333314</Y></Point>
+						<Point><X>0</X><Y>-26.666999999999916</Y></Point>
+						<Point><X>0</X><Y>-26.666999999999916</Y></Point>
+						<Point><X>0</X><Y>-36.666999999999916</Y></Point>
+						<Point><X>-44.333000000000084</X><Y>-71</Y></Point>
+						<Point><X>-34.333000000000084</X><Y>-71</Y></Point>
+						<Point><X>-7</X><Y>-50</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -4918,7 +6192,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1716533628537" TargetId="1716533626215">
 					<Id>1716533628564</Id>
 					<Name><![CDATA[laneConnector14]]></Name>
-					<X>257</X><Y>257.3333333333333</Y>
+					<X>257</X><Y>270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4927,14 +6201,14 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-7</X><Y>-37.333333333333314</Y></Point>
+						<Point><X>-7</X><Y>-50</Y></Point>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-3.3333333334439885E-4</Y></Point>
-						<Point><X>0</X><Y>-3.3333333334439885E-4</Y></Point>
-						<Point><X>0</X><Y>-10.000333333333316</Y></Point>
-						<Point><X>-44.333</X><Y>-44.333333333333314</Y></Point>
-						<Point><X>-34.333</X><Y>-44.333333333333314</Y></Point>
-						<Point><X>-7</X><Y>-37.333333333333314</Y></Point>
+						<Point><X>0</X><Y>-12.666999999999916</Y></Point>
+						<Point><X>0</X><Y>-12.666999999999916</Y></Point>
+						<Point><X>0</X><Y>-22.666999999999916</Y></Point>
+						<Point><X>-44.333000000000084</X><Y>-57</Y></Point>
+						<Point><X>-34.333000000000084</X><Y>-57</Y></Point>
+						<Point><X>-7</X><Y>-50</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>1</TargetLane>
@@ -4942,7 +6216,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1716533628537" TargetId="1716533628537">
 					<Id>1716533628566</Id>
 					<Name><![CDATA[laneConnector15]]></Name>
-					<X>257</X><Y>257.3333333333333</Y>
+					<X>257</X><Y>270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4951,11 +6225,11 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-7</X><Y>-37.333333333333314</Y></Point>
+						<Point><X>-7</X><Y>-50</Y></Point>
 						<Point><X>0</X><Y>-10</Y></Point>
 						<Point><X>-28</X><Y>0</Y></Point>
 						<Point><X>-28</X><Y>-10</Y></Point>
-						<Point><X>-7</X><Y>-37.333333333333314</Y></Point>
+						<Point><X>-7</X><Y>-50</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -4963,7 +6237,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1716533628537" TargetId="1716533628537">
 					<Id>1716533628568</Id>
 					<Name><![CDATA[laneConnector16]]></Name>
-					<X>257</X><Y>257.3333333333333</Y>
+					<X>257</X><Y>270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4972,11 +6246,11 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-7</X><Y>-37.333333333333314</Y></Point>
+						<Point><X>-7</X><Y>-50</Y></Point>
 						<Point><X>0</X><Y>-10</Y></Point>
 						<Point><X>-14</X><Y>0</Y></Point>
 						<Point><X>-14</X><Y>-10</Y></Point>
-						<Point><X>-7</X><Y>-37.333333333333314</Y></Point>
+						<Point><X>-7</X><Y>-50</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>1</TargetLane>
@@ -4998,8 +6272,8 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 						<Point><X>-9</X><Y>-9</Y></Point>
 						<Point><X>-9</X><Y>1</Y></Point>
 						<Point><X>-9</X><Y>-9</Y></Point>
-						<Point><X>-9</X><Y>-16.333333333333314</Y></Point>
-						<Point><X>-9</X><Y>-16.333333333333314</Y></Point>
+						<Point><X>-9</X><Y>-16.333000000000084</Y></Point>
+						<Point><X>-9</X><Y>-16.333000000000084</Y></Point>
 						<Point><X>-30</X><Y>21</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
@@ -5008,7 +6282,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1713354045780" TargetId="1716533644745">
 					<Id>1716533650314</Id>
 					<Name><![CDATA[laneConnector18]]></Name>
-					<X>243</X><Y>182.66666666666669</Y>
+					<X>243</X><Y>182.66699999999992</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5017,14 +6291,14 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>7</X><Y>37.333333333333314</Y></Point>
+						<Point><X>7</X><Y>37.333000000000084</Y></Point>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>21.333333333333314</Y></Point>
-						<Point><X>0</X><Y>21.333333333333314</Y></Point>
-						<Point><X>0</X><Y>31.333333333333314</Y></Point>
-						<Point><X>37</X><Y>58.333333333333314</Y></Point>
-						<Point><X>27</X><Y>58.333333333333314</Y></Point>
-						<Point><X>7</X><Y>37.333333333333314</Y></Point>
+						<Point><X>0</X><Y>21.333000000000084</Y></Point>
+						<Point><X>0</X><Y>21.333000000000084</Y></Point>
+						<Point><X>0</X><Y>31.333000000000084</Y></Point>
+						<Point><X>37</X><Y>58.333000000000084</Y></Point>
+						<Point><X>27</X><Y>58.333000000000084</Y></Point>
+						<Point><X>7</X><Y>37.333000000000084</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -5032,7 +6306,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1713354045780" TargetId="1716533644745">
 					<Id>1716533650316</Id>
 					<Name><![CDATA[laneConnector19]]></Name>
-					<X>243</X><Y>182.66666666666669</Y>
+					<X>243</X><Y>182.66699999999992</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5041,14 +6315,14 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>7</X><Y>37.333333333333314</Y></Point>
+						<Point><X>7</X><Y>37.333000000000084</Y></Point>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>7.333333333333314</Y></Point>
-						<Point><X>0</X><Y>7.333333333333314</Y></Point>
-						<Point><X>0</X><Y>17.333333333333314</Y></Point>
-						<Point><X>37</X><Y>44.333333333333314</Y></Point>
-						<Point><X>27</X><Y>44.333333333333314</Y></Point>
-						<Point><X>7</X><Y>37.333333333333314</Y></Point>
+						<Point><X>0</X><Y>7.333000000000084</Y></Point>
+						<Point><X>0</X><Y>7.333000000000084</Y></Point>
+						<Point><X>0</X><Y>17.333000000000084</Y></Point>
+						<Point><X>37</X><Y>44.333000000000084</Y></Point>
+						<Point><X>27</X><Y>44.333000000000084</Y></Point>
+						<Point><X>7</X><Y>37.333000000000084</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>1</TargetLane>
@@ -5067,8 +6341,8 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-30</X><Y>21</Y></Point>
 						<Point><X>-10</X><Y>0</Y></Point>
-						<Point><X>-67.333</X><Y>0</Y></Point>
-						<Point><X>-57.333</X><Y>0</Y></Point>
+						<Point><X>-67.33300000000008</X><Y>0</Y></Point>
+						<Point><X>-57.333000000000084</X><Y>0</Y></Point>
 						<Point><X>-30</X><Y>21</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
@@ -5088,8 +6362,8 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-30</X><Y>7</Y></Point>
 						<Point><X>-10</X><Y>0</Y></Point>
-						<Point><X>-67.333</X><Y>0</Y></Point>
-						<Point><X>-57.333</X><Y>0</Y></Point>
+						<Point><X>-67.33300000000008</X><Y>0</Y></Point>
+						<Point><X>-57.333000000000084</X><Y>0</Y></Point>
 						<Point><X>-30</X><Y>7</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
@@ -5098,7 +6372,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1716533626215" TargetId="1716533644745">
 					<Id>1716533650322</Id>
 					<Name><![CDATA[laneConnector22]]></Name>
-					<X>212.667</X><Y>241</Y>
+					<X>212.66699999999992</X><Y>241</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5107,11 +6381,11 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.333</X><Y>-21</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-21</Y></Point>
 						<Point><X>10</X><Y>0</Y></Point>
-						<Point><X>67.333</X><Y>0</Y></Point>
-						<Point><X>57.333</X><Y>0</Y></Point>
-						<Point><X>37.333</X><Y>-21</Y></Point>
+						<Point><X>67.33300000000008</X><Y>0</Y></Point>
+						<Point><X>57.333000000000084</X><Y>0</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-21</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -5119,7 +6393,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1716533626215" TargetId="1716533644745">
 					<Id>1716533650324</Id>
 					<Name><![CDATA[laneConnector23]]></Name>
-					<X>212.667</X><Y>227</Y>
+					<X>212.66699999999992</X><Y>227</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5128,11 +6402,11 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.333</X><Y>-7</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-7</Y></Point>
 						<Point><X>10</X><Y>0</Y></Point>
-						<Point><X>67.333</X><Y>0</Y></Point>
-						<Point><X>57.333</X><Y>0</Y></Point>
-						<Point><X>37.333</X><Y>-7</Y></Point>
+						<Point><X>67.33300000000008</X><Y>0</Y></Point>
+						<Point><X>57.333000000000084</X><Y>0</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-7</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>1</TargetLane>
@@ -5150,12 +6424,12 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-30</X><Y>7</Y></Point>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-6.666666666666686</X><Y>0</Y></Point>
-						<Point><X>-6.666666666666686</X><Y>0</Y></Point>
-						<Point><X>-16.666666666666686</X><Y>0</Y></Point>
-						<Point><X>-51</X><Y>44.333333333333314</Y></Point>
-						<Point><X>-51</X><Y>34.333333333333314</Y></Point>
+						<Point><X>-10</X><Y>0</Y></Point>
+						<Point><X>-51</X><Y>51</Y></Point>
+						<Point><X>-51</X><Y>41</Y></Point>
+						<Point><X>-51</X><Y>51</Y></Point>
+						<Point><X>-51</X><Y>57</Y></Point>
+						<Point><X>-51</X><Y>57</Y></Point>
 						<Point><X>-30</X><Y>7</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
@@ -5178,8 +6452,8 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 						<Point><X>-37</X><Y>37</Y></Point>
 						<Point><X>-37</X><Y>27</Y></Point>
 						<Point><X>-37</X><Y>37</Y></Point>
-						<Point><X>-37</X><Y>44.333333333333314</Y></Point>
-						<Point><X>-37</X><Y>44.333333333333314</Y></Point>
+						<Point><X>-37</X><Y>57</Y></Point>
+						<Point><X>-37</X><Y>57</Y></Point>
 						<Point><X>-30</X><Y>7</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
@@ -5188,7 +6462,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<LaneConnector SourceId="1716533628537" TargetId="1716533644745">
 					<Id>1716533650330</Id>
 					<Name><![CDATA[laneConnector26]]></Name>
-					<X>271</X><Y>257.3333333333333</Y>
+					<X>271</X><Y>270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5197,14 +6471,14 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Z>0</Z>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-21</X><Y>-37.333333333333314</Y></Point>
+						<Point><X>-21</X><Y>-50</Y></Point>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-7.333333333333314</Y></Point>
-						<Point><X>0</X><Y>-7.333333333333314</Y></Point>
-						<Point><X>0</X><Y>-17.333333333333314</Y></Point>
-						<Point><X>9</X><Y>-16.333333333333314</Y></Point>
-						<Point><X>-1</X><Y>-16.333333333333314</Y></Point>
-						<Point><X>-21</X><Y>-37.333333333333314</Y></Point>
+						<Point><X>0</X><Y>-20</Y></Point>
+						<Point><X>0</X><Y>-20</Y></Point>
+						<Point><X>0</X><Y>-30</Y></Point>
+						<Point><X>9</X><Y>-29</Y></Point>
+						<Point><X>-1</X><Y>-29</Y></Point>
+						<Point><X>-21</X><Y>-50</Y></Point>
 					</Points>
 					<SourceLane>0</SourceLane>
 					<TargetLane>0</TargetLane>
@@ -5257,7 +6531,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<Road TargetId="1716533628534">
 					<Id>1713354045780</Id>
 					<Name><![CDATA[road]]></Name>
-					<X>250</X><Y>-220</Y>
+					<X>250</X><Y>-400</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5277,9 +6551,9 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
 						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>402.6666666666667</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>377.6666666666667</Y><Z>0</Z></Point>
-						<Point><X>0</X><Y>427.6666666666667</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>582.6669999999999</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>557.6669999999999</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>607.6669999999999</Y><Z>0</Z></Point>
 					</Points>
 
 			<Presentation>
@@ -5292,7 +6566,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>394.6666666666667</Offset>
+					<Offset>574.6669999999999</Offset>
 					<OnForwardSide>true</OnForwardSide>
 					<LeftLane>2</LeftLane>
 					<RightLane>0</RightLane>
@@ -5367,7 +6641,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<Road TargetId="1716533628534">
 					<Id>1716533626215</Id>
 					<Name><![CDATA[road1]]></Name>
-					<X>0</X><Y>220</Y>
+					<X>-300</X><Y>220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5387,9 +6661,9 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>17.678</X><Y>17.678</Y><Z>0</Z></Point>
 						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>212.667</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>187.667</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>237.667</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>512.6669999999999</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>487.667</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>537.6669999999999</X><Y>0</Y><Z>0</Z></Point>
 					</Points>
 
 			<Presentation>
@@ -5402,7 +6676,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Offset>204.667</Offset>
+					<Offset>504.6669999999999</Offset>
 					<OnForwardSide>true</OnForwardSide>
 					<LeftLane>2</LeftLane>
 					<RightLane>0</RightLane>
@@ -5497,9 +6771,9 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
 						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>220</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>195</X><Y>0</Y><Z>0</Z></Point>
-						<Point><X>195</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>520</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>495</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>495</X><Y>0</Y><Z>0</Z></Point>
 					</Points>
 
 			<Presentation>
@@ -5584,13 +6858,1001 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 			</Presentation>
 
 				</Road>
+				<RoadJunction>
+					<Id>1716795124416</Id>
+					<Name><![CDATA[intersection1]]></Name>
+					<X>250</X><Y>880</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<FakeNode>true</FakeNode>
+
+			<Presentation>
+				<LaneConnector SourceId="1716533628537" TargetId="1716533628537">
+					<Id>1716795124431</Id>
+					<Name><![CDATA[laneConnector29]]></Name>
+					<X>243</X><Y>842.6666666666666</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>7</X><Y>37.33333333333337</Y></Point>
+						<Point><X>0</X><Y>10</Y></Point>
+						<Point><X>28</X><Y>0</Y></Point>
+						<Point><X>28</X><Y>10</Y></Point>
+						<Point><X>7</X><Y>37.33333333333337</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716533628537" TargetId="1716533628537">
+					<Id>1716795124433</Id>
+					<Name><![CDATA[laneConnector30]]></Name>
+					<X>243</X><Y>842.6666666666666</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>7</X><Y>37.33333333333337</Y></Point>
+						<Point><X>0</X><Y>10</Y></Point>
+						<Point><X>14</X><Y>0</Y></Point>
+						<Point><X>14</X><Y>10</Y></Point>
+						<Point><X>7</X><Y>37.33333333333337</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>1</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716533628537" TargetId="1716795112050">
+					<Id>1716795124435</Id>
+					<Name><![CDATA[laneConnector31]]></Name>
+					<X>229</X><Y>842.6666666666666</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>21</X><Y>37.33333333333337</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>3.3333333328755543E-4</Y></Point>
+						<Point><X>0</X><Y>3.3333333328755543E-4</Y></Point>
+						<Point><X>0</X><Y>10.000333333333288</Y></Point>
+						<Point><X>-16.333000000000084</X><Y>16.33333333333337</Y></Point>
+						<Point><X>-6.333000000000084</X><Y>16.33333333333337</Y></Point>
+						<Point><X>21</X><Y>37.33333333333337</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716533628537" TargetId="1716795112050">
+					<Id>1716795124437</Id>
+					<Name><![CDATA[laneConnector32]]></Name>
+					<X>243</X><Y>842.6666666666666</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>7</X><Y>37.33333333333337</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>3.3333333328755543E-4</Y></Point>
+						<Point><X>0</X><Y>3.3333333328755543E-4</Y></Point>
+						<Point><X>0</X><Y>10.000333333333288</Y></Point>
+						<Point><X>-30.333000000000084</X><Y>30.33333333333337</Y></Point>
+						<Point><X>-20.333000000000084</X><Y>30.33333333333337</Y></Point>
+						<Point><X>7</X><Y>37.33333333333337</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>1</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795112050" TargetId="1716533628537">
+					<Id>1716795124439</Id>
+					<Name><![CDATA[laneConnector33]]></Name>
+					<X>212.66699999999992</X><Y>901</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-21</Y></Point>
+						<Point><X>10</X><Y>0</Y></Point>
+						<Point><X>58.333000000000084</X><Y>-58.333000000000084</Y></Point>
+						<Point><X>58.333000000000084</X><Y>-48.333000000000084</Y></Point>
+						<Point><X>58.333000000000084</X><Y>-58.333000000000084</Y></Point>
+						<Point><X>58.333000000000084</X><Y>-58.33333333333337</Y></Point>
+						<Point><X>58.333000000000084</X><Y>-58.33333333333337</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-21</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795112050" TargetId="1716533628537">
+					<Id>1716795124441</Id>
+					<Name><![CDATA[laneConnector34]]></Name>
+					<X>212.66699999999992</X><Y>887</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-7</Y></Point>
+						<Point><X>10</X><Y>0</Y></Point>
+						<Point><X>44.333000000000084</X><Y>-44.333000000000084</Y></Point>
+						<Point><X>44.333000000000084</X><Y>-34.333000000000084</Y></Point>
+						<Point><X>44.333000000000084</X><Y>-44.333000000000084</Y></Point>
+						<Point><X>44.333000000000084</X><Y>-44.33333333333337</Y></Point>
+						<Point><X>44.333000000000084</X><Y>-44.33333333333337</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-7</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>1</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795112050" TargetId="1716795112050">
+					<Id>1716795124443</Id>
+					<Name><![CDATA[laneConnector35]]></Name>
+					<X>212.66699999999992</X><Y>887</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-7</Y></Point>
+						<Point><X>10</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-28</Y></Point>
+						<Point><X>10</X><Y>-28</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-7</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795112050" TargetId="1716795112050">
+					<Id>1716795124445</Id>
+					<Name><![CDATA[laneConnector36]]></Name>
+					<X>212.66699999999992</X><Y>887</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-7</Y></Point>
+						<Point><X>10</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-14</Y></Point>
+						<Point><X>10</X><Y>-14</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-7</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>1</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795129759" TargetId="1716533628537">
+					<Id>1716795152350</Id>
+					<Name><![CDATA[laneConnector37]]></Name>
+					<X>280</X><Y>859</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-30</X><Y>21</Y></Point>
+						<Point><X>-10</X><Y>0</Y></Point>
+						<Point><X>-9</X><Y>-9</Y></Point>
+						<Point><X>-9</X><Y>1</Y></Point>
+						<Point><X>-9</X><Y>-9</Y></Point>
+						<Point><X>-9</X><Y>-16.33333333333337</Y></Point>
+						<Point><X>-9</X><Y>-16.33333333333337</Y></Point>
+						<Point><X>-30</X><Y>21</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716533628537" TargetId="1716795129759">
+					<Id>1716795152352</Id>
+					<Name><![CDATA[laneConnector38]]></Name>
+					<X>243</X><Y>842.6666666666666</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>7</X><Y>37.33333333333337</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>21.33333333333337</Y></Point>
+						<Point><X>0</X><Y>21.33333333333337</Y></Point>
+						<Point><X>0</X><Y>31.33333333333337</Y></Point>
+						<Point><X>37</X><Y>58.33333333333337</Y></Point>
+						<Point><X>27</X><Y>58.33333333333337</Y></Point>
+						<Point><X>7</X><Y>37.33333333333337</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716533628537" TargetId="1716795129759">
+					<Id>1716795152354</Id>
+					<Name><![CDATA[laneConnector39]]></Name>
+					<X>243</X><Y>842.6666666666666</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>7</X><Y>37.33333333333337</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>7.333333333333371</Y></Point>
+						<Point><X>0</X><Y>7.333333333333371</Y></Point>
+						<Point><X>0</X><Y>17.33333333333337</Y></Point>
+						<Point><X>37</X><Y>44.33333333333337</Y></Point>
+						<Point><X>27</X><Y>44.33333333333337</Y></Point>
+						<Point><X>7</X><Y>37.33333333333337</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>1</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795129759" TargetId="1716795112050">
+					<Id>1716795152356</Id>
+					<Name><![CDATA[laneConnector40]]></Name>
+					<X>280</X><Y>859</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-30</X><Y>21</Y></Point>
+						<Point><X>-10</X><Y>0</Y></Point>
+						<Point><X>-67.33300000000008</X><Y>0</Y></Point>
+						<Point><X>-57.333000000000084</X><Y>0</Y></Point>
+						<Point><X>-30</X><Y>21</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795129759" TargetId="1716795112050">
+					<Id>1716795152358</Id>
+					<Name><![CDATA[laneConnector41]]></Name>
+					<X>280</X><Y>873</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-30</X><Y>7</Y></Point>
+						<Point><X>-10</X><Y>0</Y></Point>
+						<Point><X>-67.33300000000008</X><Y>0</Y></Point>
+						<Point><X>-57.333000000000084</X><Y>0</Y></Point>
+						<Point><X>-30</X><Y>7</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>1</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795112050" TargetId="1716795129759">
+					<Id>1716795152360</Id>
+					<Name><![CDATA[laneConnector42]]></Name>
+					<X>212.66699999999992</X><Y>901</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-21</Y></Point>
+						<Point><X>10</X><Y>0</Y></Point>
+						<Point><X>67.33300000000008</X><Y>0</Y></Point>
+						<Point><X>57.333000000000084</X><Y>0</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-21</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795112050" TargetId="1716795129759">
+					<Id>1716795152362</Id>
+					<Name><![CDATA[laneConnector43]]></Name>
+					<X>212.66699999999992</X><Y>887</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-7</Y></Point>
+						<Point><X>10</X><Y>0</Y></Point>
+						<Point><X>67.33300000000008</X><Y>0</Y></Point>
+						<Point><X>57.333000000000084</X><Y>0</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-7</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>1</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795129759" TargetId="1716795129759">
+					<Id>1716795152364</Id>
+					<Name><![CDATA[laneConnector44]]></Name>
+					<X>280</X><Y>873</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-30</X><Y>7</Y></Point>
+						<Point><X>-10</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>28</Y></Point>
+						<Point><X>-10</X><Y>28</Y></Point>
+						<Point><X>-30</X><Y>7</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795129759" TargetId="1716795129759">
+					<Id>1716795152366</Id>
+					<Name><![CDATA[laneConnector45]]></Name>
+					<X>280</X><Y>873</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-30</X><Y>7</Y></Point>
+						<Point><X>-10</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>14</Y></Point>
+						<Point><X>-10</X><Y>14</Y></Point>
+						<Point><X>-30</X><Y>7</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>1</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795194671" TargetId="1716533628537">
+					<Id>1716795203855</Id>
+					<Name><![CDATA[laneConnector46]]></Name>
+					<X>271</X><Y>910</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-21</X><Y>-30</Y></Point>
+						<Point><X>0</X><Y>-10</Y></Point>
+						<Point><X>0</X><Y>-67.33333333333337</Y></Point>
+						<Point><X>0</X><Y>-57.33333333333337</Y></Point>
+						<Point><X>-21</X><Y>-30</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795194671" TargetId="1716533628537">
+					<Id>1716795203857</Id>
+					<Name><![CDATA[laneConnector47]]></Name>
+					<X>257</X><Y>910</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-7</X><Y>-30</Y></Point>
+						<Point><X>0</X><Y>-10</Y></Point>
+						<Point><X>0</X><Y>-67.33333333333337</Y></Point>
+						<Point><X>0</X><Y>-57.33333333333337</Y></Point>
+						<Point><X>-7</X><Y>-30</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>1</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716533628537" TargetId="1716795194671">
+					<Id>1716795203859</Id>
+					<Name><![CDATA[laneConnector48]]></Name>
+					<X>229</X><Y>842.6666666666666</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>21</X><Y>37.33333333333337</Y></Point>
+						<Point><X>0</X><Y>10</Y></Point>
+						<Point><X>0</X><Y>67.33333333333337</Y></Point>
+						<Point><X>0</X><Y>57.33333333333337</Y></Point>
+						<Point><X>21</X><Y>37.33333333333337</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716533628537" TargetId="1716795194671">
+					<Id>1716795203861</Id>
+					<Name><![CDATA[laneConnector49]]></Name>
+					<X>243</X><Y>842.6666666666666</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>7</X><Y>37.33333333333337</Y></Point>
+						<Point><X>0</X><Y>10</Y></Point>
+						<Point><X>0</X><Y>67.33333333333337</Y></Point>
+						<Point><X>0</X><Y>57.33333333333337</Y></Point>
+						<Point><X>7</X><Y>37.33333333333337</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>1</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795194671" TargetId="1716795112050">
+					<Id>1716795203863</Id>
+					<Name><![CDATA[laneConnector50]]></Name>
+					<X>257</X><Y>910</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-7</X><Y>-30</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-6.666999999999916</Y></Point>
+						<Point><X>0</X><Y>-6.666999999999916</Y></Point>
+						<Point><X>0</X><Y>-16.666999999999916</Y></Point>
+						<Point><X>-44.333000000000084</X><Y>-51</Y></Point>
+						<Point><X>-34.333000000000084</X><Y>-51</Y></Point>
+						<Point><X>-7</X><Y>-30</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795194671" TargetId="1716795112050">
+					<Id>1716795203865</Id>
+					<Name><![CDATA[laneConnector51]]></Name>
+					<X>257</X><Y>910</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-7</X><Y>-30</Y></Point>
+						<Point><X>0</X><Y>-10</Y></Point>
+						<Point><X>-37</X><Y>-37</Y></Point>
+						<Point><X>-27</X><Y>-37</Y></Point>
+						<Point><X>-37</X><Y>-37</Y></Point>
+						<Point><X>-44.333000000000084</X><Y>-37</Y></Point>
+						<Point><X>-44.333000000000084</X><Y>-37</Y></Point>
+						<Point><X>-7</X><Y>-30</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>1</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795112050" TargetId="1716795194671">
+					<Id>1716795203867</Id>
+					<Name><![CDATA[laneConnector52]]></Name>
+					<X>212.66699999999992</X><Y>901</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-21</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>7.333000000000084</X><Y>0</Y></Point>
+						<Point><X>7.333000000000084</X><Y>0</Y></Point>
+						<Point><X>17.333000000000084</X><Y>0</Y></Point>
+						<Point><X>16.333000000000084</X><Y>9</Y></Point>
+						<Point><X>16.333000000000084</X><Y>-1</Y></Point>
+						<Point><X>37.333000000000084</X><Y>-21</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795194671" TargetId="1716795194671">
+					<Id>1716795203869</Id>
+					<Name><![CDATA[laneConnector53]]></Name>
+					<X>257</X><Y>910</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-7</X><Y>-30</Y></Point>
+						<Point><X>0</X><Y>-10</Y></Point>
+						<Point><X>-28</X><Y>0</Y></Point>
+						<Point><X>-28</X><Y>-10</Y></Point>
+						<Point><X>-7</X><Y>-30</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795194671" TargetId="1716795194671">
+					<Id>1716795203871</Id>
+					<Name><![CDATA[laneConnector54]]></Name>
+					<X>257</X><Y>910</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-7</X><Y>-30</Y></Point>
+						<Point><X>0</X><Y>-10</Y></Point>
+						<Point><X>-14</X><Y>0</Y></Point>
+						<Point><X>-14</X><Y>-10</Y></Point>
+						<Point><X>-7</X><Y>-30</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>1</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795194671" TargetId="1716795129759">
+					<Id>1716795203873</Id>
+					<Name><![CDATA[laneConnector55]]></Name>
+					<X>271</X><Y>910</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-21</X><Y>-30</Y></Point>
+						<Point><X>0</X><Y>-10</Y></Point>
+						<Point><X>9</X><Y>-9</Y></Point>
+						<Point><X>-1</X><Y>-9</Y></Point>
+						<Point><X>-21</X><Y>-30</Y></Point>
+					</Points>
+					<SourceLane>0</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795129759" TargetId="1716795194671">
+					<Id>1716795203875</Id>
+					<Name><![CDATA[laneConnector56]]></Name>
+					<X>280</X><Y>873</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-30</X><Y>7</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-14</X><Y>0</Y></Point>
+						<Point><X>-14</X><Y>0</Y></Point>
+						<Point><X>-24</X><Y>0</Y></Point>
+						<Point><X>-51</X><Y>37</Y></Point>
+						<Point><X>-51</X><Y>27</Y></Point>
+						<Point><X>-30</X><Y>7</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1716795129759" TargetId="1716795194671">
+					<Id>1716795203877</Id>
+					<Name><![CDATA[laneConnector57]]></Name>
+					<X>280</X><Y>873</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-30</X><Y>7</Y></Point>
+						<Point><X>-10</X><Y>0</Y></Point>
+						<Point><X>-37</X><Y>37</Y></Point>
+						<Point><X>-37</X><Y>27</Y></Point>
+						<Point><X>-30</X><Y>7</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>1</TargetLane>
+				</LaneConnector>
+			</Presentation>
+
+				</RoadJunction>
+				<Road TargetId="1716795124416">
+					<Id>1716795112050</Id>
+					<Name><![CDATA[road4]]></Name>
+					<X>-300</X><Y>880</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<DelimiterWidth Class="UnitValue">
+						<Value Class="Double">0</Value>
+						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+					</DelimiterWidth>
+					<RoadDelimiterColor>-16744448</RoadDelimiterColor>
+					<RoadDelimiterMaterial>null</RoadDelimiterMaterial>
+					<ForwardLanesCount>2</ForwardLanesCount>
+					<Bidirectional>true</Bidirectional>
+					<BackwardLanesCount>2</BackwardLanesCount>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>17.678</X><Y>17.678</Y><Z>0</Z></Point>
+						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>512.6669999999999</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>487.667</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>537.6669999999999</X><Y>0</Y><Z>0</Z></Point>
+					</Points>
+
+			<Presentation>
+				<RoadStopline>
+					<Id>1716795124449</Id>
+					<Name><![CDATA[stopLine5]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>504.6669999999999</Offset>
+					<OnForwardSide>true</OnForwardSide>
+					<LeftLane>2</LeftLane>
+					<RightLane>0</RightLane>
+					<Junction>1716795124416</Junction>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<EmbeddedObject>
+						<ActiveObjectClass>
+							<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+							<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+						</ActiveObjectClass>
+						<GenericParameterSubstitute>
+							<GenericParameterSubstituteReference>
+								<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+								<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+								<ItemName><![CDATA[1587667461380]]></ItemName>
+							</GenericParameterSubstituteReference>
+						</GenericParameterSubstitute>
+						<Parameters>
+							<Parameter>
+								<Name><![CDATA[onCarPassed]]></Name>
+							</Parameter>
+						</Parameters>
+						<ReplicationFlag>false</ReplicationFlag>
+						<Replication Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</Replication>
+						<CollectionType>ARRAY_LIST_BASED</CollectionType>
+						<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+						<XCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</XCode>
+						<YCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</YCode>
+						<ZCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ZCode>
+						<ColumnCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ColumnCode>
+						<RowCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</RowCode>
+						<LatitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LatitudeCode>
+						<LongitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LongitudeCode>
+						<LocationNameCode Class="CodeValue">
+							<Code><![CDATA[""]]></Code>
+						</LocationNameCode>
+						<InitializationType>SPECIFIED_NUMBER</InitializationType>
+						<InitializationDatabaseTableQuery>
+							<TableReference>
+							</TableReference>
+						</InitializationDatabaseTableQuery>
+						<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+						<QuantityColumn>
+						</QuantityColumn>
+					</EmbeddedObject>
+				</RoadStopline>
+			</Presentation>
+
+				</Road>
+				<Road SourceId="1716795124416">
+					<Id>1716795129759</Id>
+					<Name><![CDATA[road5]]></Name>
+					<X>280</X><Y>880</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<DelimiterWidth Class="UnitValue">
+						<Value Class="Double">0</Value>
+						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+					</DelimiterWidth>
+					<RoadDelimiterColor>-16744448</RoadDelimiterColor>
+					<RoadDelimiterMaterial>null</RoadDelimiterMaterial>
+					<ForwardLanesCount>2</ForwardLanesCount>
+					<Bidirectional>true</Bidirectional>
+					<BackwardLanesCount>2</BackwardLanesCount>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>17.678</X><Y>17.678</Y><Z>0</Z></Point>
+						<Point><X>25</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>520</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>495</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>545</X><Y>0</Y><Z>0</Z></Point>
+					</Points>
+
+			<Presentation>
+				<RoadStopline>
+					<Id>1716795152368</Id>
+					<Name><![CDATA[stopLine6]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>8.0</Offset>
+					<OnForwardSide>false</OnForwardSide>
+					<LeftLane>2</LeftLane>
+					<RightLane>0</RightLane>
+					<Junction>1716795124416</Junction>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<EmbeddedObject>
+						<ActiveObjectClass>
+							<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+							<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+						</ActiveObjectClass>
+						<GenericParameterSubstitute>
+							<GenericParameterSubstituteReference>
+								<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+								<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+								<ItemName><![CDATA[1587667461380]]></ItemName>
+							</GenericParameterSubstituteReference>
+						</GenericParameterSubstitute>
+						<Parameters>
+							<Parameter>
+								<Name><![CDATA[onCarPassed]]></Name>
+							</Parameter>
+						</Parameters>
+						<ReplicationFlag>false</ReplicationFlag>
+						<Replication Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</Replication>
+						<CollectionType>ARRAY_LIST_BASED</CollectionType>
+						<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+						<XCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</XCode>
+						<YCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</YCode>
+						<ZCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ZCode>
+						<ColumnCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ColumnCode>
+						<RowCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</RowCode>
+						<LatitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LatitudeCode>
+						<LongitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LongitudeCode>
+						<LocationNameCode Class="CodeValue">
+							<Code><![CDATA[""]]></Code>
+						</LocationNameCode>
+						<InitializationType>SPECIFIED_NUMBER</InitializationType>
+						<InitializationDatabaseTableQuery>
+							<TableReference>
+							</TableReference>
+						</InitializationDatabaseTableQuery>
+						<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+						<QuantityColumn>
+						</QuantityColumn>
+					</EmbeddedObject>
+				</RoadStopline>
+			</Presentation>
+
+				</Road>
+				<Road SourceId="1716795124416">
+					<Id>1716795194671</Id>
+					<Name><![CDATA[road6]]></Name>
+					<X>250</X><Y>910</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<DelimiterWidth Class="UnitValue">
+						<Value Class="Double">0</Value>
+						<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+					</DelimiterWidth>
+					<RoadDelimiterColor>-16744448</RoadDelimiterColor>
+					<RoadDelimiterMaterial>null</RoadDelimiterMaterial>
+					<ForwardLanesCount>2</ForwardLanesCount>
+					<Bidirectional>true</Bidirectional>
+					<BackwardLanesCount>2</BackwardLanesCount>
+					<Points>
+						<Point><X>0</X><Y>0</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>25</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>572.6666666666666</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>547.6666666666666</Y><Z>0</Z></Point>
+						<Point><X>0</X><Y>597.6666666666666</Y><Z>0</Z></Point>
+					</Points>
+
+			<Presentation>
+				<RoadStopline>
+					<Id>1716795203879</Id>
+					<Name><![CDATA[stopLine7]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>8.0</Offset>
+					<OnForwardSide>false</OnForwardSide>
+					<LeftLane>2</LeftLane>
+					<RightLane>0</RightLane>
+					<Junction>1716795124416</Junction>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<EmbeddedObject>
+						<ActiveObjectClass>
+							<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+							<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+						</ActiveObjectClass>
+						<GenericParameterSubstitute>
+							<GenericParameterSubstituteReference>
+								<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+								<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+								<ItemName><![CDATA[1587667461380]]></ItemName>
+							</GenericParameterSubstituteReference>
+						</GenericParameterSubstitute>
+						<Parameters>
+							<Parameter>
+								<Name><![CDATA[onCarPassed]]></Name>
+							</Parameter>
+						</Parameters>
+						<ReplicationFlag>false</ReplicationFlag>
+						<Replication Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</Replication>
+						<CollectionType>ARRAY_LIST_BASED</CollectionType>
+						<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+						<XCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</XCode>
+						<YCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</YCode>
+						<ZCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ZCode>
+						<ColumnCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ColumnCode>
+						<RowCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</RowCode>
+						<LatitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LatitudeCode>
+						<LongitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LongitudeCode>
+						<LocationNameCode Class="CodeValue">
+							<Code><![CDATA[""]]></Code>
+						</LocationNameCode>
+						<InitializationType>SPECIFIED_NUMBER</InitializationType>
+						<InitializationDatabaseTableQuery>
+							<TableReference>
+							</TableReference>
+						</InitializationDatabaseTableQuery>
+						<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+						<QuantityColumn>
+						</QuantityColumn>
+					</EmbeddedObject>
+				</RoadStopline>
+			</Presentation>
+
+				</Road>
 			</Presentation>
 
 				</RoadNetwork>
 				<DensityMap>
 					<Id>1713512678583</Id>
 					<Name><![CDATA[densityMap]]></Name>
-					<X>520</X><Y>40</Y>
+					<X>440</X><Y>-220</Y>
 					<Label><X>-15</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5614,7 +7876,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<Text>
 					<Id>1713966782249</Id>
 					<Name><![CDATA[text]]></Name>
-					<X>410</X><Y>10</Y>
+					<X>430</X><Y>-260</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5635,7 +7897,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
     			<Histogram>
 					<Id>1714048507761</Id>
 					<Name><![CDATA[chart]]></Name>
-					<X>1070</X><Y>920</Y>
+					<X>1690</X><Y>230</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5699,7 +7961,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
     			<Histogram>
 					<Id>1714049581671</Id>
 					<Name><![CDATA[Avg_Latency]]></Name>
-					<X>1050</X><Y>710</Y>
+					<X>1680</X><Y>10</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5844,10 +8106,44 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
+				<Control Type="Window3D">
+					<Id>1714634780774</Id>
+					<Name><![CDATA[window3d]]></Name>
+					<X>0</X><Y>-730</Y>
+					<Width>610</Width>
+					<Height>310</Height>
+					<MakeDefaultViewArea>true</MakeDefaultViewArea>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<ShowLabel>false</ShowLabel>
+					<FollowCamera>false</FollowCamera>
+					<NavigationType>full</NavigationType>
+					<FarClippingDistance>2000</FarClippingDistance>
+				</Control>
 				<Text>
-					<Id>1714137677872</Id>
+					<Id>1716796917964</Id>
 					<Name><![CDATA[text5]]></Name>
-					<X>85</X><Y>730</Y>
+					<X>380</X><Y>825</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Road5]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>10</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1716796928432</Id>
+					<Name><![CDATA[text6]]></Name>
+					<X>115</X><Y>830</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5866,9 +8162,9 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					<Alignment>LEFT</Alignment>
 				</Text>
 				<Text>
-					<Id>1714137702998</Id>
-					<Name><![CDATA[text6]]></Name>
-					<X>365</X><Y>730</Y>
+					<Id>1716797012461</Id>
+					<Name><![CDATA[text7]]></Name>
+					<X>180</X><Y>980</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5886,19 +8182,6 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
-				<Control Type="Window3D">
-					<Id>1714634780774</Id>
-					<Name><![CDATA[window3d]]></Name>
-					<X>0</X><Y>-730</Y>
-					<Width>610</Width>
-					<Height>310</Height>
-					<MakeDefaultViewArea>true</MakeDefaultViewArea>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<ShowLabel>false</ShowLabel>
-					<FollowCamera>false</FollowCamera>
-					<NavigationType>full</NavigationType>
-					<FarClippingDistance>2000</FarClippingDistance>
-				</Control>
 			</Presentation>
 
 				</Level>
@@ -5924,7 +8207,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<EmbeddedObjectPresentation>
 					<Id>1713777632951</Id>
 					<Name><![CDATA[networkaccess_presentation]]></Name>
-					<X>363</X><Y>100</Y>
+					<X>365</X><Y>90</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7949,8 +10232,8 @@ if(message[0].equals("request route"))
 				<StopOption><![CDATA[Stop at specified time]]></StopOption>
 				<InitialDate><![CDATA[1713312000000]]></InitialDate>	
 				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1713312900000]]></FinalDate>	
-				<FinalTime><![CDATA[900.0]]></FinalTime>	
+				<FinalDate><![CDATA[1713315600000]]></FinalDate>	
+				<FinalTime><![CDATA[3600.0]]></FinalTime>	
 			</ModelTimeProperties>
 			<BypassInitialScreen>true</BypassInitialScreen>
 		</SimulationExperiment>	
