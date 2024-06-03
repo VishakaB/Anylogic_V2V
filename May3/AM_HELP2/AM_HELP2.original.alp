@@ -3244,7 +3244,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944324</Id>
 					<Name><![CDATA[color]]></Name>
-					<X>270</X><Y>660</Y>
+					<X>230</X><Y>660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3259,7 +3259,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944326</Id>
 					<Name><![CDATA[lastsender]]></Name>
-					<X>270</X><Y>720</Y>
+					<X>230</X><Y>720</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3271,7 +3271,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944328</Id>
 					<Name><![CDATA[id]]></Name>
-					<X>270</X><Y>690</Y>
+					<X>230</X><Y>690</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -3286,7 +3286,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944330</Id>
 					<Name><![CDATA[receivedmsg]]></Name>
-					<X>270</X><Y>750</Y>
+					<X>230</X><Y>750</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3298,7 +3298,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944332</Id>
 					<Name><![CDATA[energyLevel]]></Name>
-					<X>270</X><Y>930</Y>
+					<X>230</X><Y>930</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3313,7 +3313,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944334</Id>
 					<Name><![CDATA[locAccuracy]]></Name>
-					<X>270</X><Y>870</Y>
+					<X>230</X><Y>870</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3328,7 +3328,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944336</Id>
 					<Name><![CDATA[nbrelayers]]></Name>
-					<X>270</X><Y>780</Y>
+					<X>230</X><Y>780</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3343,7 +3343,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944338</Id>
 					<Name><![CDATA[waitingTime]]></Name>
-					<X>470</X><Y>750</Y>
+					<X>400</X><Y>750</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3358,7 +3358,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944340</Id>
 					<Name><![CDATA[inCoverage]]></Name>
-					<X>270</X><Y>900</Y>
+					<X>230</X><Y>900</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3370,7 +3370,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944342</Id>
 					<Name><![CDATA[nbTrails]]></Name>
-					<X>270</X><Y>810</Y>
+					<X>230</X><Y>810</Y>
 					<Label><X>11.275</X><Y>1.649</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3382,7 +3382,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944346</Id>
 					<Name><![CDATA[k1]]></Name>
-					<X>470</X><Y>660</Y>
+					<X>400</X><Y>660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3394,7 +3394,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944348</Id>
 					<Name><![CDATA[k]]></Name>
-					<X>470</X><Y>630</Y>
+					<X>400</X><Y>630</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3406,7 +3406,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944350</Id>
 					<Name><![CDATA[nbcalls]]></Name>
-					<X>470</X><Y>690</Y>
+					<X>400</X><Y>690</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3418,7 +3418,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944352</Id>
 					<Name><![CDATA[ic]]></Name>
-					<X>270</X><Y>840</Y>
+					<X>230</X><Y>840</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3430,7 +3430,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944354</Id>
 					<Name><![CDATA[T_0]]></Name>
-					<X>470</X><Y>720</Y>
+					<X>400</X><Y>720</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3445,7 +3445,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944356</Id>
 					<Name><![CDATA[Location_phoneX]]></Name>
-					<X>270</X><Y>960</Y>
+					<X>230</X><Y>960</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3457,7 +3457,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944358</Id>
 					<Name><![CDATA[Location_phoneY]]></Name>
-					<X>270</X><Y>980</Y>
+					<X>230</X><Y>980</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3505,7 +3505,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944366</Id>
 					<Name><![CDATA[rssidBm]]></Name>
-					<X>470</X><Y>780</Y>
+					<X>400</X><Y>780</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3517,7 +3517,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944368</Id>
 					<Name><![CDATA[rssiWatts_max]]></Name>
-					<X>470</X><Y>810</Y>
+					<X>400</X><Y>810</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3529,7 +3529,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944370</Id>
 					<Name><![CDATA[TmaxPlusone]]></Name>
-					<X>470</X><Y>840</Y>
+					<X>400</X><Y>840</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3541,7 +3541,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944372</Id>
 					<Name><![CDATA[Tmax]]></Name>
-					<X>470</X><Y>870</Y>
+					<X>400</X><Y>870</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3553,7 +3553,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944374</Id>
 					<Name><![CDATA[minArrival]]></Name>
-					<X>470</X><Y>900</Y>
+					<X>400</X><Y>900</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3565,7 +3565,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944376</Id>
 					<Name><![CDATA[callArrived]]></Name>
-					<X>270</X><Y>1010</Y>
+					<X>230</X><Y>1010</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3580,7 +3580,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944378</Id>
 					<Name><![CDATA[rssidBm_watts]]></Name>
-					<X>470</X><Y>960</Y>
+					<X>400</X><Y>960</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3592,7 +3592,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944380</Id>
 					<Name><![CDATA[nbmins]]></Name>
-					<X>470</X><Y>990</Y>
+					<X>400</X><Y>990</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3604,7 +3604,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944382</Id>
 					<Name><![CDATA[nbrelayersEmerg]]></Name>
-					<X>270</X><Y>1040</Y>
+					<X>230</X><Y>1040</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3616,7 +3616,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944384</Id>
 					<Name><![CDATA[Tr]]></Name>
-					<X>270</X><Y>1110</Y>
+					<X>230</X><Y>1110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3628,7 +3628,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944386</Id>
 					<Name><![CDATA[timeout]]></Name>
-					<X>270</X><Y>1090</Y>
+					<X>230</X><Y>1090</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3643,7 +3643,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944388</Id>
 					<Name><![CDATA[eTimeout]]></Name>
-					<X>270</X><Y>1070</Y>
+					<X>230</X><Y>1070</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3658,7 +3658,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944390</Id>
 					<Name><![CDATA[alpha]]></Name>
-					<X>470</X><Y>930</Y>
+					<X>400</X><Y>930</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3670,7 +3670,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944392</Id>
 					<Name><![CDATA[cost231_pathloss_dbm]]></Name>
-					<X>470</X><Y>1030</Y>
+					<X>400</X><Y>1030</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3682,7 +3682,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944394</Id>
 					<Name><![CDATA[flag]]></Name>
-					<X>470</X><Y>1060</Y>
+					<X>400</X><Y>1060</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3745,7 +3745,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944404</Id>
 					<Name><![CDATA[congestion_high]]></Name>
-					<X>270</X><Y>1130</Y>
+					<X>230</X><Y>1130</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3799,7 +3799,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944412</Id>
 					<Name><![CDATA[latency]]></Name>
-					<X>270</X><Y>1150</Y>
+					<X>230</X><Y>1150</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3835,7 +3835,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611405944418</Id>
 					<Name><![CDATA[flag_l]]></Name>
-					<X>20</X><Y>620</Y>
+					<X>20</X><Y>630</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3847,7 +3847,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1611429395737</Id>
 					<Name><![CDATA[flagspec]]></Name>
-					<X>270</X><Y>630</Y>
+					<X>230</X><Y>630</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3871,7 +3871,7 @@ import java.util.*;]]></Import>
 				<Variable Class="PlainVariable">
 					<Id>1619180700205</Id>
 					<Name><![CDATA[hmt]]></Name>
-					<X>470</X><Y>1090</Y>
+					<X>400</X><Y>1090</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3922,7 +3922,7 @@ import java.util.*;]]></Import>
 				<Variable Class="Parameter">
 					<Id>1611405944421</Id>
 					<Name><![CDATA[T_initial]]></Name>
-					<X>880</X><Y>620</Y>
+					<X>750</X><Y>630</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3948,7 +3948,7 @@ import java.util.*;]]></Import>
 				<Variable Class="Parameter">
 					<Id>1611405944424</Id>
 					<Name><![CDATA[transmitE]]></Name>
-					<X>880</X><Y>640</Y>
+					<X>750</X><Y>650</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3972,7 +3972,7 @@ import java.util.*;]]></Import>
 				<Variable Class="Parameter">
 					<Id>1611405944427</Id>
 					<Name><![CDATA[receiveE]]></Name>
-					<X>880</X><Y>660</Y>
+					<X>750</X><Y>670</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3996,7 +3996,7 @@ import java.util.*;]]></Import>
 				<Variable Class="Parameter">
 					<Id>1611405944430</Id>
 					<Name><![CDATA[transmitPowerBsdBm]]></Name>
-					<X>880</X><Y>680</Y>
+					<X>750</X><Y>690</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4020,7 +4020,7 @@ import java.util.*;]]></Import>
 				<Variable Class="Parameter">
 					<Id>1611405944433</Id>
 					<Name><![CDATA[nbTrails_threshold]]></Name>
-					<X>880</X><Y>700</Y>
+					<X>750</X><Y>710</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -4044,7 +4044,7 @@ import java.util.*;]]></Import>
 				<Variable Class="Parameter">
 					<Id>1611405944436</Id>
 					<Name><![CDATA[relay_threshold]]></Name>
-					<X>880</X><Y>720</Y>
+					<X>750</X><Y>730</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4068,7 +4068,7 @@ import java.util.*;]]></Import>
 				<Variable Class="Parameter">
 					<Id>1611405944439</Id>
 					<Name><![CDATA[n0_th]]></Name>
-					<X>880</X><Y>740</Y>
+					<X>750</X><Y>750</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4089,7 +4089,7 @@ import java.util.*;]]></Import>
 				<Variable Class="CollectionVariable">
 					<Id>1611405944292</Id>
 					<Name><![CDATA[alreadyrelayed]]></Name>
-					<X>680</X><Y>720</Y>
+					<X>580</X><Y>720</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4104,7 +4104,7 @@ import java.util.*;]]></Import>
 				<Variable Class="CollectionVariable">
 					<Id>1611405944294</Id>
 					<Name><![CDATA[alreadyCalled]]></Name>
-					<X>680</X><Y>690.047</Y>
+					<X>580</X><Y>690.047</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4122,7 +4122,7 @@ import java.util.*;]]></Import>
 				<Variable Class="CollectionVariable">
 					<Id>1611405944296</Id>
 					<Name><![CDATA[diffcallids]]></Name>
-					<X>680</X><Y>749.952</Y>
+					<X>580</X><Y>749.952</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -4137,7 +4137,7 @@ import java.util.*;]]></Import>
 				<Variable Class="CollectionVariable">
 					<Id>1611405944298</Id>
 					<Name><![CDATA[functioningGnb]]></Name>
-					<X>680</X><Y>780</Y>
+					<X>580</X><Y>780</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4152,7 +4152,7 @@ import java.util.*;]]></Import>
 				<Variable Class="CollectionVariable">
 					<Id>1611405944300</Id>
 					<Name><![CDATA[listTotalCalls]]></Name>
-					<X>680</X><Y>810</Y>
+					<X>580</X><Y>810</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4167,7 +4167,7 @@ import java.util.*;]]></Import>
 				<Variable Class="CollectionVariable">
 					<Id>1611405944304</Id>
 					<Name><![CDATA[TotalRelayingsEmerg]]></Name>
-					<X>680</X><Y>840</Y>
+					<X>580</X><Y>840</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4182,7 +4182,7 @@ import java.util.*;]]></Import>
 				<Variable Class="CollectionVariable">
 					<Id>1611405944306</Id>
 					<Name><![CDATA[buffer_nbrelayers]]></Name>
-					<X>680</X><Y>900</Y>
+					<X>580</X><Y>900</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4197,7 +4197,7 @@ import java.util.*;]]></Import>
 				<Variable Class="CollectionVariable">
 					<Id>1611405944308</Id>
 					<Name><![CDATA[list_Tr]]></Name>
-					<X>680</X><Y>870</Y>
+					<X>580</X><Y>870</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4212,7 +4212,7 @@ import java.util.*;]]></Import>
 				<Variable Class="CollectionVariable">
 					<Id>1611405944310</Id>
 					<Name><![CDATA[rssi_array]]></Name>
-					<X>680</X><Y>930</Y>
+					<X>580</X><Y>930</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4227,7 +4227,7 @@ import java.util.*;]]></Import>
 				<Variable Class="CollectionVariable">
 					<Id>1611405944312</Id>
 					<Name><![CDATA[x_i]]></Name>
-					<X>680</X><Y>960</Y>
+					<X>580</X><Y>960</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4242,7 +4242,7 @@ import java.util.*;]]></Import>
 				<Variable Class="CollectionVariable">
 					<Id>1611405944314</Id>
 					<Name><![CDATA[final_array]]></Name>
-					<X>680</X><Y>990</Y>
+					<X>580</X><Y>990</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4257,7 +4257,7 @@ import java.util.*;]]></Import>
 				<Variable Class="CollectionVariable">
 					<Id>1611405944316</Id>
 					<Name><![CDATA[rssiArray]]></Name>
-					<X>680</X><Y>1020</Y>
+					<X>580</X><Y>1020</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4275,7 +4275,7 @@ import java.util.*;]]></Import>
 				<Variable Class="CollectionVariable">
 					<Id>1611405944318</Id>
 					<Name><![CDATA[neighborCount]]></Name>
-					<X>680</X><Y>660</Y>
+					<X>580</X><Y>660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4290,7 +4290,7 @@ import java.util.*;]]></Import>
 				<Variable Class="CollectionVariable">
 					<Id>1611405944320</Id>
 					<Name><![CDATA[neighbor_list]]></Name>
-					<X>680</X><Y>620</Y>
+					<X>580</X><Y>620</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4305,7 +4305,7 @@ import java.util.*;]]></Import>
 				<Variable Class="CollectionVariable">
 					<Id>1611405944322</Id>
 					<Name><![CDATA[buffer_tr]]></Name>
-					<X>680</X><Y>1050</Y>
+					<X>580</X><Y>1050</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4320,7 +4320,7 @@ import java.util.*;]]></Import>
 				<Variable Class="CollectionVariable">
 					<Id>1611690393181</Id>
 					<Name><![CDATA[buffer_msgid]]></Name>
-					<X>680</X><Y>1080</Y>
+					<X>580</X><Y>1080</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4335,7 +4335,7 @@ import java.util.*;]]></Import>
 				<Variable Class="CollectionVariable">
 					<Id>1611690394397</Id>
 					<Name><![CDATA[buffer_rssi]]></Name>
-					<X>680</X><Y>1110</Y>
+					<X>580</X><Y>1110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4350,7 +4350,7 @@ import java.util.*;]]></Import>
 				<Variable Class="CollectionVariable">
 					<Id>1619179273439</Id>
 					<Name><![CDATA[buffer_relayid]]></Name>
-					<X>680</X><Y>1140</Y>
+					<X>580</X><Y>1140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4451,7 +4451,7 @@ import java.util.*;]]></Import>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1637772750721</Id>
 					<Name><![CDATA[checking]]></Name>
-					<X>610</X><Y>80</Y>
+					<X>630</X><Y>230</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -4868,10 +4868,10 @@ if(message[0].equals("emergency") && message[1].equals(String.valueOf(id)))
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
-						<Point><X>0.4650000000000034</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-74</X><Y>-50</Y></Point>
 						<Point><X>-74</X><Y>-177</Y></Point>
-						<Point><X>144.934</X><Y>-211.53900000000002</Y></Point>
+						<Point><X>144</X><Y>-212</Y></Point>
 					</Points>
 					<IconOffset>120.0</IconOffset>
 					<Properties Source="1611477531238" Target="1611477531226" Trigger="condition">
@@ -5086,7 +5086,7 @@ if(message[0].equals("emergency"))
 nbrelayers=0;
 String[] message = receivedmsg.split(";");
 lastsender=message[1];
-//if an emergency call is received: energy counter
+//if an emergency call is received : energy counter
 if(message[0].equals("emergency")) 	
 	{    
 		congestion_min++;
@@ -5267,7 +5267,7 @@ else
 				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
 					<Id>1637772750724</Id>
 					<Name><![CDATA[checkingCongestion]]></Name>
-					<X>640</X><Y>40</Y>
+					<X>660</X><Y>190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5282,7 +5282,7 @@ else
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1637772750726</Id>
 					<Name><![CDATA[transition1]]></Name>
-					<X>630</X><Y>110</Y>
+					<X>650</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5454,7 +5454,7 @@ else
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1611405910057</Id>
 					<Name><![CDATA[TmaxDynamicCalc]]></Name>
-					<X>490</X><Y>520</Y>
+					<X>490</X><Y>510</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5473,7 +5473,7 @@ else if(congestion_min>200)
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1611405910061</Id>
 					<Name><![CDATA[rosenbrock]]></Name>
-					<X>490</X><Y>550</Y>
+					<X>490</X><Y>530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
