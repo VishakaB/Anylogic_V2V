@@ -8041,7 +8041,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713947127482</Id>
 					<Name><![CDATA[receivedmsg]]></Name>
-					<X>400</X><Y>-220</Y>
+					<X>1110</X><Y>-110</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8080,7 +8080,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713954458100</Id>
 					<Name><![CDATA[receptionfinished]]></Name>
-					<X>400</X><Y>-280</Y>
+					<X>1110</X><Y>-170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8140,7 +8140,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1714139976203</Id>
 					<Name><![CDATA[receptionfinishedcloud]]></Name>
-					<X>400</X><Y>-250</Y>
+					<X>1110</X><Y>-140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8188,7 +8188,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1717409391578</Id>
 					<Name><![CDATA[ACK_timeout]]></Name>
-					<X>820</X><Y>-170</Y>
+					<X>880</X><Y>-170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8203,7 +8203,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1717409434491</Id>
 					<Name><![CDATA[Message_timeout]]></Name>
-					<X>820</X><Y>-130</Y>
+					<X>880</X><Y>-130</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8356,6 +8356,46 @@ else {
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="40">
+						<EntryAction><![CDATA[// Check if the vehicle is connected to the network or to the car
+if (connected2network==true) {
+    //initialization
+    color = yellow;// Set color to yellow
+    int vehicleindex = main.vehicleids.indexOf(this.vehicleid);
+   
+    //transmission
+    transmitmsgcar = "emergency"+";"+String.valueOf(vehicleindex)+";"+ //
+    String.valueOf(vehicleid) + ";" + String.valueOf(carX) + ";" + String.valueOf(carY);
+    send(transmitmsgcar,main.networkaccess);
+    transmitfinished = true;
+    transmissionTime = time(SECOND);
+        
+    //Results
+    waitingTimetoConnect = time(SECOND)- startTime;//Total waiting time to connect to network
+    
+    //Storage
+    main.vehicle_transmissiontime.put(vehicleid, transmissionTime);
+    
+    if (main.vehicleLatency.containsKey(vehicleid)) {
+        // If the time already exists in the map, add the latency to its list
+        latencycount +=1;
+        avglatency = (waitingTimetoConnect + main.vehicleLatency.get(vehicleid))/latencycount; 
+        main.vehicleLatency.put(vehicleid,avglatency);
+    } else {
+        // If the time doesn't exist in the map, create a new list and add the latency
+        main.vehicleLatency.put(vehicleid, waitingTimetoConnect);
+    }
+    //System.out.println("vehicleid: "+vehicleid+" latency: "+ latency);
+} 
+else if (connected2car==true)
+     {
+     	color = green;
+     	sendToAllConnected("car" + ";" + String.valueOf(vehicleid) + ";" + String.valueOf(connected2network) + ";" + String.valueOf(carX) + ";" + String.valueOf(carY));
+     	transmitfinished = true;
+     }
+else {
+	    // Set color to red
+	    color = red;
+	}]]></EntryAction>
 						<FillColor/>
 					</Properties>
 				</StatechartElement>
@@ -8962,6 +9002,27 @@ color=red;
 					<FillMaterial>null</FillMaterial>
 					<ArcRadius>10</ArcRadius>
 				</RoundedRectangle>
+				<Text>
+					<Id>1717409316549</Id>
+					<Name><![CDATA[text]]></Name>
+					<X>880</X><Y>-210</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Simulation Parameters]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>10</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
 			</Presentation>
 
 				</Level>
