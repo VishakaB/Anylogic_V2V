@@ -8764,7 +8764,7 @@ else {
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1719563576935</Id>
 					<Name><![CDATA[ReceiveMsg]]></Name>
-					<X>410</X><Y>70</Y>
+					<X>430</X><Y>70</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8778,8 +8778,8 @@ else {
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1719563605528</Id>
-					<Name><![CDATA[RelayMsg]]></Name>
-					<X>580</X><Y>70</Y>
+					<Name><![CDATA[ListenMsg]]></Name>
+					<X>610</X><Y>70</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8792,6 +8792,23 @@ rsrp_cal();
 send("test",main.networkaccess);
 
 //Increment nbtransmissions]]></EntryAction>
+						<FillColor>-1468806</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1719566242120</Id>
+					<Name><![CDATA[RelayMsg]]></Name>
+					<X>610</X><Y>-10</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="40">
+						<EntryAction><![CDATA[//if received msg decoded successfully HARQ = ACK transmission 
+//else if HARQ = NACK transmission
+//Form the transmitting message
+//if HARQ
+//else if relay msg generation]]></EntryAction>
 						<FillColor>-1468806</FillColor>
 					</Properties>
 				</StatechartElement>
@@ -9672,7 +9689,7 @@ nbrelaying++]]></Action>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>80</X><Y>-10</Y></Point>
+						<Point><X>100</X><Y>-10</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1713511053796" Target="1719563576935" Trigger="message">
@@ -9695,18 +9712,19 @@ nbrelaying++]]></Action>
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1719563672010</Id>
-					<Name><![CDATA[transition21]]></Name>
-					<X>510</X><Y>90</Y>
+					<Name><![CDATA[msg_processing_delay]]></Name>
+					<X>530</X><Y>90</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>70</X><Y>0</Y></Point>
+						<Point><X>80</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1719563576935" Target="1719563605528" Trigger="timeout">
+						<Action><![CDATA[//Received Messages Processing Delay]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1//received msg processing time]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -9725,20 +9743,21 @@ nbrelaying++]]></Action>
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1719563678660</Id>
-					<Name><![CDATA[transition22]]></Name>
-					<X>600</X><Y>70</Y>
+					<Name><![CDATA[transferDelayRelaymsg]]></Name>
+					<X>610</X><Y>10</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-50</Y></Point>
-						<Point><X>-270</X><Y>-50</Y></Point>
-						<Point><X>-310</X><Y>20</Y></Point>
+						<Point><X>-160</X><Y>0</Y></Point>
+						<Point><X>-160</X><Y>40</Y></Point>
+						<Point><X>-290</X><Y>80</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1719563605528" Target="1713511053796" Trigger="timeout">
+					<Properties Source="1719566242120" Target="1713511053796" Trigger="timeout">
+						<Action><![CDATA[//Retransmit the message based on priority]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -9755,10 +9774,10 @@ nbrelaying++]]></Action>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="RelayMsg" ParentStateId="1719563605528">
+				<StatechartElement Class="Transition" ParentState="ListenMsg" ParentStateId="1719563605528">
 					<Id>1719564735158</Id>
 					<Name><![CDATA[Listening_rx]]></Name>
-					<X>640</X><Y>110</Y>
+					<X>670</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9769,8 +9788,7 @@ nbrelaying++]]></Action>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1719563605528" Target="1719563605528" Trigger="message">
-						<Action><![CDATA[//if received msg decoded successfully HARQ = ACK transmission 
-//else if HARQ = NACK transmission]]></Action>
+						<Action><![CDATA[//Neighborhood message listening]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -9790,7 +9808,7 @@ nbrelaying++]]></Action>
 				<StatechartElement Class="Transition" ParentState="ReceiveMsg" ParentStateId="1719563576935">
 					<Id>1719565199613</Id>
 					<Name><![CDATA[buffer_msgs]]></Name>
-					<X>470</X><Y>110</Y>
+					<X>490</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9802,6 +9820,38 @@ nbrelaying++]]></Action>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1719563576935" Target="1719563576935" Trigger="timeout">
 						<Action><![CDATA[//Buffer max number of messages possible]]></Action>
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1719566332167</Id>
+					<Name><![CDATA[waitingTime_relaying]]></Name>
+					<X>650</X><Y>70</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-40</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1719563605528" Target="1719566242120" Trigger="timeout">
+						<Action><![CDATA[//Based on vehicle status determine the waiting time
+//Waiting Time model]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
