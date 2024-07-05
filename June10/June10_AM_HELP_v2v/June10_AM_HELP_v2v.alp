@@ -6278,8 +6278,9 @@ if(message[0].equals("emergency") && message[1].equals(String.valueOf(id)))
 					<Points>
 						<Point><X>0.4650000000000034</X><Y>0</Y></Point>
 						<Point><X>-74</X><Y>-50</Y></Point>
-						<Point><X>-74</X><Y>-177</Y></Point>
-						<Point><X>144.934</X><Y>-211.53900000000002</Y></Point>
+						<Point><X>-69.535</X><Y>-239.259</Y></Point>
+						<Point><X>40.465</X><Y>-239.259</Y></Point>
+						<Point><X>134.934</X><Y>-240.507</Y></Point>
 					</Points>
 					<IconOffset>120.0</IconOffset>
 					<Properties Source="1611477531238" Target="1611477531226" Trigger="condition">

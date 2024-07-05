@@ -8449,7 +8449,7 @@ send("test",main.networkaccess);
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="40">
 						<EntryAction><![CDATA[//Set RSRSP threshold based on vehicle speed
-]]></EntryAction>
+//Transmit Syncref Search Request]]></EntryAction>
 						<FillColor>-4343957</FillColor>
 					</Properties>
 				</StatechartElement>
@@ -8948,7 +8948,7 @@ rsrpdBm >= -116 && warning==true]]></Condition>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[//RSRP<th & RSRP >= p_th 
-rsrpdBm < -110 && rsrpdBm >= -128]]></Condition>
+rsrpdBm >= -128 && rsrpdBm < -116 && warning==true]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[main.requiredEmergCalls]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
@@ -8980,7 +8980,7 @@ rsrpdBm < -110 && rsrpdBm >= -128]]></Condition>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[//RSRP<th & RSRP < p_th 
-rsrpdBm < -128 && rsrpdBm < -110]]></Condition>
+rsrpdBm < -128 && warning==true]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[main.requiredEmergCalls]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
