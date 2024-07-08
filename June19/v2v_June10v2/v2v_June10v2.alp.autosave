@@ -10423,7 +10423,7 @@ receptioncloud=false;]]></EntryAction>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="30">
-						<FillColor/>
+						<FillColor>-1468806</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -10437,7 +10437,7 @@ receptioncloud=false;]]></EntryAction>
 					<Properties Width="150" Height="30">
 						<EntryAction><![CDATA[
 ]]></EntryAction>
-						<FillColor/>
+						<FillColor>-1644806</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -10463,7 +10463,7 @@ if (message[0].equals("recommendation")) {
         }
     }
 }]]></EntryAction>
-						<FillColor/>
+						<FillColor>-1644806</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
