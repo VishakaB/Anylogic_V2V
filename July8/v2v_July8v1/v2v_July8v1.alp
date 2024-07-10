@@ -8194,7 +8194,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1717409391578</Id>
 					<Name><![CDATA[ACK_timeout]]></Name>
-					<X>440</X><Y>-190</Y>
+					<X>440</X><Y>-260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8209,7 +8209,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1717409434491</Id>
 					<Name><![CDATA[Message_timeout]]></Name>
-					<X>440</X><Y>-160</Y>
+					<X>440</X><Y>-230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8365,7 +8365,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719560714147</Id>
 					<Name><![CDATA[warning]]></Name>
-					<X>30</X><Y>-490</Y>
+					<X>30</X><Y>-230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8390,6 +8390,30 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 					<Id>1720424737824</Id>
 					<Name><![CDATA[waitingTimecontrol]]></Name>
 					<X>690</X><Y>-350</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1720593556848</Id>
+					<Name><![CDATA[timeoutReached]]></Name>
+					<X>440</X><Y>-200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1720602306013</Id>
+					<Name><![CDATA[nomsg]]></Name>
+					<X>440</X><Y>-170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8491,7 +8515,6 @@ waitingTimecontrol = 1/rsrpdBm;]]></EntryAction>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="40">
-						<EntryAction><![CDATA[//Transmit the data message]]></EntryAction>
 						<FillColor>-4343957</FillColor>
 					</Properties>
 				</StatechartElement>
@@ -8563,8 +8586,8 @@ else {
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1718782373398</Id>
-					<Name><![CDATA[Bcast_Partial_Control]]></Name>
-					<X>340</X><Y>480</Y>
+					<Name><![CDATA[ListenData]]></Name>
+					<X>340</X><Y>445</Y>
 					<Label><X>5</X><Y>30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8679,14 +8702,14 @@ else {
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1718786679379</Id>
-					<Name><![CDATA[Syncref_PartialCoverage]]></Name>
-					<X>340</X><Y>380</Y>
+					<Name><![CDATA[TransmitData]]></Name>
+					<X>340</X><Y>360</Y>
 					<Label><X>5</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="40">
-						<EntryAction><![CDATA[//Transmit Data
+						<EntryAction><![CDATA[//Transmit Data (Unicast, groucast, broadcast)
 ]]></EntryAction>
 						<FillColor>-4343957</FillColor>
 					</Properties>
@@ -8722,7 +8745,7 @@ else {
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1719563605528</Id>
-					<Name><![CDATA[ListenMsg]]></Name>
+					<Name><![CDATA[BroadcastMsg]]></Name>
 					<X>610</X><Y>70</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -8741,7 +8764,7 @@ send("test",main.networkaccess);
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1719566242120</Id>
-					<Name><![CDATA[RelayMsg]]></Name>
+					<Name><![CDATA[ListenMsg]]></Name>
 					<X>610</X><Y>-10</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -8753,6 +8776,22 @@ send("test",main.networkaccess);
 //Form the transmitting message
 //if HARQ
 //else if relay msg generation]]></EntryAction>
+						<FillColor>-1468806</FillColor>
+					</Properties>
+				</StatechartElement>
+				<StatechartElement Class="State" ParentState="ROOT_NODE">
+					<Id>1720602157160</Id>
+					<Name><![CDATA[RelayMsg]]></Name>
+					<X>425</X><Y>-10</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="100" Height="40">
+						<EntryAction><![CDATA[//Relay data if (nbrelaying < th)
+
+
+]]></EntryAction>
 						<FillColor>-1468806</FillColor>
 					</Properties>
 				</StatechartElement>
@@ -8981,9 +9020,8 @@ rsrpdBm < -128 && warning==true]]></Condition>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1718779670032" Target="1718779716634" Trigger="timeout">
-						<Action><![CDATA[//Listen to control messages with "I wanna connect"
-//If received data during this time change the waiting time based on received message
-//Determine the SyncRef based on the first control message received by other persons]]></Action>
+						<Action><![CDATA[//Transfer Delay: Control Message
+]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[waitingTimecontrol]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -9071,15 +9109,15 @@ HARQ==false && nbtransmissions <= 3]]></Condition>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>60</Y></Point>
+						<Point><X>0</X><Y>40</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1718779716634" Target="1718786679379" Trigger="timeout">
+					<Properties Source="1718779716634" Target="1718786679379" Trigger="condition">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
+						<Condition><![CDATA[timeoutReached=true]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -9140,39 +9178,6 @@ HARQ==false && nbtransmissions <= 3]]></Condition>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1718782771927</Id>
-					<Name><![CDATA[transition10]]></Name>
-					<X>340</X><Y>500</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-40</X><Y>0</Y></Point>
-						<Point><X>-40</X><Y>-200</Y></Point>
-						<Point><X>0</X><Y>-200</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1718782373398" Target="1718779716634" Trigger="condition">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[//Relaying threshold <th && retransmission threshold < th
-rsrpdBm >= -128 && rsrpdBm < -116 //add thresholds: relaying and retransmission]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -9250,22 +9255,23 @@ rsrpdBm < pre_rsrp_th && HARQ==false]]></Condition>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1718786690435</Id>
 					<Name><![CDATA[transition3]]></Name>
-					<X>380</X><Y>420</Y>
+					<X>370</X><Y>445</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>60</Y></Point>
+						<Point><X>0</X><Y>-45</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1718786679379" Target="1718782373398" Trigger="condition">
+					<Properties Source="1718782373398" Target="1718786679379" Trigger="condition">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[rsrpdBm >= -128 && rsrpdBm < -116]]></Condition>
+						<Condition><![CDATA[//relay threshold
+nbrelaying< 2]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -9280,7 +9286,7 @@ rsrpdBm < pre_rsrp_th && HARQ==false]]></Condition>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1718788088540</Id>
 					<Name><![CDATA[transition13]]></Name>
-					<X>340</X><Y>510</Y>
+					<X>340</X><Y>475</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9288,7 +9294,7 @@ rsrpdBm < pre_rsrp_th && HARQ==false]]></Condition>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-70</X><Y>0</Y></Point>
-						<Point><X>-70</X><Y>-380</Y></Point>
+						<Point><X>-70</X><Y>-345</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1718782373398" Target="1713511053796" Trigger="condition">
@@ -9297,7 +9303,7 @@ rsrpdBm < pre_rsrp_th && HARQ==false]]></Condition>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[//RSRP< Pth || RSRP > th //no need to check HARQ
-rsrpdBm < pre_rsrp_th || rsrpdBm > rsrp_th ]]></Condition>
+rsrpdBm < pre_rsrp_th || rsrpdBm > rsrp_th || nbrelaying > 2]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -9536,7 +9542,7 @@ nbrelaying++]]></Action>
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1719563672010</Id>
-					<Name><![CDATA[msg_processing_delay]]></Name>
+					<Name><![CDATA[waiting]]></Name>
 					<X>530</X><Y>90</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -9553,102 +9559,7 @@ nbrelaying++]]></Action>
 							<Code><![CDATA[1//received msg processing time]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1719563678660</Id>
-					<Name><![CDATA[transferDelayRelaymsg]]></Name>
-					<X>610</X><Y>10</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-160</X><Y>0</Y></Point>
-						<Point><X>-250</X><Y>0</Y></Point>
-						<Point><X>-290</X><Y>80</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1719566242120" Target="1713511053796" Trigger="timeout">
-						<Action><![CDATA[//Retransmit the message based on priority]]></Action>
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ListenMsg" ParentStateId="1719563605528">
-					<Id>1719564735158</Id>
-					<Name><![CDATA[Listening_rx]]></Name>
-					<X>670</X><Y>110</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-40</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1719563605528" Target="1719563605528" Trigger="message">
-						<Action><![CDATA[//Neighborhood message listening]]></Action>
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[String]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ReceiveMsg" ParentStateId="1719563576935">
-					<Id>1719565199613</Id>
-					<Name><![CDATA[buffer_msgs]]></Name>
-					<X>490</X><Y>110</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-40</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1719563576935" Target="1719563576935" Trigger="timeout">
-						<Action><![CDATA[//Buffer max number of messages possible]]></Action>
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
+						<Condition><![CDATA[timeoutReached=true]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -9692,17 +9603,17 @@ nbrelaying++]]></Action>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="Bcast_Partial_Control" ParentStateId="1718782373398">
+				<StatechartElement Class="Transition" ParentState="ListenData" ParentStateId="1718782373398">
 					<Id>1720431640646</Id>
 					<Name><![CDATA[transition2]]></Name>
-					<X>390</X><Y>520</Y>
+					<X>415</X><Y>445</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-40</Y></Point>
+						<Point><X>0</X><Y>40</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1718782373398" Target="1718782373398" Trigger="message">
@@ -9723,13 +9634,391 @@ nbrelaying++]]></Action>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="Listen_" ParentStateId="1718779716634">
+					<Id>1720593445919</Id>
+					<Name><![CDATA[transition5]]></Name>
+					<X>430</X><Y>280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>40</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1718779716634" Target="1718779716634" Trigger="message">
+						<Action><![CDATA[//Listen to control messages with "I wanna connect"
+//If received data during this time change the waiting time based on received message
+//Determine the SyncRef from the first control message received by neighbors]]></Action>
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[String]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="Listen_" ParentStateId="1718779716634">
+					<Id>1720593461065</Id>
+					<Name><![CDATA[transition6]]></Name>
+					<X>410</X><Y>280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>40</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1718779716634" Target="1718779716634" Trigger="timeout">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1720594738922</Id>
+					<Name><![CDATA[rsrp_calc]]></Name>
+					<X>360</X><Y>280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-23</X><Y>-19</Y></Point>
+						<Point><X>-40</X><Y>-15</Y></Point>
+						<Point><X>-45</X><Y>-5</Y></Point>
+						<Point><X>-20</X><Y>10</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1718779716634" Target="1718779716634" Trigger="timeout">
+						<Action><![CDATA[//rsrp check]]></Action>
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1720594937473</Id>
+					<Name><![CDATA[transferDelay]]></Name>
+					<X>410</X><Y>400</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>45</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1718786679379" Target="1718782373398" Trigger="timeout">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1720595879086</Id>
+					<Name><![CDATA[rsrp_calc1]]></Name>
+					<X>360</X><Y>450</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>-5</Y></Point>
+						<Point><X>-23</X><Y>-19</Y></Point>
+						<Point><X>-40</X><Y>-15</Y></Point>
+						<Point><X>-45</X><Y>-5</Y></Point>
+						<Point><X>-20</X><Y>10</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1718782373398" Target="1718782373398" Trigger="timeout">
+						<Action><![CDATA[//rsrp check]]></Action>
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ListenData" ParentStateId="1718782373398">
+					<Id>1720596133534</Id>
+					<Name><![CDATA[transition8]]></Name>
+					<X>395</X><Y>445</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>40</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1718782373398" Target="1718782373398" Trigger="timeout">
+						<Action><![CDATA[//Listening timeout]]></Action>
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1720596226430</Id>
+					<Name><![CDATA[transition10]]></Name>
+					<X>340</X><Y>380</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-50</X><Y>0</Y></Point>
+						<Point><X>-50</X><Y>-250</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1718786679379" Target="1713511053796" Trigger="condition">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[nbtransmissions>3]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1720599825023</Id>
+					<Name><![CDATA[rsrp_calc2]]></Name>
+					<X>270</X><Y>90</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-28</X><Y>-24</Y></Point>
+						<Point><X>-45</X><Y>-20</Y></Point>
+						<Point><X>-50</X><Y>-10</Y></Point>
+						<Point><X>-25</X><Y>0</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1713511053796" Target="1713511053796" Trigger="timeout">
+						<Action><![CDATA[//rsrp check]]></Action>
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ListenMsg" ParentStateId="1719566242120">
+					<Id>1720602127636</Id>
+					<Name><![CDATA[transition14]]></Name>
+					<X>630</X><Y>-10</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>40</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1719566242120" Target="1719566242120" Trigger="message">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1720602175045</Id>
+					<Name><![CDATA[transition20]]></Name>
+					<X>610</X><Y>10</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-85</X><Y>0</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1719566242120" Target="1720602157160" Trigger="timeout">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1720602265333</Id>
+					<Name><![CDATA[tarnsferDelay]]></Name>
+					<X>425</X><Y>10</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-105</X><Y>80</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1720602157160" Target="1713511053796" Trigger="timeout">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1720602283644</Id>
+					<Name><![CDATA[transition21]]></Name>
+					<X>610</X><Y>20</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-205</X><Y>30</Y></Point>
+						<Point><X>-280</X><Y>80</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1719566242120" Target="1713511053796" Trigger="condition">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[nomsg=true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
 			</StatechartElements>
 			<Events>
 				<Event>
 					<Id>1719559879691</Id>
 					<Name><![CDATA[pedcrossing_warning]]></Name>
-					<X>30</X><Y>-520</Y>
-					<Label><X>5</X><Y>-5</Y></Label>
+					<X>30</X><Y>-540</Y>
+					<Label><X>5</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -10916,7 +11205,7 @@ if(message[0].equals("emergency"))
 				<Variable Class="PlainVariable">
 					<Id>1717056336039</Id>
 					<Name><![CDATA[commlatencycount]]></Name>
-					<X>880</X><Y>-50</Y>
+					<X>680</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10928,7 +11217,7 @@ if(message[0].equals("emergency"))
 				<Variable Class="PlainVariable">
 					<Id>1717057125366</Id>
 					<Name><![CDATA[commlatency]]></Name>
-					<X>880</X><Y>-20</Y>
+					<X>680</X><Y>270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10940,7 +11229,7 @@ if(message[0].equals("emergency"))
 				<Variable Class="PlainVariable">
 					<Id>1717057140340</Id>
 					<Name><![CDATA[transmittime_vehicle]]></Name>
-					<X>880</X><Y>20</Y>
+					<X>680</X><Y>310</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -11017,7 +11306,7 @@ processfinished=true;]]></EntryAction>
 					<Id>1717143217341</Id>
 					<Name><![CDATA[RecommendationSystem]]></Name>
 					<X>220</X><Y>290</Y>
-					<Label><X>15</X><Y>15</Y></Label>
+					<Label><X>10</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
