@@ -9896,7 +9896,8 @@ rsrpdBm < pre_rsrp_th || rsrpdBm > rsrp_th || nbrelaying > 2]]></Condition>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1720615353892" Target="1720615353892" Trigger="message">
-						<Action><![CDATA[//Listen to neighbor relaying of own message]]></Action>
+						<Action><![CDATA[//Listen to neighbor relaying of own message
+//nbrelaying threshold varies with partial and out of coverage]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
