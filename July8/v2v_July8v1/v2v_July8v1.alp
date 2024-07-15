@@ -8483,7 +8483,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 						<EntryAction><![CDATA[//HARQ==NACK
 if (HARQ==false && this.nbtransmissions < 3)
 {//Generate and Transmit Data Msg 
-send("test"+";"+String.valueOf(this.vehicleid),main.networkaccess);
+send("testt"+";"+String.valueOf(this.vehicleid),main.networkaccess);
 System.out.println("okay tx msg: "+String.valueOf(this.vehicleid));
 //Increment nbtransmissions
 this.nbtransmissions++;
@@ -8781,6 +8781,7 @@ rsrpdBm >= -116 && warning==true && nbtransmissions < 3]]></Condition>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1717136759428" Target="1713511053796" Trigger="condition">
+						<Action><![CDATA[HARQ=false]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -9065,11 +9066,11 @@ rsrpdBm < pre_rsrp_th || rsrpdBm > rsrp_th || nbrelaying > 2]]></Condition>
 //HARQ Status Listening
 //RSRP checking
 //Own Message Relaying
-if (receivedmsg.equals("test")) {
+if (receivedmsg.equals("testt")) {
     this.nbrelaying++;
 } else if (receivedmsg.equals("HARQ")) {
     HARQ = true;
-    System.out.println("okay HARQ reception"); 
+    System.out.println("okay HARQ reception: "+String.valueOf(this.vehicleid)); 
 }]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
@@ -10577,6 +10578,18 @@ rsrpdBm = rssidBm - 10*log (12*N);
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1721044908299</Id>
+					<Name><![CDATA[received_a_msg]]></Name>
+					<X>640</X><Y>20</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+					</Properties>
+				</Variable>
 			</Variables>
 			<StatechartElements>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -10675,12 +10688,12 @@ if (message[0].equals("recommendation")) {
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1713788393420" Target="1713948211784" Trigger="message">
-						<Action><![CDATA[receivedmsg=msg;
+						<Action><![CDATA[receivedmsg = msg;
 String[] message = receivedmsg.split(";");
 //Receive message
 //Checking V2V message type (relay data or HARQ)
-if(message[0].equals("test")) 	
-	{ 
+if(message[0].equals("testt")) 	
+	{ received_a_msg = true;
 	  System.out.println("okay test message reception: "+message[0]+ String.valueOf(message.length));  
 	  //System.out.println("network received message");
 	  receptionfinished=true;   
@@ -10886,37 +10899,6 @@ if(message[0].equals("emergency"))
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="Receive" ParentStateId="1713948211784">
-					<Id>1719576359062</Id>
-					<Name><![CDATA[buffer_msgs]]></Name>
-					<X>420</X><Y>200</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-20</X><Y>-30</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1713948211784" Target="1713948211784" Trigger="timeout">
-						<Action><![CDATA[//Buffer max number of messages possible]]></Action>
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1719578521085</Id>
 					<Name><![CDATA[transition6]]></Name>
@@ -10933,12 +10915,14 @@ if(message[0].equals("emergency"))
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1713948211784" Target="1713788393420" Trigger="condition">
-						<Action><![CDATA[System.out.println("ok going back to idle");  ]]></Action>
+						<Action><![CDATA[//System.out.println("ok going back to idle");  
+//transmissionHARQ = false;
+]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[transmissionHARQ == true]]></Condition>
+						<Condition><![CDATA[transmissionHARQ = true;]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
