@@ -8047,7 +8047,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713947127482</Id>
 					<Name><![CDATA[receivedmsg]]></Name>
-					<X>690</X><Y>-410</Y>
+					<X>660</X><Y>-410</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8086,7 +8086,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713954458100</Id>
 					<Name><![CDATA[receptionfinished]]></Name>
-					<X>690</X><Y>-470</Y>
+					<X>660</X><Y>-470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8146,7 +8146,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1714139976203</Id>
 					<Name><![CDATA[receptionfinishedcloud]]></Name>
-					<X>690</X><Y>-440</Y>
+					<X>660</X><Y>-440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8323,7 +8323,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719302043649</Id>
 					<Name><![CDATA[freespacepathlossdbm]]></Name>
-					<X>690</X><Y>-380</Y>
+					<X>660</X><Y>-380</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8389,7 +8389,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1720424737824</Id>
 					<Name><![CDATA[waitingTimecontrol]]></Name>
-					<X>690</X><Y>-350</Y>
+					<X>660</X><Y>-350</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8425,13 +8425,28 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1720681359271</Id>
 					<Name><![CDATA[v2xchannel]]></Name>
-					<X>690</X><Y>-320</Y>
+					<X>660</X><Y>-320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1721042163978</Id>
+					<Name><![CDATA[car2network]]></Name>
+					<X>220</X><Y>-80</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[false]]></Code>
+						</InitialValue>
 					</Properties>
 				</Variable>
 			</Variables>
@@ -8465,11 +8480,15 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="40">
-						<EntryAction><![CDATA[//Generate and Transmit Data Msg 
-send("test",main.networkaccess);
-
+						<EntryAction><![CDATA[//HARQ==NACK
+if (HARQ==false && this.nbtransmissions < 3)
+{//Generate and Transmit Data Msg 
+send("test"+";"+String.valueOf(this.vehicleid),main.networkaccess);
+System.out.println("okay tx msg: "+String.valueOf(this.vehicleid));
 //Increment nbtransmissions
-this.nbtransmissions++;]]></EntryAction>
+this.nbtransmissions++;
+car2network=true;
+}]]></EntryAction>
 						<FillColor>-1644806</FillColor>
 					</Properties>
 				</StatechartElement>
@@ -8499,7 +8518,7 @@ this.nbtransmissions++;]]></EntryAction>
 sendToAll("I wanna connect");
 //Calculate waiting time to send control message
 waitingTimecontrol = 1/rsrpdBm;]]></EntryAction>
-						<FillColor>-6632142</FillColor>
+						<FillColor>-7278960</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -8511,7 +8530,7 @@ waitingTimecontrol = 1/rsrpdBm;]]></EntryAction>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="40">
-						<FillColor>-6632142</FillColor>
+						<FillColor>-7278960</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -8523,7 +8542,7 @@ waitingTimecontrol = 1/rsrpdBm;]]></EntryAction>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="40">
-						<FillColor>-6632142</FillColor>
+						<FillColor>-7278960</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -8537,7 +8556,7 @@ waitingTimecontrol = 1/rsrpdBm;]]></EntryAction>
 					<Properties Width="100" Height="40">
 						<EntryAction><![CDATA[//Transmit Data (Unicast, groucast, broadcast)
 ]]></EntryAction>
-						<FillColor>-6632142</FillColor>
+						<FillColor>-7278960</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -8551,7 +8570,7 @@ waitingTimecontrol = 1/rsrpdBm;]]></EntryAction>
 					<Properties Width="100" Height="40">
 						<EntryAction><![CDATA[//Receive message
 //Checking V2V message type (relay data or HARQ)]]></EntryAction>
-						<FillColor>-10496</FillColor>
+						<FillColor>-256</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -8570,7 +8589,7 @@ rsrp_cal();
 send("test",main.networkaccess);
 
 //Increment nbtransmissions]]></EntryAction>
-						<FillColor>-10496</FillColor>
+						<FillColor>-256</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -8587,7 +8606,7 @@ send("test",main.networkaccess);
 //partial and out of coverage scenarios
 //Compute waiting time
 ]]></EntryAction>
-						<FillColor>-10496</FillColor>
+						<FillColor>-256</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -8603,7 +8622,7 @@ send("test",main.networkaccess);
 
 
 ]]></EntryAction>
-						<FillColor>-10496</FillColor>
+						<FillColor>-256</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -8620,7 +8639,7 @@ send("test",main.networkaccess);
 sendToAll("I wanna connect");
 //Calculate waiting time to send control message
 waitingTimecontrol = 1/rsrpdBm;]]></EntryAction>
-						<FillColor>-10039894</FillColor>
+						<FillColor>-6943</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -8632,7 +8651,7 @@ waitingTimecontrol = 1/rsrpdBm;]]></EntryAction>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="40">
-						<FillColor>-10039894</FillColor>
+						<FillColor>-6943</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -8646,7 +8665,7 @@ waitingTimecontrol = 1/rsrpdBm;]]></EntryAction>
 					<Properties Width="100" Height="40">
 						<EntryAction><![CDATA[//Transmit Data (Unicast, groucast, broadcast)
 ]]></EntryAction>
-						<FillColor>-10039894</FillColor>
+						<FillColor>-6943</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -8658,7 +8677,7 @@ waitingTimecontrol = 1/rsrpdBm;]]></EntryAction>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="40">
-						<FillColor>-10039894</FillColor>
+						<FillColor>-6943</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
@@ -8704,7 +8723,7 @@ color=red;
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[//RSRP threshols for V2N and V2X switching = -95 dBm
-rsrpdBm >= -116 && warning==true]]></Condition>
+rsrpdBm >= -116 && warning==true && nbtransmissions < 3]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[main.requiredEmergCalls]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
@@ -8729,12 +8748,12 @@ rsrpdBm >= -116 && warning==true]]></Condition>
 						<Point><X>0</X><Y>40</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1713941014450" Target="1717136759428" Trigger="timeout">
+					<Properties Source="1713941014450" Target="1717136759428" Trigger="condition">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
+						<Condition><![CDATA[car2network==true]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -8766,7 +8785,7 @@ rsrpdBm >= -116 && warning==true]]></Condition>
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[HARQ==true || rsrpdBm<-116 || nbrelaying>=2]]></Condition>
+						<Condition><![CDATA[HARQ==true || rsrpdBm<-116 || nbrelaying>=2 || nbtransmissions>=3]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -8887,9 +8906,9 @@ rsrpdBm < -128 && warning==true]]></Condition>
 						<Point><X>0</X><Y>-40</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1717136759428" Target="1713941014450" Trigger="condition">
+					<Properties Source="1717136759428" Target="1713941014450" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
+							<Code><![CDATA[10]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[//HARQ==NACK
@@ -9046,8 +9065,12 @@ rsrpdBm < pre_rsrp_th || rsrpdBm > rsrp_th || nbrelaying > 2]]></Condition>
 //HARQ Status Listening
 //RSRP checking
 //Own Message Relaying
-if(receivedmsg=="test")
-this.nbrelaying++;]]></Action>
+if (receivedmsg.equals("test")) {
+    this.nbrelaying++;
+} else if (receivedmsg.equals("HARQ")) {
+    HARQ = true;
+    System.out.println("okay HARQ reception"); 
+}]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -9058,38 +9081,6 @@ this.nbrelaying++;]]></Action>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
 						</Rate>
 						<MessageType><![CDATA[String]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1719559591306</Id>
-					<Name><![CDATA[transition19]]></Name>
-					<X>130</X><Y>200</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-40</Y></Point>
-						<Point><X>0</X><Y>-50</Y></Point>
-						<Point><X>100</X><Y>-80</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1713941014450" Target="1713511053796" Trigger="condition">
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[rsrpdBm<-116 || this.nbtransmissions>=3]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
 						<DefaultTransition>true</DefaultTransition>
 						<FilterType><![CDATA[unconditionally]]></FilterType>
 						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
@@ -10021,6 +10012,41 @@ rsrp_cal();]]></Action>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
+				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+					<Id>1721042010481</Id>
+					<Name><![CDATA[rsrp_calc6]]></Name>
+					<X>130</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-3</X><Y>-4</Y></Point>
+						<Point><X>-20</X><Y>0</Y></Point>
+						<Point><X>-25</X><Y>10</Y></Point>
+						<Point><X>-10</X><Y>15</Y></Point>
+					</Points>
+					<IconOffset>20.0</IconOffset>
+					<Properties Source="1713941014450" Target="1713941014450" Trigger="timeout">
+						<Action><![CDATA[//rsrp check
+rsrp_cal();]]></Action>
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Condition><![CDATA[true]]></Condition>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<MessageType><![CDATA[Object]]></MessageType>
+						<DefaultTransition>true</DefaultTransition>
+						<FilterType><![CDATA[unconditionally]]></FilterType>
+						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
+						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
+					</Properties>	
+				</StatechartElement>
 			</StatechartElements>
 			<Events>
 				<Event>
@@ -10061,7 +10087,7 @@ rsrp_cal();]]></Action>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1719215093141</Id>
 					<Name><![CDATA[rsrp_cal]]></Name>
-					<X>690</X><Y>-500</Y>
+					<X>660</X><Y>-500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10084,12 +10110,12 @@ int N = 10;//for 15kHz in n47 band
 rsrpdBm = rssidBm - 10*log (12*N);
 
 //Printing
-System.out.println("pathlossdbm :" +freespacepathlossdbm);
-System.out.println("vehicleid :" +this.vehicleid);
-System.out.println("carX :" +this.getX());
-System.out.println("carY :" +this.getY());
+//System.out.println("pathlossdbm :" +freespacepathlossdbm);
+//System.out.println("vehicleid :" +this.vehicleid);
+//System.out.println("carX :" +this.getX());
+//System.out.println("carY :" +this.getY());
 
-System.out.println("rsrpdBm :" +rsrpdBm);]]></Body>
+//System.out.println("rsrpdBm :" +rsrpdBm);]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
@@ -10458,7 +10484,7 @@ System.out.println("rsrpdBm :" +rsrpdBm);]]></Body>
 				<Variable Class="PlainVariable">
 					<Id>1715587410115</Id>
 					<Name><![CDATA[datarate]]></Name>
-					<X>640</X><Y>-150</Y>
+					<X>640</X><Y>-140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10470,7 +10496,7 @@ System.out.println("rsrpdBm :" +rsrpdBm);]]></Body>
 				<Variable Class="PlainVariable">
 					<Id>1715587420321</Id>
 					<Name><![CDATA[latency]]></Name>
-					<X>640</X><Y>-180</Y>
+					<X>640</X><Y>-170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10482,7 +10508,7 @@ System.out.println("rsrpdBm :" +rsrpdBm);]]></Body>
 				<Variable Class="PlainVariable">
 					<Id>1715587438762</Id>
 					<Name><![CDATA[packetlossrate]]></Name>
-					<X>640</X><Y>-110</Y>
+					<X>640</X><Y>-100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10524,7 +10550,7 @@ System.out.println("rsrpdBm :" +rsrpdBm);]]></Body>
 				<Variable Class="PlainVariable">
 					<Id>1719578570301</Id>
 					<Name><![CDATA[relaywarning]]></Name>
-					<X>640</X><Y>-80</Y>
+					<X>640</X><Y>-70</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10539,7 +10565,7 @@ System.out.println("rsrpdBm :" +rsrpdBm);]]></Body>
 				<Variable Class="PlainVariable">
 					<Id>1719578614892</Id>
 					<Name><![CDATA[transmissionHARQ]]></Name>
-					<X>640</X><Y>-40</Y>
+					<X>640</X><Y>-30</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10562,8 +10588,8 @@ System.out.println("rsrpdBm :" +rsrpdBm);]]></Body>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="30">
-						<EntryAction><![CDATA[transmitfinished=false;
-//initialize variable
+						<EntryAction><![CDATA[//initialize variable
+transmitfinished=false;
 receptioncloud=false;]]></EntryAction>
 						<FillColor>-5247250</FillColor>
 					</Properties>
@@ -10577,12 +10603,12 @@ receptioncloud=false;]]></EntryAction>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="30">
-						<FillColor>-1468806</FillColor>
+						<FillColor>-256</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1714029614857</Id>
-					<Name><![CDATA[TransmitToCloud]]></Name>
+					<Name><![CDATA[NetworkToCloud]]></Name>
 					<X>160</X><Y>170</Y>
 					<Label><X>10</X><Y>15</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -10596,7 +10622,7 @@ receptioncloud=false;]]></EntryAction>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1714138516185</Id>
-					<Name><![CDATA[TransmitToCar]]></Name>
+					<Name><![CDATA[Cloud2Network2Car]]></Name>
 					<X>340</X><Y>250</Y>
 					<Label><X>20</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -10653,22 +10679,25 @@ if (message[0].equals("recommendation")) {
 String[] message = receivedmsg.split(";");
 //Receive message
 //Checking V2V message type (relay data or HARQ)
-if(message[0].equals("emergency")) 	
-	{    
+if(message[0].equals("test")) 	
+	{ 
+	  System.out.println("okay test message reception: "+message[0]+ String.valueOf(message.length));  
 	  //System.out.println("network received message");
 	  receptionfinished=true;   
-	  String vehicleindex = message[1];//vehicleid
+	  //String vehicleindex = message[1];//vehicleid
 	  //System.out.println("vehicle index received at network: "+message[1]);
 	  //Transmit HARQ == ACK message
 	  for (Car car : main.cars) {
-        if (car.vehicleid == Integer.valueOf(message[2])) {
+        if (car.vehicleid == Integer.valueOf(message[1])) {
             send("HARQ", car);
             transmissionHARQ = true;
+            //Printing
+            System.out.println("HARQ sent to car: " +String.valueOf(car.vehicleid));
             break; // Exit loop after transmitting to the correct car
             }
         //Broadcast/Retransmit the warning message to all vehicles connected to the network
-        send(receivedmsg, car);
-        relaywarning=true;
+        //send(receivedmsg, car);
+        //relaywarning=true;
         }    
 	}
 else if (message[0].equals("recommendation")) 	
@@ -10815,7 +10844,7 @@ else if (message[0].equals("recommendation"))
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="TransmitToCloud" ParentStateId="1714029614857">
+				<StatechartElement Class="Transition" ParentState="NetworkToCloud" ParentStateId="1714029614857">
 					<Id>1717069281770</Id>
 					<Name><![CDATA[transition1]]></Name>
 					<X>270</X><Y>200</Y>
@@ -10904,11 +10933,12 @@ if(message[0].equals("emergency"))
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1713948211784" Target="1713788393420" Trigger="condition">
+						<Action><![CDATA[System.out.println("ok going back to idle");  ]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[relaywarning==true ]]></Condition>
+						<Condition><![CDATA[transmissionHARQ == true]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -11277,7 +11307,7 @@ if(message[0].equals("emergency"))
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="30">
 						<EntryAction><![CDATA[receptionexit=false]]></EntryAction>
-						<FillColor/>
+						<FillColor>-5247250</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -11290,7 +11320,7 @@ if(message[0].equals("emergency"))
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="30">
 						<EntryAction><![CDATA[receptionfinished=true]]></EntryAction>
-						<FillColor/>
+						<FillColor>-256</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -11308,7 +11338,7 @@ transmitmsg = "recommendation"+";"+message[1]+";"+message[2]+";"+roadsegments.ge
 //System.out.println("vehicle index transmmitted"+vehicleindex);
 send(transmitmsg,main.networkaccess);
 processfinished=true;]]></EntryAction>
-						<FillColor/>
+						<FillColor>-1644806</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -11326,7 +11356,7 @@ transmitmsg = "recommendation"+";"+message[1]+";"+message[2]+";"+roadsegments.ge
 //System.out.println("vehicle index transmmitted"+vehicleindex);
 send(transmitmsg,main.networkaccess);
 processfinished=true;]]></EntryAction>
-						<FillColor/>
+						<FillColor>-1644806</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
