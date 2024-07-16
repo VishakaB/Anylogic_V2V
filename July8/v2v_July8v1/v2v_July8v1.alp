@@ -344,6 +344,21 @@ applyNetwork();]]></BeforeStepCode>
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1721112868578</Id>
+					<Name><![CDATA[nbmsgs]]></Name>
+					<X>-230</X><Y>-30</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[100000000]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
 				<Variable Class="CollectionVariable">
 					<Id>1713507346579</Id>
 					<Name><![CDATA[vehicleids]]></Name>
@@ -8449,6 +8464,60 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1721112440821</Id>
+					<Name><![CDATA[msgid]]></Name>
+					<X>240</X><Y>-600</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1721115375598</Id>
+					<Name><![CDATA[contains]]></Name>
+					<X>240</X><Y>-630</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1721113269609</Id>
+					<Name><![CDATA[msgidsall]]></Name>
+					<X>240</X><Y>-550</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Integer]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1721113850854</Id>
+					<Name><![CDATA[txcomplete]]></Name>
+					<X>240</X><Y>-580</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[ArrayList]]></CollectionClass>
+						<ElementClass><![CDATA[Integer]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
 			</Variables>
 			<StatechartElements>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -8467,7 +8536,8 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 
 
 //RSRP from gNB calculation
-	]]></EntryAction>
+
+]]></EntryAction>
 						<FillColor>-5247250</FillColor>
 					</Properties>
 				</StatechartElement>
@@ -8480,15 +8550,20 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="40">
-						<EntryAction><![CDATA[//HARQ==NACK
-if (HARQ==false && this.nbtransmissions < 3)
-{//Generate and Transmit Data Msg 
-send("testt"+";"+String.valueOf(this.vehicleid),main.networkaccess);
-System.out.println("okay tx msg: "+String.valueOf(this.vehicleid));
-//Increment nbtransmissions
-this.nbtransmissions++;
-car2network=true;
-}]]></EntryAction>
+						<EntryAction><![CDATA[// HARQ == NACK
+
+if (HARQ==false && this.nbtransmissions < 3 && !txcomplete.contains(msgid)) {
+    // Generate and Transmit Data Msg
+    send("testt"+";"+String.valueOf(this.vehicleid), main.networkaccess);
+    System.out.println("okay tx msg: " + String.valueOf(this.vehicleid)+" ; "+String.valueOf(this.msgid));
+    
+    // Increment nbtransmissions
+    this.nbtransmissions++;
+    
+    // Set car2network to true
+    car2network = true;
+}
+]]></EntryAction>
 						<FillColor>-1644806</FillColor>
 					</Properties>
 				</StatechartElement>
@@ -8718,12 +8793,21 @@ color=red;
 					</Points>
 					<IconOffset>60.0</IconOffset>
 					<Properties Source="1713511053796" Target="1713941014450" Trigger="condition">
+						<Action><![CDATA[//initialize msg id
+
+//for (int value : txcomplete) {
+   // if (value == msgid) {
+       // contains = true;
+       // break;
+   // }
+//}
+msgid=(int) uniform(1,main.nbmsgs);]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[0.1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[//RSRP threshols for V2N and V2X switching = -95 dBm
-rsrpdBm >= -116 && warning==true && nbtransmissions < 3]]></Condition>
+rsrpdBm >= -116 && warning==true && nbtransmissions < 3 ]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[main.requiredEmergCalls]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_MINUTE]]></Unit>
@@ -8781,7 +8865,7 @@ rsrpdBm >= -116 && warning==true && nbtransmissions < 3]]></Condition>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1717136759428" Target="1713511053796" Trigger="condition">
-						<Action><![CDATA[HARQ=false]]></Action>
+						<Action><![CDATA[HARQ=false; txcomplete.add(msgid);]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -10694,11 +10778,8 @@ String[] message = receivedmsg.split(";");
 //Checking V2V message type (relay data or HARQ)
 if(message[0].equals("testt")) 	
 	{ received_a_msg = true;
-	  System.out.println("okay test message reception: "+message[0]+ String.valueOf(message.length));  
-	  //System.out.println("network received message");
 	  receptionfinished=true;   
 	  //String vehicleindex = message[1];//vehicleid
-	  //System.out.println("vehicle index received at network: "+message[1]);
 	  //Transmit HARQ == ACK message
 	  for (Car car : main.cars) {
         if (car.vehicleid == Integer.valueOf(message[1])) {
