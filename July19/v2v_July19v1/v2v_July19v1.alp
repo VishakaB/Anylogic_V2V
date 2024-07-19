@@ -9926,7 +9926,7 @@ timeoutReached=true;]]></Action>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[//RSRP< Pth || RSRP > th //no need to check HARQ
-rsrpdBm < pre_rsrp_th || rsrpdBm > rsrp_th || nbrelaying > 2]]></Condition>
+rsrpdBm > -128 || nbrelaying > 2]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -9952,8 +9952,22 @@ rsrpdBm < pre_rsrp_th || rsrpdBm > rsrp_th || nbrelaying > 2]]></Condition>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1720615353892" Target="1720615353892" Trigger="message">
-						<Action><![CDATA[//Listen to neighbor relaying of own message
-//nbrelaying threshold varies with partial and out of coverage]]></Action>
+						<Action><![CDATA[//Listen to control messages with "I wanna connect"
+//If received data during this time change the waiting time based on received message
+//Determine the SyncRef from the first control message received by neighbors
+newmsg=msg;
+String[] message = newmsg.split(";");
+//System.out.println("V2V listen state ok");
+
+if (message[0].equals("testt v2v: ")&& 
+    !message[1].equals(String.valueOf(vehicleid)) && 
+    !message[2].equals(String.valueOf(msgid))) {
+    
+    nbrelaying++;
+    System.out.println("V2V data msg listening: "+message[0]+";"+message[1]+";"+message[2]);
+    timeoutReached=true;
+    System.out.println("V2V data msg listening timeout reached ok");
+}]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
