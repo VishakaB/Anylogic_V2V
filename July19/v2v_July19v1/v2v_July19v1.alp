@@ -8753,7 +8753,7 @@ for (Car car : main.cars) {
     // Check if the car is not itself
     if (car != this) {
         this.connectTo(car);
-        send("I wanna connect"+";"+String.valueOf(this.vehicleid)+";"+String.valueOf(msgid), car); // control msg
+        send("oc I wanna connect"+";"+String.valueOf(this.vehicleid)+";"+String.valueOf(msgid), car); // control msg
         //System.out.println("V2V sending done!");
     }
 }
@@ -8791,7 +8791,7 @@ for (Car car : main.cars) {
     // Check if the car is not itself
     if (car != this) {
         this.connectTo(car);
-        send("testt v2v: " +";"+String.valueOf(vehicleid)+";"+ String.valueOf(msgid), car); // control msg
+        send("oc v2v" +";"+String.valueOf(vehicleid)+";"+ String.valueOf(msgid), car); // control msg
         //System.out.println("V2V sending done!");
     }
 }]]></EntryAction>
@@ -9740,14 +9740,14 @@ newmsg=msg;
 String[] message = newmsg.split(";");
 //System.out.println("V2V listen state ok");
 
-if (message[0].equals("I wanna connect")&& 
+if (message[0].equals("oc I wanna connect")&& 
     !message[1].equals(String.valueOf(vehicleid)) && 
     !message[2].equals(String.valueOf(msgid))) {
     
     nbrelaying++;
-    System.out.println("V2V listening: "+message[0]+";"+message[1]+";"+message[2]);
+    System.out.println("V2V oc listening: "+message[0]+";"+message[1]+";"+message[2]);
     timeoutReached=true;
-    System.out.println("V2V listening timeout reached ok");
+    System.out.println("V2V oc listening timeout reached ok");
 }]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
@@ -9959,14 +9959,14 @@ newmsg=msg;
 String[] message = newmsg.split(";");
 //System.out.println("V2V listen state ok");
 
-if (message[0].equals("testt v2v: ")&& 
+if (message[0].equals("oc v2v")&& 
     !message[1].equals(String.valueOf(vehicleid)) && 
     !message[2].equals(String.valueOf(msgid))) {
     
     nbrelaying++;
-    System.out.println("V2V data msg listening: "+message[0]+";"+message[1]+";"+message[2]);
+    System.out.println("V2V oc data msg listening: "+message[0]+";"+message[1]+";"+message[2]);
     timeoutReached=true;
-    System.out.println("V2V data msg listening timeout reached ok");
+    System.out.println("V2V oc data msg listening timeout reached ok");
 }]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
@@ -10239,7 +10239,7 @@ rssidBm_watts = Math.pow(10,(rssidBm-30)/10);
 
 //RSRP calculation
 int N = 10;//for 15kHz in n47 band
-rsrpdBm = rssidBm - 10*log (12*N)-100;//added -100 for testing V2V
+rsrpdBm = rssidBm - 10*log (12*N)-200;//added -100 for testing V2V
 
 //Printing
 //System.out.println("pathlossdbm :" +freespacepathlossdbm);
