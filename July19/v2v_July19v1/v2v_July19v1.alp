@@ -8598,7 +8598,7 @@ for (Car car : main.cars) {
     // Check if the car is not itself
     if (car != this) {
         this.connectTo(car);
-        send("I wanna connect" + String.valueOf(this.vehicleid) + String.valueOf(msgid), car); // control msg
+        send("I wanna connect"+";"+String.valueOf(this.vehicleid)+";"+String.valueOf(msgid), car); // control msg
         //System.out.println("V2V sending done!");
     }
 }
@@ -8648,7 +8648,7 @@ for (Car car : main.cars) {
     // Check if the car is not itself
     if (car != this) {
         this.connectTo(car);
-        send("testt v2v" + String.valueOf(this.vehicleid) + String.valueOf(msgid), car); // control msg
+        send("testt v2v: " +";"+String.valueOf(vehicleid)+";"+ String.valueOf(msgid), car); // control msg
         //System.out.println("V2V sending done!");
     }
 }]]></EntryAction>
@@ -9183,7 +9183,7 @@ if (receivedmsg.equals("testt")) {
 						<Action><![CDATA[//msg reception
 receivedmsg = msg;
 String[] message = receivedmsg.split(";");
-System.out.println("Received a msg!"+message[0]);
+System.out.println("Received a msg!: "+message[0]);
 if(message[0].equals("I wanna connect")) 	
 	{ 
 	//Printing
