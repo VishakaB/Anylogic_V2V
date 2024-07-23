@@ -7,7 +7,7 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.0.202404161236" AlpVersion="8.9.0">
 <Model>
 	<Id>1713352799334</Id>
-	<Name><![CDATA[v2v_July23v1]]></Name>
+	<Name><![CDATA[v2v_July23v2]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[v2v]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Second]]></ModelTimeUnit>
@@ -10022,7 +10022,8 @@ String[] message = newmsg.split(";");
 //System.out.println("V2V data listen state ok");
 
 if (message[0].equals("oc v2v")&& 
-    !message[1].equals(String.valueOf(vehicleid))) {
+    !message[1].equals(String.valueOf(vehicleid))&&
+    !message[2].equals(String.valueOf(msgid))) {
     
     nbrelaying++;
     //System.out.println("V2V oc data msg listening: "+message[0]+";"+message[1]+";"+message[2]);
