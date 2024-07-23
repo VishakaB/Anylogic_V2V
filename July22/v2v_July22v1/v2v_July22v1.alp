@@ -8452,7 +8452,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721042163978</Id>
 					<Name><![CDATA[car2network]]></Name>
-					<X>220</X><Y>-80</Y>
+					<X>650</X><Y>-190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8564,7 +8564,8 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 
 //RSRP from gNB calculation
 
-vehicletext=blue;]]></EntryAction>
+vehicletext=blue;
+timeoutReached=false;]]></EntryAction>
 						<FillColor>-5247250</FillColor>
 					</Properties>
 				</StatechartElement>
@@ -8618,6 +8619,7 @@ if (HARQ==false && this.nbtransmissions < 3 && !txcomplete.contains(msgid)) {
 						<EntryAction><![CDATA[//Set RSRSP threshold based on vehicle speed
 //Broadcast I wanna connect control message with time, frequency, etc for data messaging
 //send only to connected neoghboring cars
+nbrelaying=0;
 List<Agent> neighbors = getConnections();
 final double COMMUNICATION_RANGE = 30.0;
 
@@ -8638,6 +8640,7 @@ for (Car car : main.cars) {
 
 //Calculate waiting time to send control message
 waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
+
 //printing
 //System.out.println("waitingtimecontrol: "+waitingTimecontrol);
 // Output the result for verification;]]></EntryAction>
@@ -8822,21 +8825,33 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 					<Properties Width="100" Height="40">
 						<EntryAction><![CDATA[//Transmit data message
 List<Agent> neighbors = getConnections();
-final double COMMUNICATION_RANGE = 100.0;
-if (nbrelaying<2)
-{
-	for (Car car : main.cars) { 
+final double COMMUNICATION_RANGE = 30.0;
+//if (nbrelaying<2)
+//{
+	//for (Car car : main.cars) { 
 	    // Compute the distance between the current car and another car
-	    double distance = Math.sqrt(Math.pow(car.getX() - this.getX(), 2) + Math.pow(car.getY() - this.getY(), 2));
+	  //  double distance = Math.sqrt(Math.pow(car.getX() - this.getX(), 2) + Math.pow(car.getY() - this.getY(), 2));
 	    
 	    // Check if the car is not itself
-	    if (car != this) {
+	    //if (car != this) {
 	        // Check if the car is within the communication range
-	        if (distance <= COMMUNICATION_RANGE) {
-	            this.connectTo(car);
-	            send("oc v2v" + ";" + String.valueOf(this.vehicleid) + ";" + String.valueOf(msgid), car); // control msg
+	      //  if (distance <= COMMUNICATION_RANGE) {
+	        //    this.connectTo(car);
+	          //  send("oc v2v" + ";" + String.valueOf(this.vehicleid) + ";" + String.valueOf(msgid), car); // control msg
 	            //System.out.println("V2V sending done!");
-	        }
+	     //   }
+	    //}
+	//}
+//}
+
+//if (nbrelaying<2)
+{
+	for (Car car : main.cars) { 
+	    // Check if the car is not itself
+	    if (car != this) {
+	        this.connectTo(car);
+	        send("oc v2v" +";"+String.valueOf(vehicleid)+";"+ String.valueOf(msgid), car); // control msg
+	        System.out.println("V2V OC data sending done!");
 	    }
 	}
 }]]></EntryAction>
@@ -9031,6 +9046,7 @@ rsrpdBm >= -128 && rsrpdBm < -116 && warning==true]]></Condition>
 					</Points>
 					<IconOffset>60.0</IconOffset>
 					<Properties Source="1713511053796" Target="1720615326149" Trigger="condition">
+						<Action><![CDATA[timeoutReached=false]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[0.1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -9129,7 +9145,7 @@ HARQ==false && this.nbtransmissions < 3]]></Condition>
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[timeoutReached==true]]></Condition>
+						<Condition><![CDATA[timeoutReached==true;nbrelaying=0;]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -9261,11 +9277,12 @@ if (receivedmsg.equals("testt")) {
 						<Action><![CDATA[//msg reception
 receivedmsg = msg;
 String[] message = receivedmsg.split(";");
+nbrelaying=0;//initializing nbrelaying
 //System.out.println("Received a msg!: "+message[0]);
 if(message[0].equals("oc I wanna connect"))//control msg	
 	{ 
 	//Printing
-	System.out.println("Received oc V2V msg yay!"+message[0]+";"+message[1]);
+	//System.out.println("Received oc V2V msg yay!"+message[0]+";"+message[1]);
 	}  ]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
@@ -9524,8 +9541,7 @@ timeoutReached=true;]]></Action>
 					<Properties Source="1718782373398" Target="1718782373398" Trigger="timeout">
 						<Action><![CDATA[//rsrp check
 rsrp_cal();
-System.out.println("V2V rsrp timeout reached ok");
-timeoutReached=true;]]></Action>
+System.out.println("V2V rsrp timeout reached ok");]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[10]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -9783,16 +9799,15 @@ rsrp_cal();
 //Determine the SyncRef from the first control message received by neighbors
 newmsg=msg;
 String[] message = newmsg.split(";");
-System.out.println("oc V2V listen state ok");
+///printing
+//System.out.println("oc V2V control listen state ok");
 
 if (message[0].equals("oc I wanna connect")&& 
-    !message[1].equals(String.valueOf(vehicleid)) && 
-    !message[2].equals(String.valueOf(msgid))) {
+    !message[1].equals(String.valueOf(vehicleid))) {
     
     nbrelaying++;
-    System.out.println("V2V oc listening: "+message[0]+";"+message[1]+";"+message[2]);
     timeoutReached=true;
-    System.out.println("V2V oc listening timeout reached ok");
+    //System.out.println("V2V oc control listening timeout reached ok");
     vehicletext=green;
 }]]></Action>
 						<Timeout Class="CodeUnitValue">
@@ -9831,10 +9846,10 @@ if (message[0].equals("oc I wanna connect")&&
 						<Action><![CDATA[//rsrp check
 //rsrp check
 rsrp_cal();
-System.out.println("V2V oc rsrp timeout reached ok");
-timeoutReached=true;]]></Action>
+System.out.println("1 V2V oc rsrp timeout reached ok");
+//timeoutReached=true;]]></Action>
 						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[10]]></Code>
+							<Code><![CDATA[100]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[true]]></Condition>
@@ -9862,9 +9877,10 @@ timeoutReached=true;]]></Action>
 						<Point><X>0</X><Y>40</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1720615336740" Target="1720615347555" Trigger="condition">
+					<Properties Source="1720615336740" Target="1720615347555" Trigger="timeout">
+						<Action><![CDATA[timeoutReached=false; nbrelaying=0;]]></Action>
 						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
+							<Code><![CDATA[100]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[timeoutReached=true]]></Condition>
@@ -9932,10 +9948,9 @@ timeoutReached=true;]]></Action>
 					<Properties Source="1720615353892" Target="1720615353892" Trigger="timeout">
 						<Action><![CDATA[//rsrp check
 rsrp_cal();
-System.out.println("V2V rsrp timeout reached ok");
-timeoutReached=true;]]></Action>
+System.out.println("2 V2V rsrp timeout reached ok");]]></Action>
 						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[10]]></Code>
+							<Code><![CDATA[100]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[true]]></Condition>
@@ -10003,16 +10018,14 @@ rsrpdBm > -128 || nbrelaying > 2]]></Condition>
 //Determine the SyncRef from the first control message received by neighbors
 newmsg=msg;
 String[] message = newmsg.split(";");
-//System.out.println("V2V listen state ok");
+//System.out.println("V2V data listen state ok");
 
 if (message[0].equals("oc v2v")&& 
-    !message[1].equals(String.valueOf(vehicleid)) && 
-    !message[2].equals(String.valueOf(msgid))) {
+    !message[1].equals(String.valueOf(vehicleid))) {
     
     nbrelaying++;
-    System.out.println("V2V oc data msg listening: "+message[0]+";"+message[1]+";"+message[2]);
-    timeoutReached=true;
-    System.out.println("V2V oc data msg listening timeout reached ok");
+    //System.out.println("V2V oc data msg listening: "+message[0]+";"+message[1]+";"+message[2]);
+    //System.out.println("V2V oc data msg listening timeout reached ok");
 }]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
@@ -10043,12 +10056,12 @@ if (message[0].equals("oc v2v")&&
 						<Point><X>0</X><Y>60</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1720615347555" Target="1720615353892" Trigger="timeout">
+					<Properties Source="1720615347555" Target="1720615353892" Trigger="condition">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
+						<Condition><![CDATA[rsrpdBm < -128 && warning==true]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -10075,7 +10088,7 @@ if (message[0].equals("oc v2v")&&
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1720615353892" Target="1720615347555" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[100]]></Code>
+							<Code><![CDATA[10]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[//relay threshold
@@ -10214,7 +10227,7 @@ rsrpdBm < -128|| rsrpdBm > -116 || nbrelaying > 2]]></Condition>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[//RSRP< Pth || RSRP > th //no need to check HARQ
-rsrpdBm > -128 || nbrelaying > 2]]></Condition>
+rsrpdBm > -128 ]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -10434,7 +10447,7 @@ rsrpdBm = rssidBm - 10*log (12*N)-200;//added -100 for testing V2V
 					<Rotation>0.0</Rotation>
 					<Color>-16776961</Color>
 					<ColorCode><![CDATA[vehicletext]]></ColorCode>
-					<Text><![CDATA[vehicleid]]></Text>
+					<Text><![CDATA[locationX]]></Text>
 					<TextCode><![CDATA[carX]]></TextCode>
 					<Font>
 						<Name>SansSerif</Name>
@@ -10457,7 +10470,7 @@ rsrpdBm = rssidBm - 10*log (12*N)-200;//added -100 for testing V2V
 					<Rotation>0.0</Rotation>
 					<Color>-16776961</Color>
 					<ColorCode><![CDATA[vehicletext]]></ColorCode>
-					<Text><![CDATA[vehicleid]]></Text>
+					<Text><![CDATA[locationY]]></Text>
 					<TextCode><![CDATA[carY]]></TextCode>
 					<Font>
 						<Name>SansSerif</Name>
