@@ -7,7 +7,7 @@
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.0.202404161236" AlpVersion="8.9.0">
 <Model>
 	<Id>1713352799334</Id>
-	<Name><![CDATA[v2v_July23v2]]></Name>
+	<Name><![CDATA[v2v_July24v1]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[v2v]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Second]]></ModelTimeUnit>
@@ -8515,6 +8515,18 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1721811931806</Id>
+					<Name><![CDATA[incoverage]]></Name>
+					<X>650</X><Y>-160</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>false</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+					</Properties>
+				</Variable>
 				<Variable Class="CollectionVariable">
 					<Id>1721113269609</Id>
 					<Name><![CDATA[msgidsall]]></Name>
@@ -8704,7 +8716,7 @@ if (nbrelaying<2)
 					<Properties Width="100" Height="40">
 						<EntryAction><![CDATA[//Receive message
 //Checking V2V message type (relay data or HARQ)
-]]></EntryAction>
+//Waiting time compute=tw]]></EntryAction>
 						<FillColor>-1331</FillColor>
 					</Properties>
 				</StatechartElement>
@@ -8951,7 +8963,7 @@ rsrpdBm >= -116 && warning==true && nbtransmissions < 3 ]]></Condition>
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[car2network==true]]></Condition>
+						<Condition><![CDATA[nbrelaying<2 || HARQ==false]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -8984,7 +8996,7 @@ rsrpdBm >= -116 && warning==true && nbtransmissions < 3 ]]></Condition>
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[HARQ==true || rsrpdBm<-116 || nbrelaying>=2 || nbtransmissions>=3]]></Condition>
+						<Condition><![CDATA[HARQ==true || rsrpdBm<-116 || nbrelaying>=2 || nbtransmissions>=3 || incoverage==true]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -9207,7 +9219,7 @@ nbrelaying< 2]]></Condition>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[//RSRP< Pth || RSRP > th //no need to check HARQ
-rsrpdBm < -128|| rsrpdBm > -116 || nbrelaying > 2]]></Condition>
+nbrelaying > 2]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -9301,7 +9313,7 @@ if(message[0].equals("oc I wanna connect"))//control msg
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1719563672010</Id>
-					<Name><![CDATA[waiting]]></Name>
+					<Name><![CDATA[processingdelay]]></Name>
 					<X>510</X><Y>150</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -9455,43 +9467,6 @@ if (message[0].equals("pc I wanna connect")&&
 					</Properties>	
 				</StatechartElement>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1720594738922</Id>
-					<Name><![CDATA[rsrp_calc]]></Name>
-					<X>360</X><Y>370</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-23</X><Y>-19</Y></Point>
-						<Point><X>-40</X><Y>-15</Y></Point>
-						<Point><X>-45</X><Y>-5</Y></Point>
-						<Point><X>-20</X><Y>10</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1718779716634" Target="1718779716634" Trigger="timeout">
-						<Action><![CDATA[//rsrp check
-rsrp_cal();
-System.out.println("V2V rsrp timeout reached ok");
-timeoutReached=true;]]></Action>
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[10]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720594937473</Id>
 					<Name><![CDATA[transferDelay]]></Name>
 					<X>410</X><Y>490</Y>
@@ -9504,48 +9479,12 @@ timeoutReached=true;]]></Action>
 						<Point><X>0</X><Y>45</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
-					<Properties Source="1718786679379" Target="1718782373398" Trigger="timeout">
+					<Properties Source="1718786679379" Target="1718782373398" Trigger="condition">
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1720595879086</Id>
-					<Name><![CDATA[rsrp_calc1]]></Name>
-					<X>360</X><Y>540</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>-5</Y></Point>
-						<Point><X>-23</X><Y>-19</Y></Point>
-						<Point><X>-40</X><Y>-15</Y></Point>
-						<Point><X>-45</X><Y>-5</Y></Point>
-						<Point><X>-20</X><Y>10</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1718782373398" Target="1718782373398" Trigger="timeout">
-						<Action><![CDATA[//rsrp check
-rsrp_cal();
-System.out.println("V2V rsrp timeout reached ok");]]></Action>
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[10]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
+						<Condition><![CDATA[nbrelaying<2 ]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -9576,7 +9515,7 @@ System.out.println("V2V rsrp timeout reached ok");]]></Action>
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
-						<Condition><![CDATA[nbtransmissions>3
+						<Condition><![CDATA[nbtransmissions>3 || incoverage==true
 //nbtransmissions threshold varies with 
 //partial and out of coverage status]]></Condition>
 						<Rate Class="CodeUnitValue">
@@ -9607,7 +9546,7 @@ System.out.println("V2V rsrp timeout reached ok");]]></Action>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1713511053796" Target="1713511053796" Trigger="timeout">
-						<Action><![CDATA[//rsrp check
+						<Action><![CDATA[//check updated rsrp value 
 rsrp_cal();
 //System.out.println("rsrpdBm: "+String.valueOf(rsrpdBm));]]></Action>
 						<Timeout Class="CodeUnitValue">
@@ -10122,42 +10061,7 @@ nbrelaying< 2]]></Condition>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1717136759428" Target="1717136759428" Trigger="timeout">
-						<Action><![CDATA[//rsrp check
-rsrp_cal();]]></Action>
-						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
-						</Timeout>
-						<Condition><![CDATA[true]]></Condition>
-						<Rate Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
-							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
-						</Rate>
-						<MessageType><![CDATA[Object]]></MessageType>
-						<DefaultTransition>true</DefaultTransition>
-						<FilterType><![CDATA[unconditionally]]></FilterType>
-						<EqualsExpression><![CDATA["text"]]></EqualsExpression>
-						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
-					</Properties>	
-				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
-					<Id>1721042010481</Id>
-					<Name><![CDATA[rsrp_calc6]]></Name>
-					<X>130</X><Y>290</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-3</X><Y>-4</Y></Point>
-						<Point><X>-20</X><Y>0</Y></Point>
-						<Point><X>-25</X><Y>10</Y></Point>
-						<Point><X>-10</X><Y>15</Y></Point>
-					</Points>
-					<IconOffset>20.0</IconOffset>
-					<Properties Source="1713941014450" Target="1713941014450" Trigger="timeout">
-						<Action><![CDATA[//rsrp check
+						<Action><![CDATA[//updated rsrp value check
 rsrp_cal();]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
@@ -10195,7 +10099,7 @@ rsrp_cal();]]></Action>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[//RSRP< Pth || RSRP > th //no need to check HARQ
-rsrpdBm < -128|| rsrpdBm > -116 || nbrelaying > 2]]></Condition>
+rsrpdBm < -128|| rsrpdBm > -116 || nbrelaying > 2 || incoverage ==true]]></Condition>
 						<Rate Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
@@ -10285,7 +10189,7 @@ rsrpdBm > -128 ]]></Condition>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[//RSRP calculation
+					<Body><![CDATA[//Update RSRP value
 
 //distance betweeen car and gNB
 distance_car_gnb = Math.pow(Math.pow(main.networkaccess.gnbX - this.getX(),2) + Math. pow(main.networkaccess.gnbY -this.getY(),2),0.5);
