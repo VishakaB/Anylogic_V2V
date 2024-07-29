@@ -3333,7 +3333,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<EmbeddedObject>
 					<Id>1713356511641</Id>
 					<Name><![CDATA[cars]]></Name>
-					<X>-430</X><Y>-70</Y>
+					<X>-230</X><Y>320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3538,7 +3538,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<EmbeddedObject>
 					<Id>1713777632949</Id>
 					<Name><![CDATA[networkaccess]]></Name>
-					<X>-430</X><Y>-100</Y>
+					<X>-230</X><Y>290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -3604,7 +3604,7 @@ vehicleexitlist.add(car.vehicleid)]]></Code>
 				<EmbeddedObject>
 					<Id>1714028952098</Id>
 					<Name><![CDATA[cloudserver]]></Name>
-					<X>-430</X><Y>-130</Y>
+					<X>-230</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7948,7 +7948,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713507248314</Id>
 					<Name><![CDATA[vehicleid]]></Name>
-					<X>30</X><Y>-350</Y>
+					<X>30</X><Y>-360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7963,7 +7963,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713512236102</Id>
 					<Name><![CDATA[carX]]></Name>
-					<X>440</X><Y>-320</Y>
+					<X>440</X><Y>-330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -7978,7 +7978,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713512245890</Id>
 					<Name><![CDATA[carY]]></Name>
-					<X>440</X><Y>-290</Y>
+					<X>440</X><Y>-300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7993,7 +7993,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713783435034</Id>
 					<Name><![CDATA[userid]]></Name>
-					<X>30</X><Y>-260</Y>
+					<X>30</X><Y>-270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -8008,7 +8008,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713786137476</Id>
 					<Name><![CDATA[connected2network]]></Name>
-					<X>220</X><Y>-380</Y>
+					<X>220</X><Y>-390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8020,7 +8020,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713859196092</Id>
 					<Name><![CDATA[nbcalls]]></Name>
-					<X>220</X><Y>-410</Y>
+					<X>220</X><Y>-420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8032,7 +8032,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713859372541</Id>
 					<Name><![CDATA[color]]></Name>
-					<X>30</X><Y>-290</Y>
+					<X>30</X><Y>-300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8047,7 +8047,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713942486958</Id>
 					<Name><![CDATA[currentstatus]]></Name>
-					<X>220</X><Y>-350</Y>
+					<X>220</X><Y>-360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8062,7 +8062,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713947127482</Id>
 					<Name><![CDATA[receivedmsg]]></Name>
-					<X>650</X><Y>-410</Y>
+					<X>650</X><Y>-420</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8074,7 +8074,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713947512364</Id>
 					<Name><![CDATA[connected2car]]></Name>
-					<X>220</X><Y>-470</Y>
+					<X>220</X><Y>-480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8086,7 +8086,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713948504263</Id>
 					<Name><![CDATA[transmitfinished]]></Name>
-					<X>220</X><Y>-440</Y>
+					<X>220</X><Y>-450</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8101,7 +8101,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713954458100</Id>
 					<Name><![CDATA[receptionfinished]]></Name>
-					<X>650</X><Y>-470</Y>
+					<X>650</X><Y>-480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8113,7 +8113,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713968240657</Id>
 					<Name><![CDATA[startTime]]></Name>
-					<X>30</X><Y>-320</Y>
+					<X>30</X><Y>-330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8125,7 +8125,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1714030089053</Id>
 					<Name><![CDATA[latency]]></Name>
-					<X>220</X><Y>-250</Y>
+					<X>220</X><Y>-260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8137,7 +8137,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1714035970954</Id>
 					<Name><![CDATA[avglatency]]></Name>
-					<X>220</X><Y>-220</Y>
+					<X>220</X><Y>-230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8149,7 +8149,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1714035985186</Id>
 					<Name><![CDATA[latencycount]]></Name>
-					<X>220</X><Y>-190</Y>
+					<X>220</X><Y>-200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8161,7 +8161,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1714139976203</Id>
 					<Name><![CDATA[receptionfinishedcloud]]></Name>
-					<X>650</X><Y>-440</Y>
+					<X>650</X><Y>-450</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8173,7 +8173,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1714477923561</Id>
 					<Name><![CDATA[transmitmsgcar]]></Name>
-					<X>220</X><Y>-280</Y>
+					<X>220</X><Y>-290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8185,7 +8185,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1717053648131</Id>
 					<Name><![CDATA[waitingTimetoConnect]]></Name>
-					<X>220</X><Y>-160</Y>
+					<X>220</X><Y>-170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8197,7 +8197,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1717054041083</Id>
 					<Name><![CDATA[transmissionTime]]></Name>
-					<X>220</X><Y>-310</Y>
+					<X>220</X><Y>-320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8209,7 +8209,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1717409391578</Id>
 					<Name><![CDATA[ACK_timeout]]></Name>
-					<X>440</X><Y>-260</Y>
+					<X>440</X><Y>-270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8224,7 +8224,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1717409434491</Id>
 					<Name><![CDATA[Message_timeout]]></Name>
-					<X>440</X><Y>-230</Y>
+					<X>440</X><Y>-240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8239,7 +8239,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719218128934</Id>
 					<Name><![CDATA[distance_car_gnb]]></Name>
-					<X>440</X><Y>-350</Y>
+					<X>440</X><Y>-360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8251,7 +8251,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719218155812</Id>
 					<Name><![CDATA[rssidBm]]></Name>
-					<X>440</X><Y>-380</Y>
+					<X>440</X><Y>-390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8263,7 +8263,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719218200149</Id>
 					<Name><![CDATA[cost231_pathloss_dbm]]></Name>
-					<X>440</X><Y>-410</Y>
+					<X>440</X><Y>-420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8275,7 +8275,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719218215860</Id>
 					<Name><![CDATA[rsrpdBm]]></Name>
-					<X>440</X><Y>-440</Y>
+					<X>440</X><Y>-450</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8287,7 +8287,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719218245143</Id>
 					<Name><![CDATA[rssidBm_watts]]></Name>
-					<X>440</X><Y>-470</Y>
+					<X>440</X><Y>-480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8299,7 +8299,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719218284845</Id>
 					<Name><![CDATA[HARQ]]></Name>
-					<X>30</X><Y>-380</Y>
+					<X>30</X><Y>-390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8314,7 +8314,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719219268100</Id>
 					<Name><![CDATA[pre_rsrp_th]]></Name>
-					<X>30</X><Y>-410</Y>
+					<X>30</X><Y>-420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8326,7 +8326,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719219337263</Id>
 					<Name><![CDATA[rsrp_th]]></Name>
-					<X>30</X><Y>-440</Y>
+					<X>30</X><Y>-450</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -8338,7 +8338,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719302043649</Id>
 					<Name><![CDATA[freespacepathlossdbm]]></Name>
-					<X>650</X><Y>-380</Y>
+					<X>650</X><Y>-390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8350,7 +8350,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719558643118</Id>
 					<Name><![CDATA[nbtransmissions]]></Name>
-					<X>220</X><Y>-140</Y>
+					<X>220</X><Y>-150</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8365,7 +8365,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719560023063</Id>
 					<Name><![CDATA[pedestrian_crossing]]></Name>
-					<X>30</X><Y>-470</Y>
+					<X>30</X><Y>-480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8380,7 +8380,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719560714147</Id>
 					<Name><![CDATA[warning]]></Name>
-					<X>30</X><Y>-230</Y>
+					<X>30</X><Y>-240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8392,7 +8392,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719562701538</Id>
 					<Name><![CDATA[nbrelaying]]></Name>
-					<X>220</X><Y>-110</Y>
+					<X>220</X><Y>-120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8404,7 +8404,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1720424737824</Id>
 					<Name><![CDATA[waitingTimecontrol]]></Name>
-					<X>650</X><Y>-350</Y>
+					<X>650</X><Y>-360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8416,7 +8416,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1720593556848</Id>
 					<Name><![CDATA[timeoutReached]]></Name>
-					<X>440</X><Y>-200</Y>
+					<X>440</X><Y>-210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8428,7 +8428,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1720602306013</Id>
 					<Name><![CDATA[nomsg]]></Name>
-					<X>440</X><Y>-170</Y>
+					<X>440</X><Y>-180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8440,7 +8440,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1720681359271</Id>
 					<Name><![CDATA[v2xchannel]]></Name>
-					<X>650</X><Y>-320</Y>
+					<X>650</X><Y>-330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8452,7 +8452,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721042163978</Id>
 					<Name><![CDATA[car2network]]></Name>
-					<X>650</X><Y>-190</Y>
+					<X>650</X><Y>-200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8467,7 +8467,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721112440821</Id>
 					<Name><![CDATA[msgid]]></Name>
-					<X>650</X><Y>-250</Y>
+					<X>650</X><Y>-260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8479,7 +8479,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721115375598</Id>
 					<Name><![CDATA[contains]]></Name>
-					<X>650</X><Y>-280</Y>
+					<X>650</X><Y>-290</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8491,7 +8491,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721393000019</Id>
 					<Name><![CDATA[newmsg]]></Name>
-					<X>650</X><Y>-220</Y>
+					<X>650</X><Y>-230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8503,7 +8503,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721639425641</Id>
 					<Name><![CDATA[vehicletext]]></Name>
-					<X>440</X><Y>-130</Y>
+					<X>440</X><Y>-150</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8518,7 +8518,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721811931806</Id>
 					<Name><![CDATA[incoverage]]></Name>
-					<X>650</X><Y>-160</Y>
+					<X>650</X><Y>-170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -8530,7 +8530,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721988922029</Id>
 					<Name><![CDATA[WaitingTimecontrolv2v]]></Name>
-					<X>650</X><Y>-130</Y>
+					<X>650</X><Y>-140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8542,7 +8542,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721988946676</Id>
 					<Name><![CDATA[energyLevel]]></Name>
-					<X>650</X><Y>-100</Y>
+					<X>650</X><Y>-110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8557,7 +8557,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721992218240</Id>
 					<Name><![CDATA[transferdelay]]></Name>
-					<X>650</X><Y>-70</Y>
+					<X>650</X><Y>-80</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8572,7 +8572,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721993486279</Id>
 					<Name><![CDATA[nbrelayingcontrol]]></Name>
-					<X>440</X><Y>-100</Y>
+					<X>440</X><Y>-120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8584,7 +8584,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721993724830</Id>
 					<Name><![CDATA[lastsender]]></Name>
-					<X>220</X><Y>-80</Y>
+					<X>220</X><Y>-90</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8794,13 +8794,6 @@ if (nbrelaying<2)
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="40">
-						<EntryAction><![CDATA[//V2N transmit message
-//Update RSRP
-rsrp_cal();
-//Transmit Msg //Control Messaging //Data Messaging
-send("test",main.networkaccess);//wrong
-
-//Increment nbtransmissions]]></EntryAction>
 						<FillColor>-1331</FillColor>
 					</Properties>
 				</StatechartElement>
@@ -8821,22 +8814,27 @@ nbrelaying=0;
 List<Agent> neighbors = getConnections();
 final double communicationrange = 30.0;
 
-for (Car car : main.cars) { 
-    // Check if the car is not itself
-    if (car != this) {
-        double distance = Math.sqrt(Math.pow(car.getX() - this.getX(), 2) + Math.pow(car.getY() - this.getY(), 2));
-        
-        // Check if the car is within the communication range
-        if (distance <= communicationrange) {
-            this.connectTo(car);
-            //System.out.println("distance!: "+String.valueOf(distance)+";"+"vehicle id: "+String.valueOf(car.vehicleid));
-            send("oc I wanna connect" + ";" + String.valueOf(this.vehicleid) + ";" + String.valueOf(msgid), car); // control msg
-            //System.out.println("pc V2V sending done!");
-        }
-        else if (incoverage == true){
-	        send("test v2v", main.networkaccess);
-        }
-    }
+if (incoverage==true)
+	{
+		send("datasent2network_transition1",main.networkaccess);
+		System.out.println("datasent2network_transition1");
+	}
+else{
+	for (Car car : main.cars) { 
+	    // Check if the car is not itself
+	    if (car != this) {
+	        double distance = Math.sqrt(Math.pow(car.getX() - this.getX(), 2) + Math.pow(car.getY() - this.getY(), 2));
+	        
+	        // Check if the car is within the communication range
+	        if (distance <= communicationrange) {
+	            this.connectTo(car);
+	            //System.out.println("distance!: "+String.valueOf(distance)+";"+"vehicle id: "+String.valueOf(car.vehicleid));
+	            send("oc I wanna connect" + ";" + String.valueOf(this.vehicleid) + ";" + String.valueOf(msgid), car); // control msg
+	            //System.out.println("pc V2V sending done!");
+	        }
+	       
+	    }
+	}
 }]]></EntryAction>
 						<FillColor>-1331</FillColor>
 					</Properties>
@@ -8851,17 +8849,43 @@ for (Car car : main.cars) {
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="40">
 						<EntryAction><![CDATA[//Relay data if (nbrelaying < th)
-if (nbrelayingcontrol<2)
-{
-	for (Car car : main.cars) { 
-	    // Check if the car is not itself
-	    if (car != this) {
-	        this.connectTo(car);
-	        send("ocoverage test v2v reception" +";"+String.valueOf(vehicleid)+";"+ String.valueOf(msgid), car); // control msg
-	        //System.out.println("V2V sending done!");
-	    }
-	}
-}]]></EntryAction>
+//SyncRef Selection
+if (nbrelayingcontrol < 2) {
+    if (incoverage == true) {
+        // if in coverage
+        send("data2network", main.networkaccess);
+        // System.out.println("Data sent to car2network!");
+    } else {
+        // if not in coverage
+        for (Car car : main.cars) {
+            // Check if the car is not itself
+            if (car != this) {
+                this.connectTo(car);
+                send("oc control msg specs" + ";" + String.valueOf(vehicleid) + ";" + String.valueOf(msgid), car); // control msg
+                // System.out.println("V2V sending done!");
+            }
+        }
+    }
+}
+// Relay data
+if (nbrelaying < 2) {
+    if (incoverage == true) {
+        // if in coverage
+        send("data2network", main.networkaccess);
+        // System.out.println("Data sent to car2network!");
+    } else {
+        // if not in coverage
+        for (Car car : main.cars) {
+            // Check if the car is not itself
+            if (car != this) {
+                this.connectTo(car);
+                send("oc v2v relay msg!: " + ";" + String.valueOf(vehicleid) + ";" + String.valueOf(msgid), car); // control msg
+                // System.out.println("V2V sending done!");
+            }
+        }
+    }
+}
+]]></EntryAction>
 						<FillColor>-1331</FillColor>
 					</Properties>
 				</StatechartElement>
@@ -8948,16 +8972,21 @@ final double COMMUNICATION_RANGE = 30.0;
 	//}
 //}
 
-if (nbrelaying<2)
-{
-	for (Car car : main.cars) { 
-	    // Check if the car is not itself
-	    if (car != this) {
-	        this.connectTo(car);
-	        send("oc v2v" +";"+String.valueOf(vehicleid)+";"+ String.valueOf(msgid), car); // control msg
-	        System.out.println("V2V OC data sending done!"+String.valueOf(this.vehicleid));
-	    }
-	}
+if (nbrelaying < 2 && nbtransmissions < 3) {
+    for (Car car : main.cars) {
+        // Check if the car is not itself
+        if (car != this) {
+            this.connectTo(car);
+            send("oc v2v" + ";" + String.valueOf(vehicleid) + ";" + String.valueOf(msgid), car); // control msg
+            // System.out.println("V2V OC data sending done!" + String.valueOf(this.vehicleid));
+            nbtransmissions++;
+            
+            // Break the loop if nbtransmissions reaches 3
+            if (nbtransmissions >= 3) {
+                break;
+            }
+        }
+    }
 }]]></EntryAction>
 						<FillColor>-6943</FillColor>
 					</Properties>
@@ -8983,13 +9012,6 @@ if (nbrelaying<2)
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="40">
-						<EntryAction><![CDATA[//V2N transmit message
-//Update RSRP
-rsrp_cal();
-//Transmit Msg //Control Messaging //Data Messaging
-send("test",main.networkaccess);//wrong
-
-//Increment nbtransmissions]]></EntryAction>
 						<FillColor>-1331</FillColor>
 					</Properties>
 				</StatechartElement>
@@ -9404,20 +9426,32 @@ receivedmsg = msg;
 String[] message = receivedmsg.split(";");
 lastsender=message[1];
 nbrelaying=0;//initializing nbrelaying
+boolean condition = !lastsender.equals(this.vehicleid);
 //System.out.println("Received a msg!: "+message[0]);
 //Compue Waiting Time
 //If incoverage ic = 1
 int ic = incoverage ? 1 : 0;
-if(message[0].equals("oc I wanna connect"))//control msg	
-	{ 
-	//Printing
-	//System.out.println("Received oc V2V msg yay!"+message[0]+";"+message[1]);
-	WaitingTimecontrolv2v = Math.abs(min(120,(1-ic)*(1/(rsrpdBm+0.1))*(100/min(energyLevel,100))));
+if(message[0].equals("oc I wanna connect")&& condition)//control msg	
+	{ //control msgs from anpther car
+	    //Printing
+		//System.out.println("Received oc V2V msg yay!"+message[0]+";"+message[1]);
+		WaitingTimecontrolv2v = Math.abs(min(120,(1-ic)*(1/(rsrpdBm+0.1))*(100/min(energyLevel,100))));
+		//System.out.println("control msg: "+message[0]);
 	}
-else
+else if (message[0].equals("HARQ")&& condition)
 	{
-	//
-	}  ]]></Action>
+		//msgs from network to car
+		System.out.println("HARQ message"+message[0]);
+	}  
+else if (message[0].equals("oc v2v")&& condition)
+	{
+		//data msgs from another car 
+		System.out.println("data msg: "+message[0]);
+	}
+else if (condition)
+	{//Any other msgs from someone
+	    System.out.println("other msgs:"+message[0]+";"+message[1]+";"+String.valueOf(this.vehicleid));
+	}]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
@@ -10286,16 +10320,24 @@ if(message[0].equals("oc I wanna connect") && message[1].equals(lastsender))
 //Determine the SyncRef from the first control message received by neighbors
 newmsg=msg;
 String[] message = newmsg.split(";");
-//System.out.println("V2V listen state ok");
 
+//control msgs //listening
 if (message[0].equals("oc I wanna connect")&& 
     !message[1].equals(String.valueOf(vehicleid)) && 
     !message[2].equals(String.valueOf(msgid))) {
     
-    nbrelayingcontrol++;
+    nbrelayingcontrol++;//
     System.out.println("V2V control msg listening: "+message[0]+";"+message[1]+";"+message[2]);
-    timeoutReached=true;
+    if(nbrelayingcontrol<2)
+	    {
+	    	timeoutReached=true;
+	    }
     System.out.println("V2V control msg listening timeout reached ok");
+}
+else if (message[0].equals("oc v2v"))
+{
+    nbrelaying++;
+    System.out.println("V2V data msg listening done!: "+message[0]+";"+message[1]+";"+message[2]);    
 }]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
@@ -10416,7 +10458,7 @@ rsrpdBm = rssidBm - 10*log (12*N)-200;//added -100 for testing V2V
 				<ContainerLink>
 					<Id>1713356511646</Id>
 					<Name><![CDATA[main]]></Name>
-					<X>50</X><Y>-100</Y>
+					<X>50</X><Y>-110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
