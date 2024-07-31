@@ -8723,7 +8723,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1713511053796</Id>
 					<Name><![CDATA[Idle]]></Name>
-					<X>260</X><Y>250</Y>
+					<X>260</X><Y>230</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8744,7 +8744,7 @@ nbrelayingcontrol=0;]]></EntryAction>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1713941014450</Id>
 					<Name><![CDATA[Transmit]]></Name>
-					<X>150</X><Y>360</Y>
+					<X>150</X><Y>340</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8768,7 +8768,7 @@ if (HARQ==false && this.nbtransmissions < 3 && !txcomplete.contains(msgid)) {
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1717136759428</Id>
 					<Name><![CDATA[Listen]]></Name>
-					<X>150</X><Y>440</Y>
+					<X>150</X><Y>420</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8780,7 +8780,7 @@ if (HARQ==false && this.nbtransmissions < 3 && !txcomplete.contains(msgid)) {
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1719563576935</Id>
 					<Name><![CDATA[ReceiveMsg]]></Name>
-					<X>440</X><Y>200</Y>
+					<X>460</X><Y>200</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8791,8 +8791,8 @@ if (HARQ==false && this.nbtransmissions < 3 && !txcomplete.contains(msgid)) {
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1719563605528</Id>
-					<Name><![CDATA[ListeningRelaying]]></Name>
-					<X>590</X><Y>200</Y>
+					<Name><![CDATA[Listening]]></Name>
+					<X>630</X><Y>200</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8804,7 +8804,7 @@ if (HARQ==false && this.nbtransmissions < 3 && !txcomplete.contains(msgid)) {
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1719566242120</Id>
 					<Name><![CDATA[BrocastControl]]></Name>
-					<X>590</X><Y>80</Y>
+					<X>630</X><Y>310</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8849,12 +8849,12 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);]]></EntryAction>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1720602157160</Id>
 					<Name><![CDATA[RelayMsg]]></Name>
-					<X>410</X><Y>80</Y>
+					<X>590</X><Y>540</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="40">
+					<Properties Width="140" Height="40">
 						<EntryAction><![CDATA[//Relay data if (nbrelaying < th)
 //SyncRef Selection
 if (nbrelayingcontrol < 2) {
@@ -8900,7 +8900,7 @@ if (nbrelaying < 2) {
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1720615326149</Id>
 					<Name><![CDATA[Txocbrocastcontrol]]></Name>
-					<X>380</X><Y>330</Y>
+					<X>380</X><Y>310</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8952,7 +8952,7 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1720615336740</Id>
 					<Name><![CDATA[Listen_occontrol]]></Name>
-					<X>380</X><Y>410</Y>
+					<X>380</X><Y>390</Y>
 					<Label><X>5</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8964,12 +8964,12 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1720615347555</Id>
 					<Name><![CDATA[TxData]]></Name>
-					<X>330</X><Y>490</Y>
+					<X>330</X><Y>470</Y>
 					<Label><X>5</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="40">
+					<Properties Width="150" Height="40">
 						<EntryAction><![CDATA[//Transmit data message
 List<Agent> neighbors = getConnections();
 final double commrange = 30.0;
@@ -9006,31 +9006,31 @@ waitingTimedata =  Math.abs(1.0 / rsrpdBm);]]></EntryAction>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1720615353892</Id>
 					<Name><![CDATA[ListenData1]]></Name>
-					<X>330</X><Y>580</Y>
+					<X>330</X><Y>550</Y>
 					<Label><X>5</X><Y>30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="40">
+					<Properties Width="150" Height="40">
 						<FillColor>-6943</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1721813455318</Id>
 					<Name><![CDATA[rxListening]]></Name>
-					<X>490</X><Y>20</Y>
+					<X>590</X><Y>440</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="40">
+					<Properties Width="140" Height="40">
 						<FillColor>-1331</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
 					<Id>1713507242691</Id>
 					<Name><![CDATA[SwitchOn]]></Name>
-					<X>310</X><Y>210</Y>
+					<X>310</X><Y>190</Y>
 					<Label><X>-35</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9054,7 +9054,7 @@ color=red;
 					<Id>1714547718414</Id>
 					<Name><![CDATA[v2n_incoverage]]></Name>
 					<Description><![CDATA[Emergency situation]]></Description>
-					<X>290</X><Y>290</Y>
+					<X>290</X><Y>270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9094,7 +9094,7 @@ incoverage == true && warning==true && nbtransmissions < 3 ]]></Condition>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1717136833757</Id>
 					<Name><![CDATA[Transfer_Delay]]></Name>
-					<X>210</X><Y>400</Y>
+					<X>210</X><Y>380</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9124,16 +9124,16 @@ incoverage == true && warning==true && nbtransmissions < 3 ]]></Condition>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1717136840059</Id>
 					<Name><![CDATA[transition1]]></Name>
-					<X>150</X><Y>460</Y>
+					<X>160</X><Y>420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-60</X><Y>-70</Y></Point>
-						<Point><X>-60</X><Y>-190</Y></Point>
-						<Point><X>110</X><Y>-190</Y></Point>
+						<Point><X>-40</X><Y>-100</Y></Point>
+						<Point><X>-40</X><Y>-160</Y></Point>
+						<Point><X>100</X><Y>-160</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1717136759428" Target="1713511053796" Trigger="condition">
@@ -9158,7 +9158,7 @@ incoverage == true && warning==true && nbtransmissions < 3 ]]></Condition>
 					<Id>1718779704074</Id>
 					<Name><![CDATA[v2xoutofcoverage]]></Name>
 					<Description><![CDATA[Emergency situation]]></Description>
-					<X>360</X><Y>280</Y>
+					<X>360</X><Y>260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9188,7 +9188,7 @@ incoverage == true && warning==true && nbtransmissions < 3 ]]></Condition>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1718779967600</Id>
 					<Name><![CDATA[Retransmission]]></Name>
-					<X>170</X><Y>440</Y>
+					<X>170</X><Y>420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9219,7 +9219,7 @@ HARQ==false && this.nbtransmissions < 3]]></Condition>
 				<StatechartElement Class="Transition" ParentState="Listen" ParentStateId="1717136759428">
 					<Id>1718789552742</Id>
 					<Name><![CDATA[Listening_Tx]]></Name>
-					<X>230</X><Y>480</Y>
+					<X>230</X><Y>460</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9259,14 +9259,14 @@ if (receivedmsg.equals("V2N msg")) {
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1719563590269</Id>
 					<Name><![CDATA[msg_receptionrx]]></Name>
-					<X>360</X><Y>260</Y>
+					<X>360</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>80</X><Y>-40</Y></Point>
+						<Point><X>100</X><Y>-20</Y></Point>
 					</Points>
 					<IconOffset>10.0</IconOffset>
 					<Properties Source="1713511053796" Target="1719563576935" Trigger="message">
@@ -9333,14 +9333,14 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1719563672010</Id>
 					<Name><![CDATA[processingdelay]]></Name>
-					<X>540</X><Y>220</Y>
+					<X>560</X><Y>220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>50</X><Y>0</Y></Point>
+						<Point><X>70</X><Y>0</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1719563576935" Target="1719563605528" Trigger="timeout">
@@ -9364,14 +9364,14 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1719566332167</Id>
 					<Name><![CDATA[WaitingTimecontrol]]></Name>
-					<X>630</X><Y>200</Y>
+					<X>670</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-80</Y></Point>
+						<Point><X>0</X><Y>70</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1719563605528" Target="1719566242120" Trigger="timeout">
@@ -9394,14 +9394,14 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720602175045</Id>
 					<Name><![CDATA[transition20]]></Name>
-					<X>590</X><Y>100</Y>
+					<X>680</X><Y>350</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-10</X><Y>-40</Y></Point>
+						<Point><X>0</X><Y>90</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1719566242120" Target="1721813455318" Trigger="condition">
@@ -9424,14 +9424,17 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720602265333</Id>
 					<Name><![CDATA[tarnsferDelay]]></Name>
-					<X>410</X><Y>100</Y>
+					<X>730</X><Y>550</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-60</X><Y>150</Y></Point>
+						<Point><X>30</X><Y>-10</Y></Point>
+						<Point><X>30</X><Y>-380</Y></Point>
+						<Point><X>-240</X><Y>-380</Y></Point>
+						<Point><X>-370</X><Y>-310</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1720602157160" Target="1713511053796" Trigger="timeout">
@@ -9454,15 +9457,15 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720602283644</Id>
 					<Name><![CDATA[transition21]]></Name>
-					<X>600</X><Y>120</Y>
+					<X>630</X><Y>330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-180</X><Y>20</Y></Point>
-						<Point><X>-240</X><Y>140</Y></Point>
+						<Point><X>-140</X><Y>-80</Y></Point>
+						<Point><X>-270</X><Y>-80</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1719566242120" Target="1713511053796" Trigger="condition">
@@ -9485,7 +9488,7 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720615432132</Id>
 					<Name><![CDATA[waitingTime1]]></Name>
-					<X>460</X><Y>370</Y>
+					<X>460</X><Y>350</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9516,7 +9519,7 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 				<StatechartElement Class="Transition" ParentState="Listen_occontrol" ParentStateId="1720615336740">
 					<Id>1720615444932</Id>
 					<Name><![CDATA[transition7]]></Name>
-					<X>460</X><Y>410</Y>
+					<X>460</X><Y>390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9563,14 +9566,14 @@ if (message[0].equals("oc control")&&
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720615470419</Id>
 					<Name><![CDATA[waitingtimecontrol]]></Name>
-					<X>410</X><Y>450</Y>
+					<X>410</X><Y>430</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-20</X><Y>40</Y></Point>
+						<Point><X>0</X><Y>40</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1720615336740" Target="1720615347555" Trigger="condition">
@@ -9594,7 +9597,7 @@ if (message[0].equals("oc control")&&
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720615476563</Id>
 					<Name><![CDATA[transition12]]></Name>
-					<X>350</X><Y>490</Y>
+					<X>350</X><Y>470</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9628,7 +9631,7 @@ if (message[0].equals("oc control")&&
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720615519586</Id>
 					<Name><![CDATA[transition15]]></Name>
-					<X>330</X><Y>600</Y>
+					<X>330</X><Y>570</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9636,9 +9639,9 @@ if (message[0].equals("oc control")&&
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-20</X><Y>0</Y></Point>
-						<Point><X>-20</X><Y>-30</Y></Point>
-						<Point><X>-20</X><Y>-90</Y></Point>
-						<Point><X>-20</X><Y>-310</Y></Point>
+						<Point><X>-20</X><Y>-20</Y></Point>
+						<Point><X>-20</X><Y>-80</Y></Point>
+						<Point><X>-20</X><Y>-300</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1720615353892" Target="1713511053796" Trigger="condition">
@@ -9662,7 +9665,7 @@ rsrpdBm > -128 || nbrelaying > 2]]></Condition>
 				<StatechartElement Class="Transition" ParentState="ListenData1" ParentStateId="1720615353892">
 					<Id>1720615573779</Id>
 					<Name><![CDATA[transition4]]></Name>
-					<X>390</X><Y>580</Y>
+					<X>390</X><Y>550</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9706,14 +9709,14 @@ if (message[0].equals("oc v2v data")&&
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720615726993</Id>
 					<Name><![CDATA[transferDelay1]]></Name>
-					<X>385</X><Y>530</Y>
+					<X>385</X><Y>510</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>50</Y></Point>
+						<Point><X>0</X><Y>40</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1720615347555" Target="1720615353892" Trigger="condition">
@@ -9736,14 +9739,14 @@ if (message[0].equals("oc v2v data")&&
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720615740866</Id>
 					<Name><![CDATA[transition17]]></Name>
-					<X>350</X><Y>580</Y>
+					<X>350</X><Y>550</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-50</Y></Point>
+						<Point><X>0</X><Y>-40</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1720615353892" Target="1720615347555" Trigger="timeout">
@@ -9767,7 +9770,7 @@ nbrelaying< 2]]></Condition>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720792328482</Id>
 					<Name><![CDATA[rsrp_calc5]]></Name>
-					<X>160</X><Y>440</Y>
+					<X>160</X><Y>420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9802,7 +9805,7 @@ rsrp_cal();]]></Action>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1721399631530</Id>
 					<Name><![CDATA[transition19]]></Name>
-					<X>430</X><Y>330</Y>
+					<X>430</X><Y>310</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9830,10 +9833,10 @@ rsrp_cal();]]></Action>
 						<SatisfiesExpression><![CDATA[true]]></SatisfiesExpression>
 					</Properties>	
 				</StatechartElement>
-				<StatechartElement Class="Transition" ParentState="ListeningRelaying" ParentStateId="1719563605528">
+				<StatechartElement Class="Transition" ParentState="Listening" ParentStateId="1719563605528">
 					<Id>1721813151350</Id>
 					<Name><![CDATA[ListeningControl]]></Name>
-					<X>600</X><Y>200</Y>
+					<X>640</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9874,14 +9877,14 @@ else if(message[0].equals("oc v2v data") && message[1].equals(lastsender))
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1721813463325</Id>
 					<Name><![CDATA[transition]]></Name>
-					<X>490</X><Y>40</Y>
+					<X>630</X><Y>480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-40</X><Y>40</Y></Point>
+						<Point><X>0</X><Y>60</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1721813455318" Target="1720602157160" Trigger="timeout">
@@ -9904,7 +9907,7 @@ else if(message[0].equals("oc v2v data") && message[1].equals(lastsender))
 				<StatechartElement Class="Transition" ParentState="rxListening" ParentStateId="1721813455318">
 					<Id>1721813508349</Id>
 					<Name><![CDATA[transition6]]></Name>
-					<X>540</X><Y>20</Y>
+					<X>640</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9958,7 +9961,7 @@ else if (message[0].equals("oc v2v data"))
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1722416690148</Id>
 					<Name><![CDATA[transition18]]></Name>
-					<X>410</X><Y>410</Y>
+					<X>410</X><Y>390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9989,14 +9992,14 @@ nbrelaying< 2]]></Condition>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1722418693368</Id>
 					<Name><![CDATA[transition2]]></Name>
-					<X>450</X><Y>240</Y>
+					<X>460</X><Y>230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-90</X><Y>30</Y></Point>
+						<Point><X>-100</X><Y>20</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1719563576935" Target="1713511053796" Trigger="condition">
@@ -10021,14 +10024,14 @@ nbrelaying< 2]]></Condition>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1722424637722</Id>
 					<Name><![CDATA[transition3]]></Name>
-					<X>590</X><Y>40</Y>
+					<X>660</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<Points>
 						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>30</X><Y>40</Y></Point>
+						<Point><X>0</X><Y>-90</Y></Point>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1721813455318" Target="1719566242120" Trigger="timeout">
