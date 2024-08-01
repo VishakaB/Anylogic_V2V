@@ -8040,7 +8040,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713507248314</Id>
 					<Name><![CDATA[vehicleid]]></Name>
-					<X>30</X><Y>-360</Y>
+					<X>30</X><Y>-430</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8085,7 +8085,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713783435034</Id>
 					<Name><![CDATA[userid]]></Name>
-					<X>30</X><Y>-270</Y>
+					<X>30</X><Y>-340</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -8124,7 +8124,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713859372541</Id>
 					<Name><![CDATA[color]]></Name>
-					<X>30</X><Y>-300</Y>
+					<X>30</X><Y>-370</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8137,24 +8137,9 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1713942486958</Id>
-					<Name><![CDATA[currentstatus]]></Name>
-					<X>220</X><Y>-360</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[String]]></Type>        
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[""]]></Code>
-						</InitialValue>
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
 					<Id>1713947127482</Id>
 					<Name><![CDATA[receivedmsg]]></Name>
-					<X>650</X><Y>-420</Y>
+					<X>890</X><Y>-530</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8193,7 +8178,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713954458100</Id>
 					<Name><![CDATA[receptionfinished]]></Name>
-					<X>650</X><Y>-480</Y>
+					<X>670</X><Y>-480</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8205,7 +8190,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1713968240657</Id>
 					<Name><![CDATA[startTime]]></Name>
-					<X>30</X><Y>-330</Y>
+					<X>30</X><Y>-400</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8217,7 +8202,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1714030089053</Id>
 					<Name><![CDATA[latency]]></Name>
-					<X>220</X><Y>-260</Y>
+					<X>220</X><Y>-310</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8229,7 +8214,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1714035970954</Id>
 					<Name><![CDATA[avglatency]]></Name>
-					<X>220</X><Y>-230</Y>
+					<X>220</X><Y>-280</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8241,7 +8226,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1714035985186</Id>
 					<Name><![CDATA[latencycount]]></Name>
-					<X>220</X><Y>-200</Y>
+					<X>220</X><Y>-250</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8253,7 +8238,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1714139976203</Id>
 					<Name><![CDATA[receptionfinishedcloud]]></Name>
-					<X>650</X><Y>-450</Y>
+					<X>670</X><Y>-450</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8265,7 +8250,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1714477923561</Id>
 					<Name><![CDATA[transmitmsgcar]]></Name>
-					<X>220</X><Y>-290</Y>
+					<X>220</X><Y>-340</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8275,57 +8260,15 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1717053648131</Id>
-					<Name><![CDATA[waitingTimetoConnect]]></Name>
-					<X>220</X><Y>-170</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
 					<Id>1717054041083</Id>
 					<Name><![CDATA[transmissionTime]]></Name>
-					<X>220</X><Y>-320</Y>
+					<X>220</X><Y>-370</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1717409391578</Id>
-					<Name><![CDATA[ACK_timeout]]></Name>
-					<X>440</X><Y>-270</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[0.020]]></Code>
-						</InitialValue>
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1717409434491</Id>
-					<Name><![CDATA[Message_timeout]]></Name>
-					<X>440</X><Y>-240</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[0.1]]></Code>
-						</InitialValue>
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
@@ -8391,7 +8334,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719218284845</Id>
 					<Name><![CDATA[HARQ]]></Name>
-					<X>30</X><Y>-390</Y>
+					<X>30</X><Y>-460</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8404,33 +8347,9 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1719219268100</Id>
-					<Name><![CDATA[pre_rsrp_th]]></Name>
-					<X>30</X><Y>-420</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1719219337263</Id>
-					<Name><![CDATA[rsrp_th]]></Name>
-					<X>30</X><Y>-450</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>false</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>        
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
 					<Id>1719302043649</Id>
 					<Name><![CDATA[freespacepathlossdbm]]></Name>
-					<X>650</X><Y>-390</Y>
+					<X>670</X><Y>-420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8442,7 +8361,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719558643118</Id>
 					<Name><![CDATA[nbtransmissions]]></Name>
-					<X>220</X><Y>-150</Y>
+					<X>220</X><Y>-220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8472,7 +8391,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719560714147</Id>
 					<Name><![CDATA[warning]]></Name>
-					<X>30</X><Y>-240</Y>
+					<X>30</X><Y>-310</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8484,7 +8403,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1719562701538</Id>
 					<Name><![CDATA[nbrelaying]]></Name>
-					<X>220</X><Y>-120</Y>
+					<X>220</X><Y>-190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8495,8 +8414,8 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				</Variable>
 				<Variable Class="PlainVariable">
 					<Id>1720424737824</Id>
-					<Name><![CDATA[waitingTimecontrol]]></Name>
-					<X>650</X><Y>-360</Y>
+					<Name><![CDATA[waittimecontrol]]></Name>
+					<X>890</X><Y>-370</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8508,7 +8427,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1720593556848</Id>
 					<Name><![CDATA[timeoutReached]]></Name>
-					<X>440</X><Y>-210</Y>
+					<X>440</X><Y>-270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8520,7 +8439,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1720602306013</Id>
 					<Name><![CDATA[nomsg]]></Name>
-					<X>440</X><Y>-180</Y>
+					<X>890</X><Y>-560</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8532,7 +8451,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1720681359271</Id>
 					<Name><![CDATA[v2xchannel]]></Name>
-					<X>650</X><Y>-330</Y>
+					<X>670</X><Y>-390</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8544,7 +8463,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721042163978</Id>
 					<Name><![CDATA[car2network]]></Name>
-					<X>650</X><Y>-200</Y>
+					<X>670</X><Y>-330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8559,7 +8478,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721112440821</Id>
 					<Name><![CDATA[msgid]]></Name>
-					<X>650</X><Y>-260</Y>
+					<X>890</X><Y>-620</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8571,7 +8490,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721115375598</Id>
 					<Name><![CDATA[contains]]></Name>
-					<X>650</X><Y>-290</Y>
+					<X>670</X><Y>-360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8583,7 +8502,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721393000019</Id>
 					<Name><![CDATA[newmsg]]></Name>
-					<X>650</X><Y>-230</Y>
+					<X>890</X><Y>-590</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8595,22 +8514,19 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721639425641</Id>
 					<Name><![CDATA[vehicletext]]></Name>
-					<X>440</X><Y>-150</Y>
+					<X>440</X><Y>-250</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[Color]]></Type>        
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[blue]]></Code>
-						</InitialValue>
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
 					<Id>1721811931806</Id>
 					<Name><![CDATA[incoverage]]></Name>
-					<X>650</X><Y>-170</Y>
+					<X>670</X><Y>-300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -8621,8 +8537,8 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				</Variable>
 				<Variable Class="PlainVariable">
 					<Id>1721988922029</Id>
-					<Name><![CDATA[WaitingTimerx]]></Name>
-					<X>650</X><Y>-140</Y>
+					<Name><![CDATA[waitingtimerx]]></Name>
+					<X>890</X><Y>-400</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8637,7 +8553,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721988946676</Id>
 					<Name><![CDATA[energyLevel]]></Name>
-					<X>650</X><Y>-110</Y>
+					<X>670</X><Y>-270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8652,7 +8568,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721992218240</Id>
 					<Name><![CDATA[transferdelay]]></Name>
-					<X>650</X><Y>-80</Y>
+					<X>670</X><Y>-240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8667,7 +8583,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721993486279</Id>
 					<Name><![CDATA[nbrelayingcontrol]]></Name>
-					<X>440</X><Y>-120</Y>
+					<X>440</X><Y>-220</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8679,7 +8595,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1721993724830</Id>
 					<Name><![CDATA[lastsender]]></Name>
-					<X>220</X><Y>-90</Y>
+					<X>220</X><Y>-160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8691,7 +8607,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="PlainVariable">
 					<Id>1722416757700</Id>
 					<Name><![CDATA[nbtransmissionscontrol]]></Name>
-					<X>220</X><Y>-60</Y>
+					<X>440</X><Y>-190</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8702,8 +8618,8 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				</Variable>
 				<Variable Class="PlainVariable">
 					<Id>1722418462744</Id>
-					<Name><![CDATA[waitingTimedata]]></Name>
-					<X>650</X><Y>-560</Y>
+					<Name><![CDATA[waitingtimedata]]></Name>
+					<X>890</X><Y>-490</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8717,8 +8633,8 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				</Variable>
 				<Variable Class="PlainVariable">
 					<Id>1722425518923</Id>
-					<Name><![CDATA[waitingTimetx]]></Name>
-					<X>650</X><Y>-50</Y>
+					<Name><![CDATA[waitingtimetx]]></Name>
+					<X>890</X><Y>-460</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8731,9 +8647,9 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1722425757785</Id>
-					<Name><![CDATA[waitingTimerx]]></Name>
-					<X>650</X><Y>-20</Y>
+					<Id>1722504252262</Id>
+					<Name><![CDATA[waitingtimenetwork]]></Name>
+					<X>890</X><Y>-430</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8743,21 +8659,84 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
-					<Id>1722504252262</Id>
-					<Name><![CDATA[waitingtimenetwork]]></Name>
-					<X>650</X><Y>20</Y>
+					<Id>1722522689667</Id>
+					<Name><![CDATA[changeinlocation]]></Name>
+					<X>890</X><Y>-340</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0.6]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1722522711868</Id>
+					<Name><![CDATA[changeinspeed]]></Name>
+					<X>890</X><Y>-310</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0.7]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1722522746615</Id>
+					<Name><![CDATA[directionmovement]]></Name>
+					<X>890</X><Y>-280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[1]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1722522764081</Id>
+					<Name><![CDATA[freshnessofinfo]]></Name>
+					<X>890</X><Y>-250</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0.9]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1722522783057</Id>
+					<Name><![CDATA[remainingenergy]]></Name>
+					<X>890</X><Y>-220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0.4]]></Code>
+						</InitialValue>
 					</Properties>
 				</Variable>
 				<Variable Class="CollectionVariable">
 					<Id>1721113269609</Id>
 					<Name><![CDATA[msgidsall]]></Name>
-					<X>30</X><Y>-510</Y>
+					<X>250</X><Y>-540</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8772,7 +8751,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="CollectionVariable">
 					<Id>1721113850854</Id>
 					<Name><![CDATA[txcomplete]]></Name>
-					<X>30</X><Y>-540</Y>
+					<X>250</X><Y>-600</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8787,7 +8766,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<Variable Class="CollectionVariable">
 					<Id>1722432397184</Id>
 					<Name><![CDATA[alreadyMsg]]></Name>
-					<X>220</X><Y>-540</Y>
+					<X>250</X><Y>-570</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8804,7 +8783,7 @@ main.avgLatency.add(avglatency);]]></AfterStepCode>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1713511053796</Id>
 					<Name><![CDATA[Idle]]></Name>
-					<X>260</X><Y>230</Y>
+					<X>280</X><Y>120</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8819,21 +8798,21 @@ nbrelayingcontrol=0;
 incoverage=false;
 
 //check incoverage status
-rsrp_cal();]]></EntryAction>
+incoverage_status();]]></EntryAction>
 						<FillColor>-5247250</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1713941014450</Id>
 					<Name><![CDATA[Transmit]]></Name>
-					<X>150</X><Y>340</Y>
+					<X>170</X><Y>230</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="40">
 						<EntryAction><![CDATA[//incoverage status update
-rsrp_cal();
+incoverage_status();
 if (HARQ==false && this.nbtransmissions < 3 && !txcomplete.contains(msgid)) {
     // Generate and Transmit Data Msg
     send("v2n msg"+";"+String.valueOf(this.vehicleid)+";"+String.valueOf(msgid), main.networkaccess);
@@ -8852,10 +8831,10 @@ if (HARQ==false && this.nbtransmissions < 3 && !txcomplete.contains(msgid)) {
     double remainingenergy= 2;
     double directionmovement = 1;
     //waitingtimenetwork:v2n
-    waitingtimenetwork = Math.min(120,
-								  Math.abs(1.0 / rsrpdBm) *(1 / changeinlocation) *
-								  (1 / changeinspeed) * (1 / freshnessofinfo) *
-								  (1 / remainingenergy) * (1 / directionmovement));
+    waitingtimenetwork = 
+    Math.min(120, Math.abs(1.0 / rsrpdBm) *(1 / changeinlocation) *
+		  (1 / changeinspeed) * (1 / freshnessofinfo) *
+		  (1 / remainingenergy) * (1 / directionmovement));
 
     //measure emergency call count
 	if(nbrelaying==0 && !this.alreadyMsg.contains(msgid))
@@ -8869,7 +8848,7 @@ if (HARQ==false && this.nbtransmissions < 3 && !txcomplete.contains(msgid)) {
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1717136759428</Id>
 					<Name><![CDATA[Listen]]></Name>
-					<X>150</X><Y>420</Y>
+					<X>170</X><Y>310</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8881,7 +8860,7 @@ if (HARQ==false && this.nbtransmissions < 3 && !txcomplete.contains(msgid)) {
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1719563576935</Id>
 					<Name><![CDATA[ReceiveMsg]]></Name>
-					<X>570</X><Y>240</Y>
+					<X>590</X><Y>130</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8893,7 +8872,7 @@ if (HARQ==false && this.nbtransmissions < 3 && !txcomplete.contains(msgid)) {
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1719563605528</Id>
 					<Name><![CDATA[Listening]]></Name>
-					<X>590</X><Y>320</Y>
+					<X>610</X><Y>210</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8905,7 +8884,7 @@ if (HARQ==false && this.nbtransmissions < 3 && !txcomplete.contains(msgid)) {
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1719566242120</Id>
 					<Name><![CDATA[BCastControl]]></Name>
-					<X>590</X><Y>400</Y>
+					<X>610</X><Y>290</Y>
 					<Label><X>5</X><Y>20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8918,7 +8897,7 @@ if (HARQ==false && this.nbtransmissions < 3 && !txcomplete.contains(msgid)) {
 nbrelaying=0;
 List<Agent> neighbors = getConnections();
 final double communicationrange = 30.0;
-rsrp_cal();
+incoverage_status();
 if (nbrelayingcontrol < 2 && nbtransmissionscontrol < 3) {
 if (incoverage==true)
 	{
@@ -8946,14 +8925,16 @@ else{
 }
 vehicletext=yellow;
 //Calculate waiting time to send control message
-waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);]]></EntryAction>
+waittimecontrol =  Math.min(120, Math.abs(1.0 / rsrpdBm) *(1 / changeinlocation) *
+		  (1 / changeinspeed) * (1 / freshnessofinfo) *
+		  (1 / remainingenergy) * (1 / directionmovement));]]></EntryAction>
 						<FillColor>-1331</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1720602157160</Id>
 					<Name><![CDATA[RelayMsg]]></Name>
-					<X>550</X><Y>550</Y>
+					<X>570</X><Y>440</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9004,7 +8985,7 @@ if (nbrelaying < 2) {
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1720615326149</Id>
 					<Name><![CDATA[TxocBcastcontrol]]></Name>
-					<X>380</X><Y>310</Y>
+					<X>400</X><Y>200</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9045,7 +9026,9 @@ if (nbrelayingcontrol < 2 && nbtransmissionscontrol < 3) {
 
 vehicletext=yellow;
 //Calculate waiting time to send control message
-waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
+waittimecontrol = Math.min(120, Math.abs(1.0 / rsrpdBm) *(1 / changeinlocation) *
+		  (1 / changeinspeed) * (1 / freshnessofinfo) *
+		  (1 / remainingenergy) * (1 / directionmovement));
 
 //printing
 //System.out.println("rsrpdBm: "+rsrpdBm);
@@ -9056,7 +9039,7 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1720615336740</Id>
 					<Name><![CDATA[Listen_occontrol]]></Name>
-					<X>380</X><Y>390</Y>
+					<X>400</X><Y>280</Y>
 					<Label><X>5</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9068,7 +9051,7 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1720615347555</Id>
 					<Name><![CDATA[TxData]]></Name>
-					<X>330</X><Y>470</Y>
+					<X>350</X><Y>360</Y>
 					<Label><X>5</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9077,7 +9060,7 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 						<EntryAction><![CDATA[//Transmit data message
 List<Agent> neighbors = getConnections();
 final double commrange = 30.0;
-rsrp_cal();
+incoverage_status();
 if (nbrelaying < 2 && nbtransmissions < 3) {
     if (incoverage==true)
 		{
@@ -9109,14 +9092,16 @@ if (nbrelaying < 2 && nbtransmissions < 3) {
 	}
 }
 //Calculate waiting time to send control message
-waitingTimedata =  Math.abs(1.0 / rsrpdBm);]]></EntryAction>
+waitingtimedata =  Math.min(120, Math.abs(1.0 / rsrpdBm) *(1 / changeinlocation) *
+		  (1 / changeinspeed) * (1 / freshnessofinfo) *
+		  (1 / remainingenergy) * (1 / directionmovement));]]></EntryAction>
 						<FillColor>-6943</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1720615353892</Id>
 					<Name><![CDATA[ListenData1]]></Name>
-					<X>330</X><Y>550</Y>
+					<X>350</X><Y>440</Y>
 					<Label><X>5</X><Y>30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9128,7 +9113,7 @@ waitingTimedata =  Math.abs(1.0 / rsrpdBm);]]></EntryAction>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
 					<Id>1721813455318</Id>
 					<Name><![CDATA[rxListening]]></Name>
-					<X>550</X><Y>470</Y>
+					<X>570</X><Y>360</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9140,7 +9125,7 @@ waitingTimedata =  Math.abs(1.0 / rsrpdBm);]]></EntryAction>
 				<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
 					<Id>1713507242691</Id>
 					<Name><![CDATA[SwitchOn]]></Name>
-					<X>310</X><Y>190</Y>
+					<X>330</X><Y>80</Y>
 					<Label><X>-35</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9164,7 +9149,7 @@ color=red;
 					<Id>1714547718414</Id>
 					<Name><![CDATA[v2n_incoverage]]></Name>
 					<Description><![CDATA[Emergency situation]]></Description>
-					<X>290</X><Y>270</Y>
+					<X>310</X><Y>160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9205,7 +9190,7 @@ incoverage == true && warning==true && nbtransmissions < 3 ]]></Condition>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1717136833757</Id>
 					<Name><![CDATA[Transfer_Delay]]></Name>
-					<X>210</X><Y>380</Y>
+					<X>230</X><Y>270</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9235,7 +9220,7 @@ incoverage == true && warning==true && nbtransmissions < 3 ]]></Condition>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1717136840059</Id>
 					<Name><![CDATA[transition1]]></Name>
-					<X>160</X><Y>340</Y>
+					<X>180</X><Y>230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9269,7 +9254,7 @@ incoverage == true && warning==true && nbtransmissions < 3 ]]></Condition>
 					<Id>1718779704074</Id>
 					<Name><![CDATA[v2xoutofcoverage]]></Name>
 					<Description><![CDATA[Emergency situation]]></Description>
-					<X>360</X><Y>260</Y>
+					<X>380</X><Y>150</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9300,7 +9285,7 @@ incoverage == true && warning==true && nbtransmissions < 3 ]]></Condition>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1718779967600</Id>
 					<Name><![CDATA[Retransmission]]></Name>
-					<X>170</X><Y>420</Y>
+					<X>190</X><Y>310</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9331,7 +9316,7 @@ HARQ==false && this.nbtransmissions < 3]]></Condition>
 				<StatechartElement Class="Transition" ParentState="Listen" ParentStateId="1717136759428">
 					<Id>1718789552742</Id>
 					<Name><![CDATA[Listening_Tx]]></Name>
-					<X>230</X><Y>460</Y>
+					<X>250</X><Y>350</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9371,7 +9356,7 @@ if (receivedmsg.equals("V2N msg")) {
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1719563590269</Id>
 					<Name><![CDATA[msg_receptionrx]]></Name>
-					<X>350</X><Y>230</Y>
+					<X>370</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9396,7 +9381,7 @@ boolean condition = !lastsender.equals(this.vehicleid);
 //Compue Waiting Time
 //If incoverage ic = 1
 int ic = incoverage ? 1 : 0;
-rsrp_cal();
+incoverage_status();
 if (incoverage==true)
 	{
 		send(message[0],main.networkaccess);
@@ -9408,7 +9393,7 @@ else if(message[0].equals("oc control"))//control msg
 	{ //control msgs from anpther car
 	    //Printing
 		//System.out.println("Received oc V2V msg yay!"+message[0]+";"+message[1]);
-		waitingTimerx = Math.abs(min(120,(1-ic)*(1/(rsrpdBm+0.1))*(100/min(energyLevel,100))));
+		waitingtimerx = Math.abs(min(120,(1-ic)*(1/(rsrpdBm+0.1))*(100/min(energyLevel,100))));
 		//System.out.println("control msg: "+message[0]);
 	}
 else if (message[0].equals("HARQ"))
@@ -9430,7 +9415,9 @@ vehicletext=yellow;
 //Calculate waiting time to send control message
 //Upodate waiting time based on dynamic parameters of vehicle //change in location, freshness of data, 
 //direction of movement, change in speed
-waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
+waittimecontrol =  Math.min(120, Math.abs(1.0 / rsrpdBm) *(1 / changeinlocation) *
+		  (1 / changeinspeed) * (1 / freshnessofinfo) *
+		  (1 / remainingenergy) * (1 / directionmovement));
 	]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
@@ -9451,7 +9438,7 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1719563672010</Id>
 					<Name><![CDATA[processingdelay]]></Name>
-					<X>600</X><Y>280</Y>
+					<X>620</X><Y>170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9482,7 +9469,7 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1719566332167</Id>
 					<Name><![CDATA[WaitingTimecontrol]]></Name>
-					<X>630</X><Y>360</Y>
+					<X>650</X><Y>250</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9494,7 +9481,7 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1719563605528" Target="1719566242120" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[waitingTimecontrol]]></Code>
+							<Code><![CDATA[waittimecontrol]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[incoverage==false]]></Condition>
@@ -9512,7 +9499,7 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720602175045</Id>
 					<Name><![CDATA[transition20]]></Name>
-					<X>640</X><Y>440</Y>
+					<X>660</X><Y>330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9542,7 +9529,7 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720602265333</Id>
 					<Name><![CDATA[tarnsferDelay]]></Name>
-					<X>690</X><Y>560</Y>
+					<X>710</X><Y>450</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9576,7 +9563,7 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720602283644</Id>
 					<Name><![CDATA[transition21]]></Name>
-					<X>590</X><Y>420</Y>
+					<X>610</X><Y>310</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9608,7 +9595,7 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720615432132</Id>
 					<Name><![CDATA[waitingTime1]]></Name>
-					<X>460</X><Y>350</Y>
+					<X>480</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9639,7 +9626,7 @@ waitingTimecontrol =  Math.abs(1.0 / rsrpdBm);
 				<StatechartElement Class="Transition" ParentState="Listen_occontrol" ParentStateId="1720615336740">
 					<Id>1720615444932</Id>
 					<Name><![CDATA[transition7]]></Name>
-					<X>460</X><Y>390</Y>
+					<X>480</X><Y>280</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9686,7 +9673,7 @@ if (message[0].equals("oc control")&&
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720615470419</Id>
 					<Name><![CDATA[waitingtimecontrol]]></Name>
-					<X>410</X><Y>430</Y>
+					<X>430</X><Y>320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9717,7 +9704,7 @@ if (message[0].equals("oc control")&&
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720615476563</Id>
 					<Name><![CDATA[transition12]]></Name>
-					<X>350</X><Y>470</Y>
+					<X>370</X><Y>360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9751,7 +9738,7 @@ if (message[0].equals("oc control")&&
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720615519586</Id>
 					<Name><![CDATA[transition15]]></Name>
-					<X>330</X><Y>570</Y>
+					<X>350</X><Y>460</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9785,7 +9772,7 @@ rsrpdBm > -128 || nbrelaying > 2]]></Condition>
 				<StatechartElement Class="Transition" ParentState="ListenData1" ParentStateId="1720615353892">
 					<Id>1720615573779</Id>
 					<Name><![CDATA[transition4]]></Name>
-					<X>390</X><Y>550</Y>
+					<X>410</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9829,7 +9816,7 @@ if (message[0].equals("oc v2v data")&&
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720615726993</Id>
 					<Name><![CDATA[transferDelay1]]></Name>
-					<X>385</X><Y>510</Y>
+					<X>405</X><Y>400</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9859,7 +9846,7 @@ if (message[0].equals("oc v2v data")&&
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1720615740866</Id>
 					<Name><![CDATA[transition17]]></Name>
-					<X>350</X><Y>550</Y>
+					<X>370</X><Y>440</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9871,7 +9858,7 @@ if (message[0].equals("oc v2v data")&&
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1720615353892" Target="1720615347555" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[waitingTimetx]]></Code>
+							<Code><![CDATA[waitingtimetx]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[//relay threshold
@@ -9890,7 +9877,7 @@ nbrelaying< 2]]></Condition>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1721399631530</Id>
 					<Name><![CDATA[transition19]]></Name>
-					<X>430</X><Y>310</Y>
+					<X>450</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9921,7 +9908,7 @@ nbrelaying< 2]]></Condition>
 				<StatechartElement Class="Transition" ParentState="Listening" ParentStateId="1719563605528">
 					<Id>1721813151350</Id>
 					<Name><![CDATA[ListeningControl]]></Name>
-					<X>600</X><Y>320</Y>
+					<X>620</X><Y>210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9962,7 +9949,7 @@ else if(message[0].equals("oc v2v data") && message[1].equals(lastsender))
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1721813463325</Id>
 					<Name><![CDATA[transition]]></Name>
-					<X>590</X><Y>510</Y>
+					<X>610</X><Y>400</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9974,7 +9961,7 @@ else if(message[0].equals("oc v2v data") && message[1].equals(lastsender))
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1721813455318" Target="1720602157160" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[WaitingTimerx]]></Code>
+							<Code><![CDATA[waitingtimerx]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[true]]></Condition>
@@ -9992,7 +9979,7 @@ else if(message[0].equals("oc v2v data") && message[1].equals(lastsender))
 				<StatechartElement Class="Transition" ParentState="rxListening" ParentStateId="1721813455318">
 					<Id>1721813508349</Id>
 					<Name><![CDATA[transition6]]></Name>
-					<X>600</X><Y>470</Y>
+					<X>620</X><Y>360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10046,7 +10033,7 @@ else if (message[0].equals("oc v2v data"))
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1722416690148</Id>
 					<Name><![CDATA[transition18]]></Name>
-					<X>410</X><Y>390</Y>
+					<X>430</X><Y>280</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10058,7 +10045,7 @@ else if (message[0].equals("oc v2v data"))
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1720615336740" Target="1720615326149" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[waitingTimecontrol]]></Code>
+							<Code><![CDATA[waittimecontrol]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[//relay threshold
@@ -10077,7 +10064,7 @@ nbrelaying< 2]]></Condition>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1722418693368</Id>
 					<Name><![CDATA[transition2]]></Name>
-					<X>570</X><Y>270</Y>
+					<X>590</X><Y>160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10110,7 +10097,7 @@ nbrelaying< 2]]></Condition>
 				<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 					<Id>1722424637722</Id>
 					<Name><![CDATA[transition3]]></Name>
-					<X>620</X><Y>470</Y>
+					<X>640</X><Y>360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10122,7 +10109,7 @@ nbrelaying< 2]]></Condition>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1721813455318" Target="1719566242120" Trigger="timeout">
 						<Timeout Class="CodeUnitValue">
-							<Code><![CDATA[waitingTimecontrol]]></Code>
+							<Code><![CDATA[waittimecontrol]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</Timeout>
 						<Condition><![CDATA[true]]></Condition>
@@ -10142,7 +10129,7 @@ nbrelaying< 2]]></Condition>
 				<Event>
 					<Id>1719559879691</Id>
 					<Name><![CDATA[pedcrossing_warning]]></Name>
-					<X>30</X><Y>-580</Y>
+					<X>30</X><Y>-530</Y>
 					<Label><X>5</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10176,8 +10163,8 @@ nbrelaying< 2]]></Condition>
 					<ReturnModificator>VOID</ReturnModificator>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1719215093141</Id>
-					<Name><![CDATA[rsrp_cal]]></Name>
-					<X>30</X><Y>-620</Y>
+					<Name><![CDATA[incoverage_status]]></Name>
+					<X>30</X><Y>-570</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -10212,6 +10199,17 @@ else {
 //System.out.println("carY :" +this.getY());
 
 //System.out.println("rsrpdBm :" +rsrpdBm);]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1722518734893</Id>
+					<Name><![CDATA[waitingtime]]></Name>
+					<X>30</X><Y>-600</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
 				</Function>
 			</Functions>
 			<AgentLinks>
